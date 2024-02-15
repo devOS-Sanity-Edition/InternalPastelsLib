@@ -2,16 +2,20 @@
 # The latest versions are available at https://fabricmc.net/develop
 minecraft = "1.20.4"
 fabric-loader = "0.15.3"
+fabric-api = "0.95.4+1.20.4"
+fabric_language_kotlin = "1.10.17+kotlin.1.9.22"
 
 dokka_as_java = "1.9.10"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
+fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
+fabric_language_kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabric_language_kotlin" }
 
 dokka_as_java = { module = "org.jetbrains.dokka:kotlin-as-java-plugin", version.ref = "dokka_as_java" }
 
 [plugins]
 grgit = { id = "org.ajoberstar.grgit", version = "5.2.1"}
-fabric_loom = { id = "fabric-loom", version = "1.4-SNAPSHOT" }
+fabric_loom = { id = "fabric-loom", version = "1.5-SNAPSHOT" }
 dokka = { id = "org.jetbrains.dokka", version = "1.9.10" }

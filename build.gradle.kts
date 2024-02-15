@@ -38,6 +38,7 @@ dependencies {
 
 	//Fabric
 	modImplementation(libs.fabric.loader)
+	modImplementation(libs.fabric.api)
 
 	dokkaHtmlPlugin(libs.dokka.`as`.java)
 }
@@ -124,7 +125,7 @@ loom {
 			vmArgs(
 				"-Dfabric-api.datagen",
 				"-Dfabric-api.datagen.output-dir=${file("src/main/generated")}",
-				"-Dfabric-api.datagen.modid=${project.extra["mod_id"] as String}"
+				"-Dfabric-api.datagen.modid=${project.extra["archives_base_name"] as String}"
 			)
 			runDir("build/datagen")
 		}

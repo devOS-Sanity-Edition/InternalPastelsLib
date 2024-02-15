@@ -3,7 +3,7 @@
 	"id": "internalpastelslib",
 	"version": "${version}",
 	"name": "InternalPastelsLib",
-	"description": "",
+	"description": "Library mod to share helper functions between Softer Pastels, Desolated Pastels, and any other future projects from asoji [probably]",
 	"authors": [
 		"asojidev"
 	],
@@ -13,7 +13,14 @@
 	},
 	"license": "MIT",
 	"environment": "*",
-	"entrypoints": { },
+	"entrypoints": {
+		"main": [
+			{
+				"adapter": "kotlin",
+				"value": "gay.asoji.internalpastelslib.InternalPastelsLib"
+			}
+		]
+	},
 	"mixins": [ ],
 	"depends": {
 		"fabricloader": "*",
