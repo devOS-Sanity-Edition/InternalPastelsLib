@@ -16,7 +16,7 @@ object RegisterItems {
         return registerItem(modID, name, Item(Item.Properties()))
     }
 
-    fun registerBlockItem(modID: String, name: String, block: Block, tab: Int, properties: Item.Properties): BlockItem {
+    fun registerBlockItem(modID: String, name: String, block: Block, properties: Item.Properties): BlockItem {
         return Registry.register(
             BuiltInRegistries.ITEM, ResourceLocation(modID, name), BlockItem(block, properties)
         )
