@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "internalpastelslib",
+	"version": "${version}",
+	"name": "InternalPastelsLib",
+	"description": "",
+	"authors": [
+		"asojidev"
+	],
+	"contact": {
+		"homepage": "https://asoji.one/",
+		"sources": "https://github.com/devOS-Sanity-Edition/InternalPastelsLib"
+	},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": { },
+	"mixins": [ ],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "*",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
