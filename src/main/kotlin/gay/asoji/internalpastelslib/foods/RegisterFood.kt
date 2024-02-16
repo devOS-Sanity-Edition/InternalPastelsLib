@@ -2,6 +2,7 @@ package gay.asoji.internalpastelslib.foods
 
 import gay.asoji.internalpastelslib.items.CandyTooltipItem
 import gay.asoji.internalpastelslib.misc.secondsToTicks
+import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.effect.MobEffect
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.food.FoodProperties
@@ -10,6 +11,7 @@ import net.minecraft.world.item.Items
 
 object RegisterFood {
     fun registerCandy(
+        modID: String,
         name: String,
         nutrition: Int,
         saturation: Int,
@@ -18,7 +20,7 @@ object RegisterFood {
         seconds: Int
     ): CandyTooltipItem {
         return Items.registerItem(
-            name, CandyTooltipItem(
+            ResourceLocation(modID, name), CandyTooltipItem(
                 Item.Properties().food(
                     FoodProperties.Builder()
                         .nutrition(nutrition)
@@ -31,9 +33,9 @@ object RegisterFood {
         ) as CandyTooltipItem
     }
 
-    fun registerCandy(name: String, nutrition: Int, saturation: Int, amplifier: Int): CandyTooltipItem {
+    fun registerCandy(modID: String, name: String, nutrition: Int, saturation: Int, amplifier: Int): CandyTooltipItem {
         return Items.registerItem(
-            name, CandyTooltipItem(
+            ResourceLocation(modID, name), CandyTooltipItem(
                 Item.Properties().food(
                     FoodProperties.Builder()
                         .nutrition(nutrition)
@@ -46,32 +48,32 @@ object RegisterFood {
         ) as CandyTooltipItem
     }
 
-    fun registerTaffy(name: String, effect: MobEffect, seconds: Int): CandyTooltipItem {
-        return registerCandy(name, 2, 2, effect, 0, seconds)
+    fun registerTaffy(modID: String, name: String, effect: MobEffect, seconds: Int): CandyTooltipItem {
+        return registerCandy(modID, name, 2, 2, effect, 0, seconds)
     }
 
-    fun registerTaffy(name: String): CandyTooltipItem {
-        return registerCandy(name, 2, 2, 0)
+    fun registerTaffy(modID: String, name: String): CandyTooltipItem {
+        return registerCandy(modID, name, 2, 2, 0)
     }
 
-    fun registerCottonCandy(name: String, effect: MobEffect, seconds: Int): CandyTooltipItem {
-        return registerCandy(name, 3, 2, effect, 1, seconds)
+    fun registerCottonCandy(modID: String, name: String, effect: MobEffect, seconds: Int): CandyTooltipItem {
+        return registerCandy(modID, name, 3, 2, effect, 1, seconds)
     }
 
-    fun registerCottonCandy(name: String): CandyTooltipItem {
-        return registerCandy(name, 3, 2, 1)
+    fun registerCottonCandy(modID: String, name: String): CandyTooltipItem {
+        return registerCandy(modID, name, 3, 2, 1)
     }
 
-    fun registerHardCandy(name: String, effect: MobEffect, seconds: Int): CandyTooltipItem {
-        return registerCandy(name, 3, 2, effect, 2, seconds)
+    fun registerHardCandy(modID: String, name: String, effect: MobEffect, seconds: Int): CandyTooltipItem {
+        return registerCandy(modID, name, 3, 2, effect, 2, seconds)
     }
 
-    fun registerHardCandy(name: String): CandyTooltipItem {
-        return registerCandy(name, 3, 2, 2)
+    fun registerHardCandy(modID: String, name: String): CandyTooltipItem {
+        return registerCandy(modID, name, 3, 2, 2)
     }
 
-    fun registerIceCream(name: String): Item {
-        return Items.registerItem(name, Item(Item.Properties().food(FoodProperties.Builder().nutrition(3).saturationMod(5f).build()))
+    fun registerIceCream(modID: String, name: String): Item {
+        return Items.registerItem(ResourceLocation(modID, name), Item(Item.Properties().food(FoodProperties.Builder().nutrition(3).saturationMod(5f).build()))
         )
     }
 }
