@@ -1,4 +1,4 @@
-package gay.asoji.internalpastelslib.datagen
+package gay.asoji.innerpastels.datagen
 
 import net.minecraft.data.models.BlockModelGenerators
 import net.minecraft.data.models.model.ModelLocationUtils

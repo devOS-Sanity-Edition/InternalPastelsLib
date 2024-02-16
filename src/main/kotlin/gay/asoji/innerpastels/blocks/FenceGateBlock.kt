@@ -1,4 +1,4 @@
-package gay.asoji.internalpastelslib.blocks
+package gay.asoji.innerpastels.blocks
 
 import net.minecraft.world.level.block.FenceGateBlock
 import net.minecraft.world.level.block.state.properties.WoodType

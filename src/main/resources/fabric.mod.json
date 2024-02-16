@@ -1,15 +1,15 @@
 {
 	"schemaVersion": 1,
-	"id": "internalpastelslib",
+	"id": "innerpastels",
 	"version": "${version}",
-	"name": "InternalPastelsLib",
+	"name": "InnerPastels",
 	"description": "Library mod to share helper functions between Softer Pastels, Desolated Pastels, and any other future projects from asoji [probably]",
 	"authors": [
 		"asojidev"
 	],
 	"contact": {
 		"homepage": "https://asoji.one/",
-		"sources": "https://github.com/devOS-Sanity-Edition/InternalPastelsLib"
+		"sources": "https://github.com/devOS-Sanity-Edition/InnerPastels"
 	},
 	"license": "MIT",
 	"environment": "*",
@@ -17,7 +17,7 @@
 		"main": [
 			{
 				"adapter": "kotlin",
-				"value": "gay.asoji.internalpastelslib.InternalPastelsLib"
+				"value": "gay.asoji.innerpastels.InnerPastels"
 			}
 		]
 	},

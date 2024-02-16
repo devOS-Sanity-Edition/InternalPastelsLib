@@ -1,4 +1,4 @@
-package gay.asoji.internalpastelslib.items
+package gay.asoji.innerpastels.items
 
 import net.minecraft.network.chat.Component
 import net.minecraft.world.effect.MobEffectInstance
@@ -11,7 +11,7 @@ import java.util.*
 
 class CandyTooltipItem(properties: Properties) : Item(properties) {
     override fun appendHoverText(itemStack: ItemStack, level: Level?, list: MutableList<Component>, tooltipFlag: TooltipFlag) {
-        list.add(Component.translatable("item.internalpastelslib.candies.hunger.description"))
+        list.add(Component.translatable("item.innerpastels.candies.hunger.description"))
 
         val effects = LinkedList<MobEffectInstance>()
 
@@ -22,6 +22,6 @@ class CandyTooltipItem(properties: Properties) : Item(properties) {
         }
 
         PotionUtils.addPotionTooltip(effects, list, 1.0f, level?.tickRateManager()?.tickrate() ?: 20.0f)
-        list.add(Component.translatable("item.internalpastelslib.candies.hunger.alwayseat"))
+        list.add(Component.translatable("item.innerpastels.candies.hunger.alwayseat"))
     }
 }

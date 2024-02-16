@@ -1,7 +1,7 @@
-package gay.asoji.internalpastelslib.foods
+package gay.asoji.innerpastels.foods
 
-import gay.asoji.internalpastelslib.items.CandyTooltipItem
-import gay.asoji.internalpastelslib.misc.secondsToTicks
+import gay.asoji.innerpastels.items.CandyTooltipItem
+import gay.asoji.innerpastels.misc.secondsToTicks
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.effect.MobEffect
 import net.minecraft.world.effect.MobEffectInstance

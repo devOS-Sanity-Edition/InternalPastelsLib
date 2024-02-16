@@ -1,4 +1,4 @@
-package gay.asoji.internalpastelslib.datagen
+package gay.asoji.innerpastels.datagen
 
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider
 import net.minecraft.data.recipes.*

@@ -1,8 +1,8 @@
-package gay.asoji.internalpastelslib
+package gay.asoji.innerpastels
 
 import net.fabricmc.api.ModInitializer
 
-object InternalPastelsLib : ModInitializer {
+object InnerPastels : ModInitializer {
     override fun onInitialize() {
 
     }

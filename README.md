@@ -1,4 +1,6 @@
-# InternalPastelsLib [BETTER NAME PENDING]
+# InnerPastels
+
+Name by @BluSpring
 
 Library mod to share helper functions between Softer Pastels, Desolated Pastels, and any other future projects from asoji [probably]
 
