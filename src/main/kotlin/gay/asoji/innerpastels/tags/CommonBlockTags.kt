@@ -5,7 +5,7 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.TagKey
 import net.minecraft.world.level.block.Block
 
-object BlockTags {
+object CommonBlockTags {
     // Referred to list: https://fabricmc.net/wiki/community:common_tags
 
     val CONCRETE: TagKey<Block> = TagKey.create(Registries.BLOCK, ResourceLocation("c:concrete"))

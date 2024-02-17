@@ -5,7 +5,7 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.TagKey
 import net.minecraft.world.item.Item
 
-object ItemTags {
+object CommonItemTags {
     // Referred to list: https://fabricmc.net/wiki/community:common_tags
 
     // Here lies the tag spam of shame, tsk tsk tsk.
