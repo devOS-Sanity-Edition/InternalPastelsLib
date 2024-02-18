@@ -1,4 +1,35 @@
 {
   "item.innerpastels.candies.hunger.description": "§61.0 x Hunger",
-  "item.innerpastels.candies.hunger.alwayseat": "§aYou can always gulp these down!"
+  "item.innerpastels.candies.hunger.alwayseat": "§aYou can always gulp these down!",
+
+  "tag.block.innerpastels.carpets": "Carpets",
+  "tag.block.innerpastels.fence_gates": "Fence Gates",
+  "tag.block.innerpastels.fences": "Fences",
+  "tag.block.innerpastels.glass_blocks": "Glass Blocks",
+  "tag.block.innerpastels.glass_panes": "Glass Panes",
+  "tag.block.innerpastels.lights": "Lights",
+  "tag.block.innerpastels.pastel_blocks": "Pastel Blocks",
+  "tag.block.innerpastels.pastel_powder_blocks": "Pastel Powder Blocks",
+  "tag.block.innerpastels.slabs": "Slabs",
+  "tag.block.innerpastels.stairs": "Stairs",
+  "tag.block.innerpastels.walls": "Walls",
+  "tag.block.innerpastels.wools": "Wools",
+
+  "tag.item.innerpastels.carpets": "Carpets",
+  "tag.item.innerpastels.cotton_candies": "Cotton Candies",
+  "tag.item.innerpastels.fence_gates": "Fence Gates",
+  "tag.item.innerpastels.fences": "Fences",
+  "tag.item.innerpastels.glass_blocks": "Glass Blocks",
+  "tag.item.innerpastels.glass_panes": "Glass Panes",
+  "tag.item.innerpastels.hard_candies": "Hard Candies",
+  "tag.item.innerpastels.ice_cream": "Ice Cream",
+  "tag.item.innerpastels.lights": "Lights",
+  "tag.item.innerpastels.pastel_blocks": "Pastel Blocks",
+  "tag.item.innerpastels.pastel_powder_blocks": "Pastel Powder Blocks",
+  "tag.item.innerpastels.powders": "Powder",
+  "tag.item.innerpastels.slabs": "Slabs",
+  "tag.item.innerpastels.stairs": "Stairs",
+  "tag.item.innerpastels.taffies": "Taffies",
+  "tag.item.innerpastels.walls": "Walls",
+  "tag.item.innerpastels.wools": "Wools"
 }
