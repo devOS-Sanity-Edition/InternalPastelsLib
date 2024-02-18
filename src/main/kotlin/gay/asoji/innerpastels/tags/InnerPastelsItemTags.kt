@@ -13,6 +13,7 @@ object InnerPastelsItemTags {
     val FENCE_GATES: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:fence_gates"))
     val WALLS: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:walls"))
     val SLABS: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:slabs"))
+    val STAIRS: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:stairs"))
     val WOOLS: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:wools"))
     val LIGHTS: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:lights"))
     val CARPETS: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:carpets"))
