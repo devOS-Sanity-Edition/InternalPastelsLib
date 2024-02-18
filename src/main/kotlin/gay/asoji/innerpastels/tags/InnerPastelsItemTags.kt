@@ -20,6 +20,12 @@ object InnerPastelsItemTags {
     val GLASS_BLOCKS: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:glass_blocks"))
     val GLASS_PANES: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:glass_panes"))
 
+    val POWDERS: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:powders"))
+    val TAFFIES: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:taffies"))
+    val COTTON_CANDIES: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:cotton_candies"))
+    val HARD_CANDIES: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:hard_candies"))
+    val ICE_CREAM: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:ice_cream"))
+
     // Desolated
     val ORES: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:ores"))
     val LOGS: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:logs"))
