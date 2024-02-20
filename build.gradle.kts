@@ -1,6 +1,7 @@
 import org.jetbrains.dokka.base.DokkaBase
 import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.dokka.base.DokkaBaseConfiguration
+import java.net.URL
 
 buildscript {
 	dependencies {
@@ -44,13 +45,26 @@ dependencies {
 }
 
 tasks.withType<DokkaTask>().configureEach {
+	dokkaSourceSets {
+		named("main") {
+			moduleName.set("Inner Pastels")
+
+			includes.from("Module.md")
+
+			sourceLink {
+				localDirectory.set(file("src/main/kotlin"))
+				remoteUrl.set(URL("http://github.com/devOS-Sanity-Edition/InnerPastels/tree/main/" + "src/main/kotlin"))
+				remoteLineSuffix.set("#L")
+			}
+		}
+	}
 	pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
 //		customAssets = listOf(file("my-image.png"))
 //		customStyleSheets = listOf(file("my-styles.css"))
-		footerMessage = "(c) 2024 asoji"
-		separateInheritedMembers = false
+		footerMessage = "(c) 2024 devOS: Sanity Edition, Team Nautical, asoji"
+		separateInheritedMembers = true
 //		templatesDir = file("dokka/templates")
-		mergeImplicitExpectActualDeclarations = false
+		mergeImplicitExpectActualDeclarations = true
 	}
 }
 

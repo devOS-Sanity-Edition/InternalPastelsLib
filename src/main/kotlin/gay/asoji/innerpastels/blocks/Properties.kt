@@ -7,6 +7,9 @@ import net.minecraft.world.level.block.LeavesBlock
 import net.minecraft.world.level.block.RotatedPillarBlock
 import net.minecraft.world.level.block.state.BlockBehaviour
 
+/**
+ * A list of Block Properties, mostly copyOf's, to be used with making new blocks.
+ */
 object Properties {
     fun PastelBlock(): BlockBehaviour.Properties {
         return FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE)

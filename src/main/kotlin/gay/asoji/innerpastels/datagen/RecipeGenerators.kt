@@ -6,6 +6,11 @@ import net.minecraft.data.recipes.RecipeProvider.has
 import net.minecraft.world.item.Items
 import net.minecraft.world.level.ItemLike
 
+/**
+ * Recipe Generators used for Recipe Generation via Fabric Recipe Provider, generating the required recipe JSONs
+ *
+ * im craving tomato soup now
+ */
 object RecipeGenerators {
     // There's some naming inconsistencies in this file, I think, I'm a bit too tired to deal with it, I'll fix it
     // either before launching Softer Pastels v0.6.0, or after... we'll see

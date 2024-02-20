@@ -7,6 +7,9 @@ import net.minecraft.data.models.model.TexturedModel
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.block.Block
 
+/**
+ * Model Generators used for Model Data Generation, creating required JSON models for certain blocks
+ */
 object ModelGenerators {
     fun createSlabs(block: Block, slab: Block, blockStateModelGenerator: BlockModelGenerators) {
         val texturedModel = TexturedModel.CUBE[block]

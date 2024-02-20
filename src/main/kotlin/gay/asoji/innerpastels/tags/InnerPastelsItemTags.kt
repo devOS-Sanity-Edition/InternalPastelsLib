@@ -5,6 +5,11 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.TagKey
 import net.minecraft.world.item.Item
 
+/**
+ * A bunch of items tags meant to be used for tagging items to their respective tags.
+ *
+ * Now try saying tags 100 times over.
+ */
 object InnerPastelsItemTags {
     // Softer
     val PASTEL_BLOCKS: TagKey<Item> = TagKey.create(Registries.ITEM, ResourceLocation("innerpastels:pastel_blocks"))
