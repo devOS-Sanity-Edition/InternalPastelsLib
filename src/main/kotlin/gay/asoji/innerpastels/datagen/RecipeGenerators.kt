@@ -7,7 +7,7 @@ import net.minecraft.world.item.Items
 import net.minecraft.world.level.ItemLike
 
 /**
- * Recipe Generators used for Recipe Generation via Fabric Recipe Provider, generating the required recipe JSONs
+ * Recipe Generators used for Recipe Generation via Fabric Recipe Provider, generating the required recipe JSONs, meant to be used with your RecipeProvider datagen.
  *
  * im craving tomato soup now
  */

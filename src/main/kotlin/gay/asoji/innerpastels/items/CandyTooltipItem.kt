@@ -9,9 +9,19 @@ import net.minecraft.world.item.alchemy.PotionUtils
 import net.minecraft.world.level.Level
 import java.util.*
 
-class CandyTooltipItem(properties: Properties) : Item(properties) {
+/**
+ * Translation string to show which candy shows how much hunger.
+ * [actual strings in library's /src/main/resources/assets/innerpastels/lang/en_us.json]
+ */
+enum class CANDY_TRANSLATION_STRING(val candyHungerString: String) {
+    TAFFY("item.innerpastels.candies.hunger.description.taffy"),
+    COTTON("item.innerpastels.candies.hunger.description.cotton"),
+    HARD("item.innerpastels.candies.hunger.description.hard")
+}
+
+class CandyTooltipItem(properties: Properties, val candyTranslationString: CANDY_TRANSLATION_STRING) : Item(properties) {
     override fun appendHoverText(itemStack: ItemStack, level: Level?, list: MutableList<Component>, tooltipFlag: TooltipFlag) {
-        list.add(Component.translatable("item.innerpastels.candies.hunger.description"))
+        list.add(Component.translatable(candyTranslationString.candyHungerString))
 
         val effects = LinkedList<MobEffectInstance>()
 
