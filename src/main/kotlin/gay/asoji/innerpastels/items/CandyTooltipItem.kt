@@ -1,5 +1,6 @@
 package gay.asoji.innerpastels.items
 
+import gay.asoji.innerpastels.misc.CandyTranslationString
 import net.minecraft.network.chat.Component
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.item.Item
@@ -9,17 +10,7 @@ import net.minecraft.world.item.alchemy.PotionUtils
 import net.minecraft.world.level.Level
 import java.util.*
 
-/**
- * Translation string to show which candy shows how much hunger.
- * [actual strings in library's /src/main/resources/assets/innerpastels/lang/en_us.json]
- */
-enum class CANDY_TRANSLATION_STRING(val candyHungerString: String) {
-    TAFFY("item.innerpastels.candies.hunger.description.taffy"),
-    COTTON("item.innerpastels.candies.hunger.description.cotton"),
-    HARD("item.innerpastels.candies.hunger.description.hard")
-}
-
-class CandyTooltipItem(properties: Properties, val candyTranslationString: CANDY_TRANSLATION_STRING) : Item(properties) {
+class CandyTooltipItem(properties: Properties, val candyTranslationString: CandyTranslationString) : Item(properties) {
     override fun appendHoverText(itemStack: ItemStack, level: Level?, list: MutableList<Component>, tooltipFlag: TooltipFlag) {
         list.add(Component.translatable(candyTranslationString.candyHungerString))
 
