@@ -1,5 +1,6 @@
 package gay.asoji.innerpastels.datagen
 
+import gay.asoji.innerpastels.crab.CrabInTheCode
 import net.minecraft.data.models.BlockModelGenerators
 import net.minecraft.data.models.model.ModelLocationUtils
 import net.minecraft.data.models.model.ModelTemplates
@@ -12,7 +13,7 @@ import net.minecraft.world.level.block.Block
  */
 object ModelGenerators {
     /**
-     * Creates a slab model based off another block, `block:` being the reference block, `slab:` being the target slab, and just call your normal BlockStateModelGenerator after
+     * Creates a slab model based off another block
      *
      * Example:
      * ```kotlin
@@ -22,6 +23,10 @@ object ModelGenerators {
      *     }
      * }
      * ```
+     *
+     * @property block The referenced block
+     * @property slab The target slab block
+     * @property blockStateModelGenerator The Block Model Generator for your block
      */
     fun createSlabs(block: Block, slab: Block, blockStateModelGenerator: BlockModelGenerators) {
         val texturedModel = TexturedModel.CUBE[block]
@@ -48,7 +53,7 @@ object ModelGenerators {
     }
 
     /**
-     * Creates a stair model based off another block, `block:` being the reference block, `stair:` being the target stair, and just call your normal BlockStateModelGenerator after
+     * Creates a stair model based off another block
      *
      * Example:
      * ```kotlin
@@ -58,6 +63,10 @@ object ModelGenerators {
      *     }
      * }
      * ```
+     *
+     * @property block The referenced block
+     * @property stairs The target stair block
+     * @property blockStateModelGenerator The Block Model Generator for your block
      */
     fun createStairs(block: Block, stairs: Block, blockStateModelGenerator: BlockModelGenerators) {
         val texturedModel = TexturedModel.CUBE[block]
@@ -71,6 +80,7 @@ object ModelGenerators {
             texturedModel.mapping,
             blockStateModelGenerator.modelOutput
         )
+        CrabInTheCode.crabDeezNuts("can someone help me up the stairs? thaaaaanks")
         val outerStairs: ResourceLocation = ModelTemplates.STAIRS_OUTER.create(
             stairs,
             texturedModel.mapping,
@@ -88,7 +98,7 @@ object ModelGenerators {
     }
 
     /**
-     * Creates a fence model based off another block, `block:` being the reference block, `fence:` being the target fence, and just call your normal BlockStateModelGenerator after
+     * Creates a fence model based off another block
      *
      * Example:
      * ```kotlin
@@ -98,6 +108,10 @@ object ModelGenerators {
      *     }
      * }
      * ```
+     *
+     * @property block The referenced block
+     * @property fence The target fence block
+     * @property blockStateModelGenerator The Block Model Generator for your block
      */
     fun createFence(block: Block, fence: Block, blockStateModelGenerator: BlockModelGenerators) {
         val texturedModel = TexturedModel.CUBE[block]
@@ -127,7 +141,7 @@ object ModelGenerators {
     }
 
     /**
-     * Creates a fence gate model based off another block, `block:` being the reference block, `fenceGate:` being the target fence gate, and just call your normal BlockStateModelGenerator after
+     * Creates a fence gate model based off another block
      *
      * Example:
      * ```kotlin
@@ -137,6 +151,10 @@ object ModelGenerators {
      *     }
      * }
      * ```
+     *
+     * @property block The referenced block
+     * @property fenceGate The target fence gate
+     * @property blockStateModelGenerator The Block Model Generator for your block
      */
     fun createFenceGate(block: Block, fenceGate: Block, blockStateModelGenerator: BlockModelGenerators) {
         val texturedModel = TexturedModel.CUBE[block]
@@ -174,7 +192,7 @@ object ModelGenerators {
     }
 
     /**
-     * Creates a wall model based off another block, `block:` being the reference block, `wall:` being the target wall, and just call your normal BlockStateModelGenerator after
+     * Creates a wall model based off another block
      *
      * Example:
      * ```kotlin
@@ -184,6 +202,10 @@ object ModelGenerators {
      *     }
      * }
      * ```
+     *
+     * @property block The referenced block
+     * @property wall The target wall
+     * @property blockStateModelGenerator The Block Model Generator for your block
      */
     fun createWall(block: Block, wall: Block, blockStateModelGenerator: BlockModelGenerators) {
         val texturedModel = TexturedModel.CUBE[block]

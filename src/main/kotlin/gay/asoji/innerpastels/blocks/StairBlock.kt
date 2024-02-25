@@ -5,6 +5,5 @@ import net.minecraft.world.level.block.state.BlockState
 
 /**
  * Normal Fence Gate Block class, inheriting from Vanilla's FenceGateBlock
- * @returns [StairBlock]
  */
 class StairBlock(baseBlockState: BlockState, properties: Properties) : StairBlock(baseBlockState, properties)

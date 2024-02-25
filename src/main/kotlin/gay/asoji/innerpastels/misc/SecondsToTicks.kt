@@ -11,5 +11,4 @@ package gay.asoji.innerpastels.misc
  *
  * @return [Int]
  */
-
 fun Int.secondsToTicks() = this * 20

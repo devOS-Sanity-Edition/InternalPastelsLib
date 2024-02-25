@@ -1,5 +1,6 @@
 package gay.asoji.innerpastels.datagen
 
+import gay.asoji.innerpastels.crab.CrabInTheCode
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider
 import net.minecraft.data.recipes.*
 import net.minecraft.data.recipes.RecipeProvider.has
@@ -19,6 +20,28 @@ object RecipeGenerators {
     // is it lengthy? yes! is it verbose? yeah! does it tell you right away what it is? YES! and that helps imo
 
     // Documentation later
+
+    /**
+     * Registers a Smelting recipe for Pastel Glass
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     private val WHITE_PASTEL_GLASS_SMELTABLES: List<ItemLike> = listOf(SofterPastelsBlocks.WHITE_PASTEL_POWDER_BLOCK)
+     *
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerSmeltingPastelGlass(exporter, WHITE_PASTEL_GLASS_SMELTABLES, GlassBlocks.WHITE_GLASS_ITEM, "pastel_glass")
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property smeltableList A [List<ItemLike>] of what can be used as an input item to be smelted down into a resulting [outputPastelGlassItem]
+     * @property outputPastelGlassItem The resulting Glass Item from your input [smeltableList]
+     * @property group A string that defines what group your recipe belongs to
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the smelting recipe for making Pastel Glass
+     */
     fun registerSmeltingPastelGlass(
         exporter: RecipeOutput,
         smeltableList: List<ItemLike>,
@@ -36,6 +59,27 @@ object RecipeGenerators {
         )
     }
 
+    /**
+     * Registers a Smelting recipe for Pastel Hard Candy
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     private val WHITE_PASTEL_HARD_CANDY_SMELTABLES: List<ItemLike> = listOf(SofterPastelsItems.WHITE_TAFFY)
+     *
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerSmeltingPastelHardCandy(exporter, WHITE_PASTEL_HARD_CANDY_SMELTABLES, SofterPastelsItems.WHITE_HARD_CANDY, "pastel_hard_candy")
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property smeltableList A [List<ItemLike>] of what can be used as an input item to be smelted down into a resulting [outputPastelHardCandyItem]
+     * @property outputPastelGlassItem The resulting Pastel Hard Candy Item from your input [smeltableList]
+     * @property group A string that defines what group your recipe belongs to
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the smelting recipe for making Pastel Hard Candy
+     */
     fun registerSmeltingPastelHardCandy(
         exporter: RecipeOutput,
         smeltableList: List<ItemLike>,
@@ -53,11 +97,30 @@ object RecipeGenerators {
         )
     }
 
+    /**
+     * Registers a Shapeless Crafting Recipe for Pastel Powder Block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelPowderBlock(exporter, SofterPastelsItems.WHITE_POWDER, SofterPastelsBlocks.WHITE_PASTEL_POWDER_BLOCK)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelPowderItem The Powder Item used for input
+     * @property outputPastelPowderBlock The Pastel Powder Block outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Powder Block
+     */
     fun registerCraftingPastelPowderBlock(
         exporter: RecipeOutput,
         inputPastelPowderItem: ItemLike,
         outputPastelPowderBlock: ItemLike
     ) {
+        CrabInTheCode.crabDeezNuts("snadcastle :3")
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, outputPastelPowderBlock, 8)
             .requires(Items.SAND)
             .requires(Items.SAND)
@@ -75,6 +138,24 @@ object RecipeGenerators {
             .save(exporter)
     }
 
+    /**
+     * Registers a Shaped Crafting Recipe for Pastel Powder Block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelSlabBlock(exporter, SofterPastelsBlocks.WHITE_PASTEL_BLOCK, SofterPastelsBlocks.WHITE_PASTEL_SLAB_BLOCK)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelBlock The Powder Block Item used for input
+     * @property outputPastelSlabBlock The Pastel Slab Block outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Slab Block
+     */
     fun registerCraftingPastelSlabBlock(
         exporter: RecipeOutput,
         inputPastelBlock: ItemLike,
@@ -88,6 +169,24 @@ object RecipeGenerators {
             .save(exporter)
     }
 
+    /**
+     * Registers a Shaped Crafting Recipe for Pastel Stair Block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelStairBlock(exporter, SofterPastelsBlocks.WHITE_PASTEL_BLOCK, SofterPastelsBlocks.WHITE_PASTEL_STAIR_BLOCK)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelBlock The Powder Block Item used for input
+     * @property outputPastelStairBlock The Pastel Stair Block outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Stair Block
+     */
     fun registerCraftingPastelStairBlock(
         exporter: RecipeOutput,
         inputPastelBlock: ItemLike,
@@ -103,6 +202,24 @@ object RecipeGenerators {
             .save(exporter)
     }
 
+    /**
+     * Registers a Shapeless Crafting Recipe for Pastel Wool Block with Vanilla White Wool
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelWoolBlockV(exporter, SofterPastelsItems.WHITE_POWDER, SofterPastelsBlocks.WHITE_PASTEL_WOOL_BLOCK)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelPowderItem The Powder Item used for input
+     * @property outputPastelWoolBlock The Pastel Wool Block outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Wool Block using Vanilla White Wool
+     */
     fun registerCraftingPastelWoolBlockV(
         exporter: RecipeOutput,
         inputPastelPowderItem: ItemLike,
@@ -121,6 +238,24 @@ object RecipeGenerators {
             )
     }
 
+    /**
+     * Registers a Shapeless Crafting Recipe for Pastel Wool Block with White Pastel Wool
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelWoolBlock(exporter, SofterPastelsItems.WHITE_POWDER, SofterPastelsBlocks.WHITE_PASTEL_WOOL_BLOCK)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelPowderItem The Powder Item used for input
+     * @property outputPastelWoolBlock The Pastel Wool Block outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Wool Block using White Pastel Wool
+     */
     fun registerCraftingPastelWoolBlock(
         exporter: RecipeOutput,
         inputPastelPowderItem: ItemLike,
@@ -136,6 +271,24 @@ object RecipeGenerators {
             .save(exporter)
     }
 
+    /**
+     * Registers a Shaped Crafting Recipe for Pastel Carpet Block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelCarpetBlock(exporter, SofterPastelsBlocks.WHITE_PASTEL_WOOL_BLOCK, SofterPastelsBlocks.WHITE_PASTEL_CARPET_BLOCK)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelWoolBlock The Pastel Wool Block Item used for input
+     * @property outputPastelCarpetBlock The Pastel Carpet Block outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Carpet Block
+     */
     fun registerCraftingPastelCarpetBlock(
         exporter: RecipeOutput,
         inputPastelWoolBlock: ItemLike,
@@ -149,6 +302,24 @@ object RecipeGenerators {
             .save(exporter)
     }
 
+    /**
+     * Registers a Shaped Crafting Recipe for Pastel Fence Block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelFenceBlock(exporter, SofterPastelsBlocks.WHITE_PASTEL_BLOCK, SofterPastelsBlocks.WHITE_PASTEL_FENCE_BLOCK)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelBlock The Pastel Block Item used for input
+     * @property outputPastelFenceBlock The Pastel Fence Block outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Fence Block
+     */
     fun registerCraftingPastelFenceBlock(
         exporter: RecipeOutput,
         inputPastelBlock: ItemLike,
@@ -165,6 +336,24 @@ object RecipeGenerators {
             .save(exporter)
     }
 
+    /**
+     * Registers a Shaped Crafting Recipe for Pastel Fence Gate Block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelFenceGateBlock(exporter, SofterPastelsBlocks.WHITE_PASTEL_BLOCK, SofterPastelsBlocks.WHITE_PASTEL_FENCE_GATE_BLOCK)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelBlock The Pastel Block Item used for input
+     * @property outputPastelFenceGateBlock The Pastel Fence Gate Block outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Fence Gate Block
+     */
     fun registerCraftingPastelFenceGateBlock(
         exporter: RecipeOutput,
         inputPastelBlock: ItemLike,
@@ -181,6 +370,24 @@ object RecipeGenerators {
             .save(exporter)
     }
 
+    /**
+     * Registers a Shaped Crafting Recipe for Pastel Wall Block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelWallBlock(exporter, SofterPastelsBlocks.WHITE_PASTEL_BLOCK, SofterPastelsBlocks.WHITE_PASTEL_FENCE_GATE_BLOCK)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelBlock The Pastel Block Item used for input
+     * @property outputPastelWallBlock The Pastel Wall Block outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Wall Block
+     */
     fun registerCraftingPastelWallBlock(
         exporter: RecipeOutput,
         inputPastelBlock: ItemLike,
@@ -195,11 +402,30 @@ object RecipeGenerators {
             .save(exporter)
     }
 
+    /**
+     * Registers a Shaped Crafting Recipe for Pastel Glass Block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelGlassBlock(exporter, SofterPastelsItems.WHITE_POWDER, GlassBlocks.WHITE_GLASS_ITEM)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelPowderItem The Powder Item used for input
+     * @property outputPastelGlassBlock The Pastel Glass Block Item outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Glass Block
+     */
     fun registerCraftingPastelGlassBlock(
         exporter: RecipeOutput,
         inputPastelPowderItem: ItemLike,
         outputPastelGlassBlock: ItemLike
     ) {
+        CrabInTheCode.crabDeezNuts("oooooooo shiny")
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, outputPastelGlassBlock, 8)
             .pattern("AAA")
             .pattern("ABA")
@@ -212,6 +438,24 @@ object RecipeGenerators {
             .save(exporter)
     }
 
+    /**
+     * Registers a Shaped Crafting Recipe for Pastel Glass Pane Block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelGlassPaneBlock(exporter, SofterPastelsItems.WHITE_POWDER, GlassBlocks.WHITE_GLASS_PANE_ITEM)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelPowderItem The Powder Item used for input
+     * @property outputPastelGlassPaneBlock The Pastel Glass Pane Block Item outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Glass Pane Block
+     */
     fun registerCraftingPastelGlassPaneBlock(
         exporter: RecipeOutput,
         inputPastelPowderItem: ItemLike,
@@ -229,6 +473,24 @@ object RecipeGenerators {
             .save(exporter)
     }
 
+    /**
+     * Registers a Shaped Crafting Recipe for Pastel Glass Pane Block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *             registerCraftingPastelGlassPaneRectangleBlock(exporter, GlassBlocks.WHITE_GLASS_ITEM, GlassBlocks.WHITE_GLASS_PANE_ITEM)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelGlassBlockItem The Glass Block used for input
+     * @property outputPastelGlassPaneBlock The Pastel Glass Pane Block Item outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Glass Pane Block
+     */
     fun registerCraftingPastelGlassPaneRectangleBlock(
         exporter: RecipeOutput,
         inputPastelGlassBlockItem: ItemLike,
@@ -247,6 +509,24 @@ object RecipeGenerators {
             )
     }
 
+    /**
+     * Registers a Shapeless Crafting Recipe for Pastel Light Block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelLightBlock(exporter, SofterPastelsItems.WHITE_POWDER, SofterPastelsBlocks.WHITE_PASTEL_LIGHT_BLOCK)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelPowderItem The Powder Item used for input
+     * @property outputPastelLightBlock The Pastel Light Block outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Light Block
+     */
     fun registerCraftingPastelLightBlock(
         exporter: RecipeOutput,
         inputPastelPowderItem: ItemLike,
@@ -261,6 +541,24 @@ object RecipeGenerators {
             .save(exporter)
     }
 
+    /**
+     * Registers a Shapeless Crafting Recipe for Pastel Taffy
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerPastelTaffyItem(exporter, SofterPastelsItems.WHITE_POWDER, SofterPastelsItems.WHITE_TAFFY)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputPastelPowderItem The Powder Item used for input
+     * @property outputTaffyItem The Pastel Taffy Item outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Taffy
+     */
     fun registerPastelTaffyItem(exporter: RecipeOutput, inputPastelPowderItem: ItemLike, outputTaffyItem: ItemLike) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, outputTaffyItem, 4)
             .requires(Items.PAPER)
@@ -275,11 +573,30 @@ object RecipeGenerators {
             .save(exporter)
     }
 
+    /**
+     * Registers a Shaped Crafting Recipe for Pastel Glass Pane Block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsRecipeProvider(output: FabricDataOutput) : FabricRecipeProvider(output) {
+     *     override fun buildRecipes(exporter: RecipeOutput) {
+     *         registerCraftingPastelCottonCandyItem(exporter, SofterPastelsItems.WHITE_POWDER, SofterPastelsItems.WHITE_COTTON_CANDY)
+     *     }
+     * }
+     * ```
+     *
+     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property inputTaffyItem The Taffy used for input
+     * @property outputCottonCandyItem The Cotton Candy Item outputted
+     *
+     * @return A JSON file provided by your Recipe Provider datagen that has the shapeless crafting recipe for making Pastel Cotton Candy
+     */
     fun registerCraftingPastelCottonCandyItem(
         exporter: RecipeOutput,
         inputTaffyItem: ItemLike,
         outputCottonCandyItem: ItemLike
     ) {
+        CrabInTheCode.crabDeezNuts("nom nom nom noms, tasty")
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, outputCottonCandyItem, 2)
             .pattern(" A ")
             .pattern("ABA")

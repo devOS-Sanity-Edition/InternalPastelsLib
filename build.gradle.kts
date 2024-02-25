@@ -25,6 +25,7 @@ group = project.property("maven_group")!!
 
 repositories {
 	maven { url = uri("https://maven.parchmentmc.org") }
+	maven { url = uri("https://mvn.devos.one/snapshots") }
 }
 
 //All dependencies and their versions are in ./gradle/libs.versions.toml
@@ -40,6 +41,9 @@ dependencies {
 	//Fabric
 	modImplementation(libs.fabric.loader)
 	modImplementation(libs.fabric.api)
+
+	include(modImplementation("gay.asoji:fmw:1.0.0+build.8")!!)
+
 
 	dokkaHtmlPlugin(libs.dokka.`as`.java)
 }
@@ -63,6 +67,7 @@ tasks.withType<DokkaTask>().configureEach {
 //		customStyleSheets = listOf(file("my-styles.css"))
 		footerMessage = "(c) 2024 devOS: Sanity Edition, Team Nautical, asoji"
 		separateInheritedMembers = true
+
 //		templatesDir = file("dokka/templates")
 		mergeImplicitExpectActualDeclarations = true
 	}
