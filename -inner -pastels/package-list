@@ -29,6 +29,10 @@ $dokka.location:gay.asoji.innerpastels.blocks/BlockExtensionsKt/registerWoolBloc
 $dokka.location:gay.asoji.innerpastels.blocks/BlockExtensionsKt/registerWoolBlock/net.minecraft.world.level.material.MapColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-block-extensions-kt/register-wool-block.html
 $dokka.location:gay.asoji.innerpastels.blocks/FenceGateBlock///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-fence-gate-block/index.html
 $dokka.location:gay.asoji.innerpastels.blocks/FenceGateBlock/FenceGateBlock/#net.minecraft.world.level.block.state.BlockBehaviour.Properties/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-fence-gate-block/-fence-gate-block.html
+$dokka.location:gay.asoji.innerpastels.blocks/Properties.crab3///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/crab3/index.html
+$dokka.location:gay.asoji.innerpastels.blocks/Properties.crab3/INSTANCE/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/crab3/-i-n-s-t-a-n-c-e.html
+$dokka.location:gay.asoji.innerpastels.blocks/Properties.crab3/crab3/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/crab3/crab3.html
+$dokka.location:gay.asoji.innerpastels.blocks/Properties.crab3/getCrab3/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/crab3/get-crab3.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/index.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/INSTANCE/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/-i-n-s-t-a-n-c-e.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/PastelBlock/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/-pastel-block.html
@@ -50,6 +54,14 @@ $dokka.location:gay.asoji.innerpastels.blocks/Properties/PastelWall/#/PointingTo
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/PastelWool/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/-pastel-wool.html
 $dokka.location:gay.asoji.innerpastels.blocks/StairBlock///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-stair-block/index.html
 $dokka.location:gay.asoji.innerpastels.blocks/StairBlock/StairBlock/#net.minecraft.world.level.block.state.BlockState#net.minecraft.world.level.block.state.BlockBehaviour.Properties/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-stair-block/-stair-block.html
+$dokka.location:gay.asoji.innerpastels.blocks/crab1///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/crab1/index.html
+$dokka.location:gay.asoji.innerpastels.blocks/crab1/INSTANCE/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/crab1/-i-n-s-t-a-n-c-e.html
+$dokka.location:gay.asoji.innerpastels.blocks/crab1/crab2/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/crab1/crab2.html
+$dokka.location:gay.asoji.innerpastels.blocks/crab1/getCrab2/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/crab1/get-crab2.html
+$dokka.location:gay.asoji.innerpastels.crab////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.crab/index.html
+$dokka.location:gay.asoji.innerpastels.crab/CrabInTheCode///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.crab/-crab-in-the-code/index.html
+$dokka.location:gay.asoji.innerpastels.crab/CrabInTheCode/INSTANCE/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.crab/-crab-in-the-code/-i-n-s-t-a-n-c-e.html
+$dokka.location:gay.asoji.innerpastels.crab/CrabInTheCode/crabDeezNuts/#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.crab/-crab-in-the-code/crab-deez-nuts.html
 $dokka.location:gay.asoji.innerpastels.datagen////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/index.html
 $dokka.location:gay.asoji.innerpastels.datagen/ModelGenerators///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-model-generators/index.html
 $dokka.location:gay.asoji.innerpastels.datagen/ModelGenerators/INSTANCE/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-model-generators/-i-n-s-t-a-n-c-e.html
@@ -209,9 +221,12 @@ $dokka.location:gay.asoji.innerpastels.tags/InnerPastelsItemTags/getWOOLS/#/Poin
 $dokka.location:gay.asoji.innerpastels////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/index.html
 $dokka.location:gay.asoji.innerpastels/InnerPastels///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/-inner-pastels/index.html
 $dokka.location:gay.asoji.innerpastels/InnerPastels/INSTANCE/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/-inner-pastels/-i-n-s-t-a-n-c-e.html
+$dokka.location:gay.asoji.innerpastels/InnerPastels/LOGGER/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/-inner-pastels/-l-o-g-g-e-r.html
+$dokka.location:gay.asoji.innerpastels/InnerPastels/getLOGGER/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/-inner-pastels/get-l-o-g-g-e-r.html
 $dokka.location:gay.asoji.innerpastels/InnerPastels/onInitialize/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/-inner-pastels/on-initialize.html
 gay.asoji.innerpastels
 gay.asoji.innerpastels.blocks
+gay.asoji.innerpastels.crab
 gay.asoji.innerpastels.datagen
 gay.asoji.innerpastels.foods
 gay.asoji.innerpastels.items
