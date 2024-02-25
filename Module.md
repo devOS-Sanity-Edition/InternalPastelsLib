@@ -13,26 +13,36 @@ src/main/kotlin
     └───tags
 ```
 
+If you could think of a way to make all the package descriptors a bit better at explaining what they are, please feel free to make a PR with the `documentation` tag. plsandthx
+
+# Package gay.asoji.innerpastels
+
+Main root package
+
+# Package gay.asoji.innerpastels.crab
+
+Crab in the code 🦀
+
 # Package gay.asoji.innerpastels.blocks
 
-TODO: work on this
+Custom Block classes or Block helpers
 
 # Package gay.asoji.innerpastels.datagen
 
-TODO: work on this
+Helpers for Data Generation
 
 # Package gay.asoji.innerpastels.foods
 
-TODO: work on this
+Helpers for Food related code
 
 # Package gay.asoji.innerpastels.items
 
-TODO: work on this
+Custom Item classes or Item Helpers
 
 # Package gay.asoji.innerpastels.misc
 
-TODO: work on this
+Any code or helpers that don't fall under any clear category
 
 # Package gay.asoji.innerpastels.tags
 
-TODO: work on this
+Custom Block and Item tags
