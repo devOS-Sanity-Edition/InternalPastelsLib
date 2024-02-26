@@ -35,8 +35,8 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
-     * @property smeltableList A [List<ItemLike>] of what can be used as an input item to be smelted down into a resulting [outputPastelGlassItem]
+     * @property exporter The RecipeOutput used by your Recipe Provider
+     * @property smeltableList A List of what can be used as an input item to be smelted down into a resulting [outputPastelGlassItem]
      * @property outputPastelGlassItem The resulting Glass Item from your input [smeltableList]
      * @property group A string that defines what group your recipe belongs to
      *
@@ -73,7 +73,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property smeltableList A [List<ItemLike>] of what can be used as an input item to be smelted down into a resulting [outputPastelHardCandyItem]
      * @property outputPastelGlassItem The resulting Pastel Hard Candy Item from your input [smeltableList]
      * @property group A string that defines what group your recipe belongs to
@@ -109,7 +109,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelPowderItem The Powder Item used for input
      * @property outputPastelPowderBlock The Pastel Powder Block outputted
      *
@@ -150,7 +150,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelBlock The Powder Block Item used for input
      * @property outputPastelSlabBlock The Pastel Slab Block outputted
      *
@@ -181,7 +181,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelBlock The Powder Block Item used for input
      * @property outputPastelStairBlock The Pastel Stair Block outputted
      *
@@ -214,7 +214,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelPowderItem The Powder Item used for input
      * @property outputPastelWoolBlock The Pastel Wool Block outputted
      *
@@ -250,7 +250,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelPowderItem The Powder Item used for input
      * @property outputPastelWoolBlock The Pastel Wool Block outputted
      *
@@ -283,7 +283,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelWoolBlock The Pastel Wool Block Item used for input
      * @property outputPastelCarpetBlock The Pastel Carpet Block outputted
      *
@@ -314,7 +314,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelBlock The Pastel Block Item used for input
      * @property outputPastelFenceBlock The Pastel Fence Block outputted
      *
@@ -348,7 +348,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelBlock The Pastel Block Item used for input
      * @property outputPastelFenceGateBlock The Pastel Fence Gate Block outputted
      *
@@ -382,7 +382,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelBlock The Pastel Block Item used for input
      * @property outputPastelWallBlock The Pastel Wall Block outputted
      *
@@ -414,7 +414,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelPowderItem The Powder Item used for input
      * @property outputPastelGlassBlock The Pastel Glass Block Item outputted
      *
@@ -450,7 +450,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelPowderItem The Powder Item used for input
      * @property outputPastelGlassPaneBlock The Pastel Glass Pane Block Item outputted
      *
@@ -485,7 +485,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelGlassBlockItem The Glass Block used for input
      * @property outputPastelGlassPaneBlock The Pastel Glass Pane Block Item outputted
      *
@@ -521,7 +521,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelPowderItem The Powder Item used for input
      * @property outputPastelLightBlock The Pastel Light Block outputted
      *
@@ -553,7 +553,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputPastelPowderItem The Powder Item used for input
      * @property outputTaffyItem The Pastel Taffy Item outputted
      *
@@ -585,7 +585,7 @@ object RecipeGenerators {
      * }
      * ```
      *
-     * @property exporter The [RecipeOutput] used by your Recipe Provider
+     * @property exporter The RecipeOutput used by your Recipe Provider
      * @property inputTaffyItem The Taffy used for input
      * @property outputCottonCandyItem The Cotton Candy Item outputted
      *

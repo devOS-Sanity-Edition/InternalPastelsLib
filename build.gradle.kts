@@ -43,9 +43,6 @@ dependencies {
 	modImplementation(libs.fabric.api)
 
 	include(modImplementation("gay.asoji:fmw:1.0.0+build.8")!!)
-
-
-	dokkaHtmlPlugin(libs.dokka.`as`.java)
 }
 
 tasks.withType<DokkaTask>().configureEach {

@@ -6,6 +6,8 @@ import net.minecraft.client.resources.model.Material
 import net.minecraft.world.level.block.*
 import net.minecraft.world.level.block.state.BlockBehaviour
 
+//TODO: Replace all of the Functions with Values
+
 /**
  * A list of Block Properties, mostly copyOf's, to be used with making new blocks.
  */
@@ -129,6 +131,9 @@ object Properties {
         return Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS))
     }
 
+    /**
+     * @suppress
+     */
     object crab3 { val crab3 = CrabInTheCode.crabDeezNuts("according to all unknown laws of aviation, crabs can float and snip your hair off") }
 
     /**

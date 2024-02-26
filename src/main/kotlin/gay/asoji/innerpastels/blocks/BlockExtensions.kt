@@ -22,7 +22,9 @@ import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.*
 import net.minecraft.world.level.material.MapColor
 
-
+/**
+ * Block Extensions code for registering Blocks
+ */
 
 // a lot of this was written by storm so if there's shit that could be reused/abstracted, yell at her, not me - asoji
 
@@ -51,7 +53,7 @@ fun Block.registerBlockItem(modID: String, name: String): BlockItem = Registry.r
  * Registers a block & item to the Minecraft registry with the resource location set to the Mod ID
  * @property modID The namespace for your mod to be used with, like `SofterPastels.MOD_ID`
  * @property name the ID of the block
- * @return [Block]
+ * @return [Block] and [BlockItem]
  */
 fun Block.registerBlockWithItem(modID: String, name: String): Block {
     this.registerBlockItem(modID, name)
@@ -242,6 +244,9 @@ fun DyeColor.registerLightBlock(modID: String, name: String): Block = Block(Past
  */
 fun MapColor.registerLightBlock(modID: String, name: String): Block = Block(PastelLight().mapColor(this)).registerBlockWithItem(modID, name)
 
+/**
+ * @suppress
+ */
 object crab1 { val crab2 = CrabInTheCode.crabDeezNuts("hey, it felt comfortable here between the light and the carpet") }
 
 /**

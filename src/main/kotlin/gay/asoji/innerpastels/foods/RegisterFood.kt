@@ -20,11 +20,11 @@ object RegisterFood {
      * @property modID The namespace for your mod to be used with, like `SofterPastels.MOD_ID`
      * @property name Candy's Item ID [like `white_taffy`]
      * @property candyTranslationString Type of candy for hunger translation string
-     * @property nutrition Candy's nutrition value in [Int]
-     * @property saturation Candy's saturation value in [Int]
+     * @property nutrition Candy's nutrition value
+     * @property saturation Candy's saturation value
      * @property effect [MobEffect] tied to eating the candy
      * @property amplifier Potency of said [MobEffect] after eating it
-     * @property seconds Amount of time the effect lasts in [Int] seconds
+     * @property seconds Amount of time the effect lasts
      */
     fun registerCandy(
         modID: String,
@@ -57,8 +57,8 @@ object RegisterFood {
      * @property modID The namespace for your mod to be used with, like `SofterPastels.MOD_ID`
      * @property name Candy's Item ID [like `white_taffy`]
      * @property candyTranslationString Type of candy for hunger translation string
-     * @property nutrition Candy's nutrition value in [Int]
-     * @property saturation Candy's saturation value in [Int]
+     * @property nutrition Candy's nutrition value
+     * @property saturation Candy's saturation value
      *
      * @return [CandyTooltipItem]
      */
@@ -84,7 +84,7 @@ object RegisterFood {
      * @property modID The namespace for your mod to be used with, like `SofterPastels.MOD_ID`
      * @property name Candy's Item ID [like `white_taffy`]
      * @property effect The corresponding [MobEffect] obtained when the candy is eaten
-     * @property seconds Amount of seconds in [Int] applied to the tied [effect]
+     * @property seconds Amount of seconds applied to the tied [effect]
      *
      * @return Taffy [registerCandy] with a defined Mod ID, Item ID, Mob Effect when eaten for a certain amount of seconds
      */
@@ -110,7 +110,7 @@ object RegisterFood {
      * @property modID The namespace for your mod to be used with, like `SofterPastels.MOD_ID`
      * @property name Candy's Item ID [like `white_cotton_candy`]
      * @property effect The corresponding [MobEffect] obtained when the candy is eaten
-     * @property seconds Amount of seconds in [Int] applied to the tied [effect]
+     * @property seconds Amount of seconds applied to the tied [effect]
      *
      * @return Cotton Candy [registerCandy] with a defined Mod ID, Item ID, Mob Effect when eaten for a certain amount of seconds
      */
@@ -136,7 +136,7 @@ object RegisterFood {
      * @property modID The namespace for your mod to be used with, like `SofterPastels.MOD_ID`
      * @property name Candy's Item ID [like `white_hard_candy`]
      * @property effect The corresponding [MobEffect] obtained when the candy is eaten
-     * @property seconds Amount of seconds in [Int] applied to the tied [effect]
+     * @property seconds Amount of seconds applied to the tied [effect]
      *
      * @return Hard Candy [registerCandy] with a defined Mod ID, Item ID, Mob Effect when eaten for a certain amount of seconds
      */

@@ -17,7 +17,9 @@ import java.util.*
  * @property CandyTranslationString
  */
 class CandyTooltipItem(properties: Properties, val candyTranslationString: CandyTranslationString) : Item(properties) {
-    // Overrides Item's `appendHoverText` to add more things in it, notably Hunger translation string, tied Mob Effect [if there is one], and Always Eat string
+    /**
+     * Overrides Item's `appendHoverText` to add more things in it, notably Hunger translation string, tied Mob Effect [if there is one], and Always Eat string
+     */
     override fun appendHoverText(itemStack: ItemStack, level: Level?, list: MutableList<Component>, tooltipFlag: TooltipFlag) {
         list.add(Component.translatable(candyTranslationString.candyHungerString))
 
