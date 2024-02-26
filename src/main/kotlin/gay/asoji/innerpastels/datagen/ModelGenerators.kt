@@ -1,5 +1,6 @@
 package gay.asoji.innerpastels.datagen
 
+import gay.asoji.innerpastels.crab.CrabInTheCode
 import net.minecraft.data.models.BlockModelGenerators
 import net.minecraft.data.models.model.ModelLocationUtils
 import net.minecraft.data.models.model.ModelTemplates
@@ -7,7 +8,26 @@ import net.minecraft.data.models.model.TexturedModel
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.block.Block
 
+/**
+ * Model Generators used for Model Data Generation, creating required JSON models for certain blocks, meant to be used with your ModelProvider datagen.
+ */
 object ModelGenerators {
+    /**
+     * Creates a slab model based off another block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsModelProvider(generator: FabricDataOutput) : FabricModelProvider(generator) {
+     *     override fun generateBlockStateModels(blockStateModelGenerator: BlockModelGenerators) {
+     *         createSlabs(SofterPastelsBlocks.WHITE_PASTEL_BLOCK, SofterPastelsBlocks.WHITE_PASTEL_SLAB_BLOCK, blockStateModelGenerator)
+     *     }
+     * }
+     * ```
+     *
+     * @property block The referenced block
+     * @property slab The target slab block
+     * @property blockStateModelGenerator The Block Model Generator for your block
+     */
     fun createSlabs(block: Block, slab: Block, blockStateModelGenerator: BlockModelGenerators) {
         val texturedModel = TexturedModel.CUBE[block]
         val fullSlabModel = ModelLocationUtils.getModelLocation(block)
@@ -32,6 +52,22 @@ object ModelGenerators {
         blockStateModelGenerator.delegateItemModel(slab, bottomSlab)
     }
 
+    /**
+     * Creates a stair model based off another block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsModelProvider(generator: FabricDataOutput) : FabricModelProvider(generator) {
+     *     override fun generateBlockStateModels(blockStateModelGenerator: BlockModelGenerators) {
+     *         createStairs(SofterPastelsBlocks.WHITE_PASTEL_BLOCK, SofterPastelsBlocks.WHITE_PASTEL_STAIR_BLOCK, blockStateModelGenerator)
+     *     }
+     * }
+     * ```
+     *
+     * @property block The referenced block
+     * @property stairs The target stair block
+     * @property blockStateModelGenerator The Block Model Generator for your block
+     */
     fun createStairs(block: Block, stairs: Block, blockStateModelGenerator: BlockModelGenerators) {
         val texturedModel = TexturedModel.CUBE[block]
         val innerStairs: ResourceLocation = ModelTemplates.STAIRS_INNER.create(
@@ -44,6 +80,7 @@ object ModelGenerators {
             texturedModel.mapping,
             blockStateModelGenerator.modelOutput
         )
+        CrabInTheCode.crabDeezNuts("can someone help me up the stairs? thaaaaanks")
         val outerStairs: ResourceLocation = ModelTemplates.STAIRS_OUTER.create(
             stairs,
             texturedModel.mapping,
@@ -60,6 +97,22 @@ object ModelGenerators {
         blockStateModelGenerator.delegateItemModel(stairs, straightStairs)
     }
 
+    /**
+     * Creates a fence model based off another block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsModelProvider(generator: FabricDataOutput) : FabricModelProvider(generator) {
+     *     override fun generateBlockStateModels(blockStateModelGenerator: BlockModelGenerators) {
+     *         createFence(SofterPastelsBlocks.WHITE_PASTEL_BLOCK, SofterPastelsBlocks.WHITE_PASTEL_FENCE_BLOCK, blockStateModelGenerator)
+     *     }
+     * }
+     * ```
+     *
+     * @property block The referenced block
+     * @property fence The target fence block
+     * @property blockStateModelGenerator The Block Model Generator for your block
+     */
     fun createFence(block: Block, fence: Block, blockStateModelGenerator: BlockModelGenerators) {
         val texturedModel = TexturedModel.CUBE[block]
         val fencePost: ResourceLocation = ModelTemplates.FENCE_POST.create(
@@ -87,6 +140,22 @@ object ModelGenerators {
         blockStateModelGenerator.delegateItemModel(fence, fenceInventoryModel)
     }
 
+    /**
+     * Creates a fence gate model based off another block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsModelProvider(generator: FabricDataOutput) : FabricModelProvider(generator) {
+     *     override fun generateBlockStateModels(blockStateModelGenerator: BlockModelGenerators) {
+     *         createFenceGate(SofterPastelsBlocks.WHITE_PASTEL_BLOCK, SofterPastelsBlocks.WHITE_PASTEL_FENCE_GATE_BLOCK, blockStateModelGenerator)
+     *     }
+     * }
+     * ```
+     *
+     * @property block The referenced block
+     * @property fenceGate The target fence gate
+     * @property blockStateModelGenerator The Block Model Generator for your block
+     */
     fun createFenceGate(block: Block, fenceGate: Block, blockStateModelGenerator: BlockModelGenerators) {
         val texturedModel = TexturedModel.CUBE[block]
         val fenceGateOpen: ResourceLocation = ModelTemplates.FENCE_GATE_OPEN.create(
@@ -122,6 +191,22 @@ object ModelGenerators {
         blockStateModelGenerator.delegateItemModel(fenceGate, fenceGateClosed)
     }
 
+    /**
+     * Creates a wall model based off another block
+     *
+     * Example:
+     * ```kotlin
+     * class SofterPastelsModelProvider(generator: FabricDataOutput) : FabricModelProvider(generator) {
+     *     override fun generateBlockStateModels(blockStateModelGenerator: BlockModelGenerators) {
+     *         createWall(SofterPastelsBlocks.WHITE_PASTEL_BLOCK, SofterPastelsBlocks.WHITE_PASTEL_WALL_BLOCK, blockStateModelGenerator)
+     *     }
+     * }
+     * ```
+     *
+     * @property block The referenced block
+     * @property wall The target wall
+     * @property blockStateModelGenerator The Block Model Generator for your block
+     */
     fun createWall(block: Block, wall: Block, blockStateModelGenerator: BlockModelGenerators) {
         val texturedModel = TexturedModel.CUBE[block]
         val wallPost: ResourceLocation = ModelTemplates.WALL_POST.create(

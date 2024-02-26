@@ -1,6 +1,7 @@
 import org.jetbrains.dokka.base.DokkaBase
 import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.dokka.base.DokkaBaseConfiguration
+import java.net.URL
 
 buildscript {
 	dependencies {
@@ -24,6 +25,7 @@ group = project.property("maven_group")!!
 
 repositories {
 	maven { url = uri("https://maven.parchmentmc.org") }
+	maven { url = uri("https://mvn.devos.one/snapshots") }
 }
 
 //All dependencies and their versions are in ./gradle/libs.versions.toml
@@ -40,17 +42,31 @@ dependencies {
 	modImplementation(libs.fabric.loader)
 	modImplementation(libs.fabric.api)
 
-	dokkaHtmlPlugin(libs.dokka.`as`.java)
+	include(modImplementation("gay.asoji:fmw:1.0.0+build.8")!!)
 }
 
 tasks.withType<DokkaTask>().configureEach {
+	dokkaSourceSets {
+		named("main") {
+			moduleName.set("Inner Pastels")
+
+			includes.from("Module.md")
+
+			sourceLink {
+				localDirectory.set(file("src/main/kotlin"))
+				remoteUrl.set(URL("http://github.com/devOS-Sanity-Edition/InnerPastels/tree/main/" + "src/main/kotlin"))
+				remoteLineSuffix.set("#L")
+			}
+		}
+	}
 	pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
 //		customAssets = listOf(file("my-image.png"))
 //		customStyleSheets = listOf(file("my-styles.css"))
-		footerMessage = "(c) 2024 asoji"
-		separateInheritedMembers = false
+		footerMessage = "(c) 2024 devOS: Sanity Edition, Team Nautical, asoji"
+		separateInheritedMembers = true
+
 //		templatesDir = file("dokka/templates")
-		mergeImplicitExpectActualDeclarations = false
+		mergeImplicitExpectActualDeclarations = true
 	}
 }
 

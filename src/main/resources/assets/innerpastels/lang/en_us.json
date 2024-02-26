@@ -1,5 +1,7 @@
 {
-  "item.innerpastels.candies.hunger.description": "§61.0 x Hunger",
+  "item.innerpastels.candies.hunger.description.taffy": "§61.0 x Hunger",
+  "item.innerpastels.candies.hunger.description.cotton": "§61.5 x Hunger",
+  "item.innerpastels.candies.hunger.description.hard": "§61.5 x Hunger",
   "item.innerpastels.candies.hunger.alwayseat": "§aYou can always gulp these down!",
 
   "tag.block.innerpastels.carpets": "Carpets",

@@ -5,7 +5,7 @@ fabric-loader = "0.15.3"
 fabric-api = "0.95.4+1.20.4"
 fabric_language_kotlin = "1.10.17+kotlin.1.9.22"
 
-dokka_as_java = "1.9.10"
+dokka = "1.9.10"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
@@ -13,7 +13,8 @@ fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-l
 fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
 fabric_language_kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabric_language_kotlin" }
 
-dokka_as_java = { module = "org.jetbrains.dokka:kotlin-as-java-plugin", version.ref = "dokka_as_java" }
+dokka_as_java = { module = "org.jetbrains.dokka:kotlin-as-java-plugin", version.ref = "dokka" }
+dokka_versioning = { module = "org.jetbrains.dokka:versioning-plugin", version.ref = "dokka" }
 
 [plugins]
 grgit = { id = "org.ajoberstar.grgit", version = "5.2.1"}
