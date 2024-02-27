@@ -106,6 +106,8 @@ $dokka.location:gay.asoji.innerpastels.misc/CandyTranslationString/candyHungerSt
 $dokka.location:gay.asoji.innerpastels.misc/CandyTranslationString/entries/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.misc/-candy-translation-string/entries.html
 $dokka.location:gay.asoji.innerpastels.misc/CandyTranslationString/valueOf/#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.misc/-candy-translation-string/value-of.html
 $dokka.location:gay.asoji.innerpastels.misc/CandyTranslationString/values/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.misc/-candy-translation-string/values.html
+$dokka.location:gay.asoji.innerpastels.misc/DevDisclaimer///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.misc/-dev-disclaimer/index.html
+$dokka.location:gay.asoji.innerpastels.misc/DevDisclaimer/init/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.misc/-dev-disclaimer/init.html
 $dokka.location:gay.asoji.innerpastels.tags////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.tags/index.html
 $dokka.location:gay.asoji.innerpastels.tags/InnerPastelsBlockTags///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.tags/-inner-pastels-block-tags/index.html
 $dokka.location:gay.asoji.innerpastels.tags/InnerPastelsBlockTags/CARPETS/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.tags/-inner-pastels-block-tags/-c-a-r-p-e-t-s.html
@@ -156,7 +158,10 @@ $dokka.location:gay.asoji.innerpastels.tags/InnerPastelsItemTags/WOOLS/#/Pointin
 $dokka.location:gay.asoji.innerpastels////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/index.html
 $dokka.location:gay.asoji.innerpastels/InnerPastels///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/-inner-pastels/index.html
 $dokka.location:gay.asoji.innerpastels/InnerPastels/LOGGER/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/-inner-pastels/-l-o-g-g-e-r.html
+$dokka.location:gay.asoji.innerpastels/InnerPastels/MOD_ID/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/-inner-pastels/-m-o-d_-i-d.html
 $dokka.location:gay.asoji.innerpastels/InnerPastels/onInitialize/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/-inner-pastels/on-initialize.html
+$dokka.location:gay.asoji.innerpastels/InnerPastels/otherPastelMods/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/-inner-pastels/other-pastel-mods.html
+$dokka.location:gay.asoji.innerpastels/InnerPastels/registerMods/#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels/-inner-pastels/register-mods.html
 gay.asoji.innerpastels
 gay.asoji.innerpastels.blocks
 gay.asoji.innerpastels.crab
