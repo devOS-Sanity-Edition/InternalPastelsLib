@@ -6,8 +6,6 @@ import net.minecraft.client.resources.model.Material
 import net.minecraft.world.level.block.*
 import net.minecraft.world.level.block.state.BlockBehaviour
 
-//TODO: Replace all of the Functions with Values
-
 /**
  * A list of Block Properties, mostly copyOf's, to be used with making new blocks.
  */

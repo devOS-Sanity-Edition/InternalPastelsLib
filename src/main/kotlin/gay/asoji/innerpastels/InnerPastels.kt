@@ -14,9 +14,15 @@ import org.apache.logging.log4j.Logger
  * @version 1.0.1
  */
 object InnerPastels : ModInitializer {
-    val LOGGER: Logger = LogManager.getLogger(FMW.getName("innerpastels"))
+    val MOD_ID = "innerpastels"
+    val otherPastelMods = mutableListOf<String>()
+
+    fun registerMods(id: String) {
+        otherPastelMods.add(id)
+    }
+
+    val LOGGER: Logger = LogManager.getLogger(FMW.getName(MOD_ID))
     override fun onInitialize() {
         CrabInTheCode.crabDeezNuts("oh hello fren!")
     }
-
 }
