@@ -1,7 +1,9 @@
+import org.jetbrains.dokka.DokkaVersion
 import org.jetbrains.dokka.base.DokkaBase
 import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.dokka.base.DokkaBaseConfiguration
 import java.net.URL
+
 
 buildscript {
 	dependencies {
@@ -43,12 +45,15 @@ dependencies {
 	modImplementation(libs.fabric.api)
 
 	include(modImplementation("gay.asoji:fmw:1.0.0+build.8")!!)
+
+	dokkaPlugin(libs.dokka.versioning)
 }
 
 tasks.withType<DokkaTask>().configureEach {
 	dokkaSourceSets {
 		named("main") {
 			moduleName.set("Inner Pastels")
+			moduleVersion.set(version.toString())
 
 			includes.from("Module.md")
 
