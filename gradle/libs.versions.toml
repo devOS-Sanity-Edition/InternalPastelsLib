@@ -13,9 +13,6 @@ fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-l
 fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
 fabric_language_kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabric_language_kotlin" }
 
-dokka_as_java = { module = "org.jetbrains.dokka:kotlin-as-java-plugin", version.ref = "dokka" }
-dokka_versioning = { module = "org.jetbrains.dokka:versioning-plugin", version.ref = "dokka" }
-
 [plugins]
 grgit = { id = "org.ajoberstar.grgit", version = "5.2.1"}
 fabric_loom = { id = "fabric-loom", version = "1.5-SNAPSHOT" }
