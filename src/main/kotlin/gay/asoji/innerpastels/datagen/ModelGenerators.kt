@@ -4,9 +4,11 @@ import gay.asoji.innerpastels.crab.CrabInTheCode
 import net.minecraft.data.models.BlockModelGenerators
 import net.minecraft.data.models.model.ModelLocationUtils
 import net.minecraft.data.models.model.ModelTemplates
+import net.minecraft.data.models.model.TextureMapping
 import net.minecraft.data.models.model.TexturedModel
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.RotatedPillarBlock
 
 /**
  * Model Generators used for Model Data Generation, creating required JSON models for certain blocks, meant to be used with your ModelProvider datagen.
@@ -238,5 +240,22 @@ object ModelGenerators {
             blockStateModelGenerator.modelOutput
         )
         blockStateModelGenerator.delegateItemModel(wall, wallInventoryModel)
+    }
+
+    fun createPillar(pillarBlock: RotatedPillarBlock, blockStateModelGenerator: BlockModelGenerators) {
+        val texture = TextureMapping.logColumn(pillarBlock)
+        val pillarMain: ResourceLocation = ModelTemplates.CUBE_COLUMN.create(
+            pillarBlock,
+            texture,
+            blockStateModelGenerator.modelOutput
+        )
+        val pillarHorizontal: ResourceLocation = ModelTemplates.CUBE_COLUMN_HORIZONTAL.create(
+            pillarBlock,
+            texture,
+            blockStateModelGenerator.modelOutput
+        )
+        blockStateModelGenerator.blockStateOutput.accept(
+            BlockModelGenerators.createRotatedPillarWithHorizontalVariant(pillarBlock, pillarMain, pillarHorizontal)
+        )
     }
 }

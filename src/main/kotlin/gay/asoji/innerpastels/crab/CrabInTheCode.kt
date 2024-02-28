@@ -2,7 +2,6 @@ package gay.asoji.innerpastels.crab
 
 import com.mojang.blaze3d.Blaze3D
 import gay.asoji.innerpastels.InnerPastels
-import gay.asoji.innerpastels.blocks.crab1
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 

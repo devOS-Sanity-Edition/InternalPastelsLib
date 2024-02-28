@@ -2,8 +2,9 @@ package gay.asoji.innerpastels.blocks
 
 import gay.asoji.innerpastels.crab.CrabInTheCode
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
-import net.minecraft.client.resources.model.Material
-import net.minecraft.world.level.block.*
+import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.Blocks
+import net.minecraft.world.level.block.LeavesBlock
 import net.minecraft.world.level.block.state.BlockBehaviour
 
 /**
