@@ -7,6 +7,7 @@ import gay.asoji.innerpastels.blocks.Properties.PastelFenceGate
 import gay.asoji.innerpastels.blocks.Properties.PastelGlass
 import gay.asoji.innerpastels.blocks.Properties.PastelGlassPane
 import gay.asoji.innerpastels.blocks.Properties.PastelLight
+import gay.asoji.innerpastels.blocks.Properties.PastelLogs
 import gay.asoji.innerpastels.blocks.Properties.PastelPowder
 import gay.asoji.innerpastels.blocks.Properties.PastelSlab
 import gay.asoji.innerpastels.blocks.Properties.PastelStair
@@ -266,3 +267,13 @@ fun DyeColor.registerCarpetBlock(modID: String, name: String): Block =
  */
 fun MapColor.registerCarpetBlock(modID: String, name: String): Block =
     CarpetBlock(PastelCarpet().mapColor(this)).registerBlockWithItem(modID, name)
+
+/**
+ * Registers the pastel log blocks with an accompanying item with a chosen [MapColor] to be shown on a map\
+ * @property modID The namespace for your mod to be used with, like `SofterPastels.MOD_ID`
+ * @property name the ID of the block
+ * @return [RotatedPillarBlock]
+ */
+fun MapColor.registerLogBlock(modID: String, name: String): Block =
+    RotatedPillarBlock(PastelLogs().mapColor(this)).registerBlockWithItem(modID, name)
+

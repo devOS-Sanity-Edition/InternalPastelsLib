@@ -118,8 +118,8 @@ object Properties {
     /**
      * Default properties for a Pastel Log, being a copy of OAK_LOG
      */
-    fun PastelLogs(): Block {
-        return RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG))
+    fun PastelLogs(): BlockBehaviour.Properties {
+        return FabricBlockSettings.copyOf(Blocks.OAK_LOG)
     }
 
     /**
