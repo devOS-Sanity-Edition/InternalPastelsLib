@@ -107,13 +107,11 @@ object Properties {
     /**
      * Default properties for a Pastel Leaves, being a copy of OAK_LEAVES
      */
-    fun PastelLeaves(): LeavesBlock {
-        return LeavesBlock(
-            FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)
-                .nonOpaque()
-                .blockVision(Blocks::never)
-                .suffocates(Blocks::never)
-        )
+    fun PastelLeaves(): BlockBehaviour.Properties {
+        return FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)
+            .nonOpaque()
+            .blockVision(Blocks::never)
+            .suffocates(Blocks::never)
     }
 
     /**
@@ -126,8 +124,8 @@ object Properties {
     /**
      * Default properties for a Pastel Plank, being a copy of OAK_PLANKS
      */
-    fun PastelPlanks(): Block {
-        return Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS))
+    fun PastelPlanks(): BlockBehaviour.Properties {
+        return FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)
     }
 
     /**
@@ -138,7 +136,7 @@ object Properties {
     /**
      * Default properties for a Pastel Sand, being a copy of SAND
      */
-    fun PastelSand(): Block {
-        return Block(FabricBlockSettings.copyOf(Blocks.SAND))
+    fun PastelSand(): BlockBehaviour.Properties {
+        return FabricBlockSettings.copyOf(Blocks.SAND)
     }
 }

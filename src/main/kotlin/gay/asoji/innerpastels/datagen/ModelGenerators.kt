@@ -2,13 +2,11 @@ package gay.asoji.innerpastels.datagen
 
 import gay.asoji.innerpastels.crab.CrabInTheCode
 import net.minecraft.data.models.BlockModelGenerators
-import net.minecraft.data.models.model.ModelLocationUtils
-import net.minecraft.data.models.model.ModelTemplates
-import net.minecraft.data.models.model.TextureMapping
-import net.minecraft.data.models.model.TexturedModel
+import net.minecraft.data.models.model.*
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.RotatedPillarBlock
+import java.util.*
 
 /**
  * Model Generators used for Model Data Generation, creating required JSON models for certain blocks, meant to be used with your ModelProvider datagen.
@@ -242,6 +240,21 @@ object ModelGenerators {
         blockStateModelGenerator.delegateItemModel(wall, wallInventoryModel)
     }
 
+    /**
+     * Creates a pillar model
+     *
+     * Example:
+     * ```kotlin
+     * class DesolatedPastelsModelProvider(generator: FabricDataOutput) : FabricModelProvider(generator) {
+     *     override fun generateBlockStateModels(blockStateModelGenerator: BlockModelGenerators) {
+     *         ModelGenerators.createPillar(DesolatedPastelsBlocks.LIGHT_GREEN_LOG as RotatedPillarBlock, blockStateModelGenerator)
+     *     }
+     * }
+     * ```
+     *
+     * @property pillarBlock The target pillar block
+     * @property blockStateModelGenerator The Block Model Generator for your block
+     */
     fun createPillar(pillarBlock: RotatedPillarBlock, blockStateModelGenerator: BlockModelGenerators) {
         val texture = TextureMapping.logColumn(pillarBlock)
         val pillarMain: ResourceLocation = ModelTemplates.CUBE_COLUMN.create(
