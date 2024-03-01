@@ -53,6 +53,13 @@ $dokka.location:gay.asoji.innerpastels.crab////PointingToDeclaration/-inner -pa
 $dokka.location:gay.asoji.innerpastels.crab/CrabInTheCode///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.crab/-crab-in-the-code/index.html
 $dokka.location:gay.asoji.innerpastels.crab/CrabInTheCode/crabDeezNuts/#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.crab/-crab-in-the-code/crab-deez-nuts.html
 $dokka.location:gay.asoji.innerpastels.datagen////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/index.html
+$dokka.location:gay.asoji.innerpastels.datagen/CustomModelTemplates///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-custom-model-templates/index.html
+$dokka.location:gay.asoji.innerpastels.datagen/CustomModelTemplates/createCustomBlockModel/#kotlin.String#kotlin.String#kotlin.String#net.minecraft.data.models.model.TextureSlot/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-custom-model-templates/create-custom-block-model.html
+$dokka.location:gay.asoji.innerpastels.datagen/CustomModelTemplates/createCustomBlockModel/#kotlin.String#kotlin.String#net.minecraft.data.models.model.TextureSlot/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-custom-model-templates/create-custom-block-model.html
+$dokka.location:gay.asoji.innerpastels.datagen/CustomModelTemplates/createCustomBlockModel/#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-custom-model-templates/create-custom-block-model.html
+$dokka.location:gay.asoji.innerpastels.datagen/CustomModelTemplates/createCustomItemModel/#kotlin.String#kotlin.String#kotlin.String#net.minecraft.data.models.model.TextureSlot/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-custom-model-templates/create-custom-item-model.html
+$dokka.location:gay.asoji.innerpastels.datagen/CustomModelTemplates/createCustomItemModel/#kotlin.String#kotlin.String#net.minecraft.data.models.model.TextureSlot/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-custom-model-templates/create-custom-item-model.html
+$dokka.location:gay.asoji.innerpastels.datagen/CustomModelTemplates/createCustomItemModel/#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-custom-model-templates/create-custom-item-model.html
 $dokka.location:gay.asoji.innerpastels.datagen/ModelGenerators///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-model-generators/index.html
 $dokka.location:gay.asoji.innerpastels.datagen/ModelGenerators/createFence/#net.minecraft.world.level.block.Block#net.minecraft.world.level.block.Block#net.minecraft.data.models.BlockModelGenerators/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-model-generators/create-fence.html
 $dokka.location:gay.asoji.innerpastels.datagen/ModelGenerators/createFenceGate/#net.minecraft.world.level.block.Block#net.minecraft.world.level.block.Block#net.minecraft.data.models.BlockModelGenerators/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-model-generators/create-fence-gate.html
@@ -110,6 +117,10 @@ $dokka.location:gay.asoji.innerpastels.misc/CandyTranslationString/valueOf/#kotl
 $dokka.location:gay.asoji.innerpastels.misc/CandyTranslationString/values/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.misc/-candy-translation-string/values.html
 $dokka.location:gay.asoji.innerpastels.misc/DevDisclaimer///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.misc/-dev-disclaimer/index.html
 $dokka.location:gay.asoji.innerpastels.misc/DevDisclaimer/init/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.misc/-dev-disclaimer/init.html
+$dokka.location:gay.asoji.innerpastels.sounds////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.sounds/index.html
+$dokka.location:gay.asoji.innerpastels.sounds/RegisterSounds///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.sounds/-register-sounds/index.html
+$dokka.location:gay.asoji.innerpastels.sounds/RegisterSounds/registerMusicDisc/#kotlin.String#kotlin.String#kotlin.Int#net.minecraft.sounds.SoundEvent#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.sounds/-register-sounds/register-music-disc.html
+$dokka.location:gay.asoji.innerpastels.sounds/RegisterSounds/registerSoundEvent/#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.sounds/-register-sounds/register-sound-event.html
 $dokka.location:gay.asoji.innerpastels.tags////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.tags/index.html
 $dokka.location:gay.asoji.innerpastels.tags/InnerPastelsBlockTags///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.tags/-inner-pastels-block-tags/index.html
 $dokka.location:gay.asoji.innerpastels.tags/InnerPastelsBlockTags/CARPETS/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.tags/-inner-pastels-block-tags/-c-a-r-p-e-t-s.html
@@ -171,5 +182,6 @@ gay.asoji.innerpastels.datagen
 gay.asoji.innerpastels.foods
 gay.asoji.innerpastels.items
 gay.asoji.innerpastels.misc
+gay.asoji.innerpastels.sounds
 gay.asoji.innerpastels.tags
 
