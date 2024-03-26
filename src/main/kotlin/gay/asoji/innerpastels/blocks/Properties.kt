@@ -109,7 +109,6 @@ object Properties {
      */
     fun PastelLeaves(): BlockBehaviour.Properties {
         return FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)
-            .nonOpaque()
             .blockVision(Blocks::never)
             .suffocates(Blocks::never)
     }
