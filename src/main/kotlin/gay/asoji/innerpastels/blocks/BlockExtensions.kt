@@ -6,6 +6,7 @@ import gay.asoji.innerpastels.blocks.Properties.PastelFence
 import gay.asoji.innerpastels.blocks.Properties.PastelFenceGate
 import gay.asoji.innerpastels.blocks.Properties.PastelGlass
 import gay.asoji.innerpastels.blocks.Properties.PastelGlassPane
+import gay.asoji.innerpastels.blocks.Properties.PastelLeaves
 import gay.asoji.innerpastels.blocks.Properties.PastelLight
 import gay.asoji.innerpastels.blocks.Properties.PastelLogs
 import gay.asoji.innerpastels.blocks.Properties.PastelPowder
@@ -14,6 +15,7 @@ import gay.asoji.innerpastels.blocks.Properties.PastelStair
 import gay.asoji.innerpastels.blocks.Properties.PastelWall
 import gay.asoji.innerpastels.blocks.Properties.PastelWool
 import gay.asoji.innerpastels.crab.CrabInTheCode
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.resources.ResourceLocation
@@ -275,5 +277,14 @@ fun MapColor.registerCarpetBlock(modID: String, name: String): Block =
  * @return [RotatedPillarBlock]
  */
 fun MapColor.registerLogBlock(modID: String, name: String): Block =
-    RotatedPillarBlock(PastelLogs().mapColor(this)).registerBlockWithItem(modID, name)
+    RotatedPillarBlock(PastelLogs().mapColor(this)).registerBlockWithItem(modID, name).apply { FlammableBlockRegistry.getDefaultInstance().add(this, 5, 5) }
 
+// TODO: Document this shit
+fun DyeColor.registerLogBlock(modID: String, name: String): Block =
+    RotatedPillarBlock(PastelLogs().mapColor(this)).registerBlockWithItem(modID, name).apply { FlammableBlockRegistry.getDefaultInstance().add(this, 5, 5) }
+
+fun MapColor.registerLeavesBlock(modID: String, name: String): Block =
+    LeavesBlock(PastelLeaves().mapColor(this)).registerBlockWithItem(modID, name).apply { FlammableBlockRegistry.getDefaultInstance().add(this, 30, 60) }
+
+fun DyeColor.registerLeavesBlock(modID: String, name: String): Block =
+    LeavesBlock(PastelLeaves().mapColor(this)).registerBlockWithItem(modID, name).apply { FlammableBlockRegistry.getDefaultInstance().add(this, 30, 60) }
