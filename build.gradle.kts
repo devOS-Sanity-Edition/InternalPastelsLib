@@ -20,13 +20,14 @@ plugins {
     alias(libs.plugins.dokka)
 }
 
-val archivesBaseName = "${project.property("archives_base_name").toString()}"
+val archivesBaseName = project.property("archives_base_name").toString()
 version = getModVersion()
 group = project.property("maven_group")!!
 
 repositories {
     maven { url = uri("https://maven.parchmentmc.org") }
     maven { url = uri("https://mvn.devos.one/snapshots") }
+    maven { url = uri("https://raw.githubusercontent.com/kotlin-graphics/mary/master") }
 }
 
 //All dependencies and their versions are in ./gradle/libs.versions.toml
@@ -42,6 +43,22 @@ dependencies {
     //Fabric
     modImplementation(libs.fabric.loader)
     modImplementation(libs.fabric.api)
+
+    implementation("kotlin.graphics:imgui-core:1.89.7-1") {
+        exclude(group = "org.lwjgl")
+    }
+    implementation("kotlin.graphics:imgui-gl:1.89.7-1") {
+        exclude(group = "org.lwjgl")
+    }
+    implementation("kotlin.graphics:imgui-glfw:1.89.7-1") {
+        exclude(group = "org.lwjgl")
+    }
+    implementation("kotlin.graphics:uno-core:0.7.21") {
+        exclude(group = "org.lwjgl")
+    }
+    implementation("kotlin.graphics:glm:0.9.9.1-build-11") {
+        exclude(group = "org.lwjgl")
+    }
 
     include(modImplementation("gay.asoji:fmw:1.0.0+build.8")!!)
 }

@@ -19,6 +19,12 @@
 				"adapter": "kotlin",
 				"value": "gay.asoji.innerpastels.InnerPastels"
 			}
+		],
+		"client": [
+			{
+				"adapter": "kotlin",
+				"value": "gay.asoji.innerpastels.client.InnerPastelsClient"
+			}
 		]
 	},
 	"mixins": [ ],
