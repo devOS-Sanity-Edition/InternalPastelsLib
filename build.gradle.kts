@@ -11,7 +11,7 @@ buildscript {
 }
 
 plugins {
-    kotlin("jvm") version "1.9.0"
+    kotlin("jvm") version "1.9.20-RC"
     `maven-publish`
     java
 
@@ -99,14 +99,14 @@ tasks.processResources {
 }
 
 tasks.withType<JavaCompile>().configureEach {
-    options.release.set(17)
+    options.release.set(21)
 }
 
 java {
     withSourcesJar()
 
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 tasks.jar {
@@ -178,10 +178,11 @@ sourceSets {
 fun getModVersion(): String {
     val modVersion = project.property("mod_version")
     val buildId = System.getenv("GITHUB_RUN_NUMBER")
+    val branch = grgit.branch.current.name.replace("/", ".")
 
     // CI builds only
     if (buildId != null) {
-        return "${modVersion}+build.${buildId}"
+        return "${modVersion}+build.${buildId}+branch.${branch}"
     }
 
     // If a git repo can't be found, grgit won't work, this non-null check exists so you don't run grgit stuff without a git repo
@@ -192,7 +193,7 @@ fun getModVersion(): String {
         // Flag the build if the build tree is not clean
         // (aka you have uncommitted changes)
         if (!grgit.status().isClean()) {
-            id += "-dirty"
+            id += "-dirty+branch.${branch}"
         }
 
         // ex: 1.0.0+rev.91949fa or 1.0.0+rev.91949fa-dirty
