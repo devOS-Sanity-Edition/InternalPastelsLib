@@ -6,9 +6,10 @@ import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.TooltipFlag
-import net.minecraft.world.item.alchemy.PotionUtils
+import net.minecraft.world.item.alchemy.PotionContents
 import net.minecraft.world.level.Level
 import java.util.*
+import java.util.function.Consumer
 
 /**
  * Overridden Item class with a modified Hover Tooltip to show Hunger translation string, what tied Mob Effect, and always eat string
@@ -20,18 +21,18 @@ class CandyTooltipItem(properties: Properties, val candyTranslationString: Candy
     /**
      * Overrides Item's `appendHoverText` to add more things in it, notably Hunger translation string, tied Mob Effect [if there is one], and Always Eat string
      */
-    override fun appendHoverText(itemStack: ItemStack, level: Level?, list: MutableList<Component>, tooltipFlag: TooltipFlag) {
+    override fun appendHoverText(itemStack: ItemStack, tooltipContext: TooltipContext, list: MutableList<Component>, tooltipFlag: TooltipFlag) {
         list.add(Component.translatable(candyTranslationString.candyHungerString))
 
         val effects = LinkedList<MobEffectInstance>()
 
         if (itemStack.foodComponent != null) {
             for (effect in itemStack.foodComponent!!.effects) {
-                effects.add(effect.first)
+                effects.add(effect.effect)
             }
         }
 
-        PotionUtils.addPotionTooltip(effects, list, 1.0f, level?.tickRateManager()?.tickrate() ?: 20.0f)
+        PotionContents.addPotionTooltip(effects, list::add, 1.0f, tooltipContext.tickRate() ?: 20.0f)
         list.add(Component.translatable("item.innerpastels.candies.hunger.alwayseat"))
     }
 }

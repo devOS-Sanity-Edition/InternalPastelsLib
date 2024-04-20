@@ -3,6 +3,7 @@ package gay.asoji.innerpastels.foods
 import gay.asoji.innerpastels.items.CandyTooltipItem
 import gay.asoji.innerpastels.misc.CandyTranslationString
 import gay.asoji.innerpastels.misc.secondsToTicks
+import net.minecraft.core.Holder
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.effect.MobEffect
 import net.minecraft.world.effect.MobEffectInstance
@@ -41,10 +42,10 @@ object RegisterFood {
                 Item.Properties().food(
                     FoodProperties.Builder()
                         .nutrition(nutrition)
-                        .saturationMod(saturation.toFloat())
+                        .saturationModifier(saturation.toFloat())
                         .fast()
-                        .alwaysEat()
-                        .effect(MobEffectInstance(effect, seconds.secondsToTicks(), amplifier), 1.0f).build()
+                        .alwaysEdible()
+                        .effect(MobEffectInstance(Holder.direct(effect), seconds.secondsToTicks(), amplifier), 1.0f).build()
                 ),
                 candyTranslationString
             )
@@ -68,9 +69,9 @@ object RegisterFood {
                 Item.Properties().food(
                     FoodProperties.Builder()
                         .nutrition(nutrition)
-                        .saturationMod(saturation.toFloat())
+                        .saturationModifier(saturation.toFloat())
                         .fast()
-                        .alwaysEat()
+                        .alwaysEdible()
                         .build()
                 ),
                 candyTranslationString
@@ -161,7 +162,7 @@ object RegisterFood {
      * TODO: Rethink how Ice Cream is done as it's essentially an unused, but registered item, in every version of Softer Pastels.
      */
     fun registerIceCream(modID: String, name: String): Item {
-        return Items.registerItem(ResourceLocation(modID, name), Item(Item.Properties().food(FoodProperties.Builder().nutrition(3).saturationMod(5f).build()))
+        return Items.registerItem(ResourceLocation(modID, name), Item(Item.Properties().food(FoodProperties.Builder().nutrition(3).saturationModifier(5f).build()))
         )
     }
 }
