@@ -3,7 +3,6 @@ package gay.asoji.innerpastels
 import gay.asoji.fmw.FMW
 import gay.asoji.innerpastels.crab.CrabInTheCode
 import net.fabricmc.api.ModInitializer
-import net.minecraft.client.KeyMapping
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 

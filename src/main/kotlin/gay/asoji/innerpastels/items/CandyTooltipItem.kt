@@ -1,15 +1,14 @@
 package gay.asoji.innerpastels.items
 
 import gay.asoji.innerpastels.misc.CandyTranslationString
+import net.minecraft.core.component.DataComponents
 import net.minecraft.network.chat.Component
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.TooltipFlag
 import net.minecraft.world.item.alchemy.PotionContents
-import net.minecraft.world.level.Level
 import java.util.*
-import java.util.function.Consumer
 
 /**
  * Overridden Item class with a modified Hover Tooltip to show Hunger translation string, what tied Mob Effect, and always eat string
@@ -26,8 +25,8 @@ class CandyTooltipItem(properties: Properties, val candyTranslationString: Candy
 
         val effects = LinkedList<MobEffectInstance>()
 
-        if (itemStack.foodComponent != null) {
-            for (effect in itemStack.foodComponent!!.effects) {
+        if (itemStack.components.get(DataComponents.FOOD) != null) {
+            for (effect in itemStack.components.get(DataComponents.FOOD)!!.effects) {
                 effects.add(effect.effect)
             }
         }
