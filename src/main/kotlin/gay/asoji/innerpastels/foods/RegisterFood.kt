@@ -7,6 +7,7 @@ import net.minecraft.core.Holder
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.effect.MobEffect
 import net.minecraft.world.effect.MobEffectInstance
+import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.food.FoodProperties
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.Items
@@ -33,7 +34,7 @@ object RegisterFood {
         candyTranslationString: CandyTranslationString,
         nutrition: Int,
         saturation: Int,
-        effect: MobEffect,
+        effect: Holder<MobEffect>,
         amplifier: Int,
         seconds: Int
     ): CandyTooltipItem {
@@ -45,7 +46,7 @@ object RegisterFood {
                         .saturationModifier(saturation.toFloat())
                         .fast()
                         .alwaysEdible()
-                        .effect(MobEffectInstance(Holder.direct(effect), seconds.secondsToTicks(), amplifier), 1.0f).build()
+                        .effect(MobEffectInstance(effect, seconds.secondsToTicks(), amplifier), 1.0f).build()
                 ),
                 candyTranslationString
             )
@@ -89,7 +90,7 @@ object RegisterFood {
      *
      * @return Taffy [registerCandy] with a defined Mod ID, Item ID, Mob Effect when eaten for a certain amount of seconds
      */
-    fun registerTaffy(modID: String, name: String, effect: MobEffect, seconds: Int): CandyTooltipItem {
+    fun registerTaffy(modID: String, name: String, effect: Holder<MobEffect>, seconds: Int): CandyTooltipItem {
         return registerCandy(modID, name, CandyTranslationString.TAFFY, 2, 2, effect, 0, seconds)
     }
 
@@ -115,7 +116,7 @@ object RegisterFood {
      *
      * @return Cotton Candy [registerCandy] with a defined Mod ID, Item ID, Mob Effect when eaten for a certain amount of seconds
      */
-    fun registerCottonCandy(modID: String, name: String, effect: MobEffect, seconds: Int): CandyTooltipItem {
+    fun registerCottonCandy(modID: String, name: String, effect: Holder<MobEffect>, seconds: Int): CandyTooltipItem {
         return registerCandy(modID, name, CandyTranslationString.COTTON, 3, 2, effect, 1, seconds)
     }
 
@@ -141,7 +142,7 @@ object RegisterFood {
      *
      * @return Hard Candy [registerCandy] with a defined Mod ID, Item ID, Mob Effect when eaten for a certain amount of seconds
      */
-    fun registerHardCandy(modID: String, name: String, effect: MobEffect, seconds: Int): CandyTooltipItem {
+    fun registerHardCandy(modID: String, name: String, effect: Holder<MobEffect>, seconds: Int): CandyTooltipItem {
         return registerCandy(modID, name, CandyTranslationString.HARD, 3, 2, effect, 2, seconds)
     }
 
