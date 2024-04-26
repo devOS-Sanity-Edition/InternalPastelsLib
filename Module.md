@@ -6,11 +6,16 @@ Library mod to share helper functions between Softer Pastels, Desolated Pastels,
 src/main/kotlin
 └───gay.asoji.innerpastels
     ├───blocks
+    ├───client
+    │   └───screens
+    │       └───imgui
+    ├───crab
     ├───datagen
-    ├───foods
     ├───items
     ├───misc
+    ├───register
     └───tags
+
 ```
 
 If you could think of a way to make all the package descriptors a bit better at explaining what they are, please feel free to make a PR with the `documentation` tag. plsandthx
@@ -27,13 +32,13 @@ Crab in the code 🦀
 
 Custom Block classes or Block helpers
 
+# Package gay.asoji.innerpastels.client
+
+Client related classes, mainly contains the `ImGui` package
+
 # Package gay.asoji.innerpastels.datagen
 
 Helpers for Data Generation
-
-# Package gay.asoji.innerpastels.foods
-
-Helpers for Food related code
 
 # Package gay.asoji.innerpastels.items
 
@@ -42,6 +47,10 @@ Custom Item classes or Item Helpers
 # Package gay.asoji.innerpastels.misc
 
 Any code or helpers that don't fall under any clear category
+
+# Package gay.asoji.innerpastels.register
+
+Helper classes and functions for registry registers
 
 # Package gay.asoji.innerpastels.tags
 

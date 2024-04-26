@@ -1,5 +1,6 @@
-package gay.asoji.innerpastels.blocks
+package gay.asoji.innerpastels.register
 
+import gay.asoji.innerpastels.blocks.FenceGateBlock
 import gay.asoji.innerpastels.blocks.Properties.pastelBlock
 import gay.asoji.innerpastels.blocks.Properties.pastelCarpet
 import gay.asoji.innerpastels.blocks.Properties.pastelFence
@@ -14,6 +15,7 @@ import gay.asoji.innerpastels.blocks.Properties.pastelSlab
 import gay.asoji.innerpastels.blocks.Properties.pastelStair
 import gay.asoji.innerpastels.blocks.Properties.pastelWall
 import gay.asoji.innerpastels.blocks.Properties.pastelWool
+import gay.asoji.innerpastels.blocks.StairBlock
 import gay.asoji.innerpastels.crab.CrabInTheCode
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry
 import net.minecraft.core.Registry

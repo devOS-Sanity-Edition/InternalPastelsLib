@@ -11,7 +11,7 @@ buildscript {
 }
 
 plugins {
-    kotlin("jvm") version "1.9.20-RC"
+    kotlin("jvm") version "1.9.23"
     `maven-publish`
     java
 
@@ -73,7 +73,7 @@ tasks.withType<DokkaTask>().configureEach {
 
             sourceLink {
                 localDirectory.set(file("src/main/kotlin"))
-                remoteUrl.set(URL("http://github.com/devOS-Sanity-Edition/InnerPastels/tree/main/" + "src/main/kotlin"))
+                remoteUrl.set(URL("http://github.com/devOS-Sanity-Edition/InnerPastels/tree/kt/1.20.5/main/" + "src/main/kotlin"))
                 remoteLineSuffix.set("#L")
             }
         }
@@ -180,11 +180,6 @@ fun getModVersion(): String {
     val buildId = System.getenv("GITHUB_RUN_NUMBER")
     val branch = grgit.branch.current.name.replace("/", ".")
 
-    // CI builds only
-    if (buildId != null) {
-        return "${modVersion}+build.${buildId}+branch.${branch}"
-    }
-
     // If a git repo can't be found, grgit won't work, this non-null check exists so you don't run grgit stuff without a git repo
     if (grgit != null) {
         val head = grgit.head()
@@ -193,7 +188,12 @@ fun getModVersion(): String {
         // Flag the build if the build tree is not clean
         // (aka you have uncommitted changes)
         if (!grgit.status().isClean()) {
-            id += "-dirty+branch.${branch}"
+            id += "-dirty"
+            if (buildId != null) {
+                id = id.replace("-dirty", "")
+            } else {
+                id += "+branch.${branch}"
+            }
         }
 
         // ex: 1.0.0+rev.91949fa or 1.0.0+rev.91949fa-dirty

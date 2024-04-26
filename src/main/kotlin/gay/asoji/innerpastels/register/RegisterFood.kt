@@ -1,4 +1,4 @@
-package gay.asoji.innerpastels.foods
+package gay.asoji.innerpastels.register
 
 import gay.asoji.innerpastels.items.CandyTooltipItem
 import gay.asoji.innerpastels.misc.CandyTranslationString
@@ -7,7 +7,6 @@ import net.minecraft.core.Holder
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.effect.MobEffect
 import net.minecraft.world.effect.MobEffectInstance
-import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.food.FoodProperties
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.Items

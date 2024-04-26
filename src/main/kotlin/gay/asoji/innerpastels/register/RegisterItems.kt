@@ -1,4 +1,4 @@
-package gay.asoji.innerpastels.items
+package gay.asoji.innerpastels.register
 
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
