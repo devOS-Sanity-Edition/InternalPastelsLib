@@ -191,14 +191,13 @@ fun getModVersion(): String {
             id += "-dirty"
             if (buildId != null) {
                 id = id.replace("-dirty", "")
-                id += "+branch.${branch}"
             } else {
-                id += "+branch.${branch}"
+                id += ""
             }
         }
 
         // ex: 1.0.0+rev.91949fa or 1.0.0+rev.91949fa-dirty
-        return "${modVersion}+rev.${id}"
+        return "${modVersion}+rev.${id}+branch.${branch}"
     }
 
     // No tracking information could be found about the build
