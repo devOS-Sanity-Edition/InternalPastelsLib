@@ -191,6 +191,7 @@ fun getModVersion(): String {
             id += "-dirty"
             if (buildId != null) {
                 id = id.replace("-dirty", "")
+                id += "+branch.${branch}"
             } else {
                 id += "+branch.${branch}"
             }
