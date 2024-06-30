@@ -82,6 +82,22 @@ $dokka.location:gay.asoji.innerpastels.datagen/RecipeGenerators/registerCrafting
 $dokka.location:gay.asoji.innerpastels.datagen/RecipeGenerators/registerPastelTaffyItem/#net.minecraft.data.recipes.RecipeOutput#net.minecraft.world.level.ItemLike#net.minecraft.world.level.ItemLike/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-recipe-generators/register-pastel-taffy-item.html
 $dokka.location:gay.asoji.innerpastels.datagen/RecipeGenerators/registerSmeltingPastelGlass/#net.minecraft.data.recipes.RecipeOutput#kotlin.collections.List[net.minecraft.world.level.ItemLike]#net.minecraft.world.level.ItemLike#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-recipe-generators/register-smelting-pastel-glass.html
 $dokka.location:gay.asoji.innerpastels.datagen/RecipeGenerators/registerSmeltingPastelHardCandy/#net.minecraft.data.recipes.RecipeOutput#kotlin.collections.List[net.minecraft.world.level.ItemLike]#net.minecraft.world.level.ItemLike#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.datagen/-recipe-generators/register-smelting-pastel-hard-candy.html
+$dokka.location:gay.asoji.innerpastels.events////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/index.html
+$dokka.location:gay.asoji.innerpastels.events/InputAction.PRESS///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-inner -pastels/gay.asoji.innerpastels.events/-input-action/-p-r-e-s-s/index.html
+$dokka.location:gay.asoji.innerpastels.events/InputAction.RELEASE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-inner -pastels/gay.asoji.innerpastels.events/-input-action/-r-e-l-e-a-s-e/index.html
+$dokka.location:gay.asoji.innerpastels.events/InputAction///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-input-action/index.html
+$dokka.location:gay.asoji.innerpastels.events/InputAction/from/#int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-input-action/from.html
+$dokka.location:gay.asoji.innerpastels.events/InputAction/valueOf/#java.lang.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-input-action/value-of.html
+$dokka.location:gay.asoji.innerpastels.events/InputAction/values/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-input-action/values.html
+$dokka.location:gay.asoji.innerpastels.events/KeyInputEvent///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-key-input-event/index.html
+$dokka.location:gay.asoji.innerpastels.events/KeyInputEvent/EVENT/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-key-input-event/-e-v-e-n-t.html
+$dokka.location:gay.asoji.innerpastels.events/KeyInputEvent/onKeyInput/#int#int#gay.asoji.innerpastels.events.InputAction#int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-key-input-event/on-key-input.html
+$dokka.location:gay.asoji.innerpastels.events/MouseInputEvent///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-mouse-input-event/index.html
+$dokka.location:gay.asoji.innerpastels.events/MouseInputEvent/EVENT/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-mouse-input-event/-e-v-e-n-t.html
+$dokka.location:gay.asoji.innerpastels.events/MouseInputEvent/onMouseInput/#int#gay.asoji.innerpastels.events.InputAction#int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-mouse-input-event/on-mouse-input.html
+$dokka.location:gay.asoji.innerpastels.events/MouseScrollInputEvent///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-mouse-scroll-input-event/index.html
+$dokka.location:gay.asoji.innerpastels.events/MouseScrollInputEvent/EVENT/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-mouse-scroll-input-event/-e-v-e-n-t.html
+$dokka.location:gay.asoji.innerpastels.events/MouseScrollInputEvent/onScroll/#double#double/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.events/-mouse-scroll-input-event/on-scroll.html
 $dokka.location:gay.asoji.innerpastels.items////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.items/index.html
 $dokka.location:gay.asoji.innerpastels.items/CandyTooltipItem///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.items/-candy-tooltip-item/index.html
 $dokka.location:gay.asoji.innerpastels.items/CandyTooltipItem/CandyTooltipItem/#net.minecraft.world.item.Item.Properties#gay.asoji.innerpastels.misc.CandyTranslationString/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.items/-candy-tooltip-item/-candy-tooltip-item.html
@@ -99,6 +115,11 @@ $dokka.location:gay.asoji.innerpastels.misc/CandyTranslationString/valueOf/#kotl
 $dokka.location:gay.asoji.innerpastels.misc/CandyTranslationString/values/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.misc/-candy-translation-string/values.html
 $dokka.location:gay.asoji.innerpastels.misc/DevDisclaimer///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.misc/-dev-disclaimer/index.html
 $dokka.location:gay.asoji.innerpastels.misc/DevDisclaimer/init/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.misc/-dev-disclaimer/init.html
+$dokka.location:gay.asoji.innerpastels.mixins////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.mixins/index.html
+$dokka.location:gay.asoji.innerpastels.mixins/KeyboardHandlerMixin///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.mixins/-keyboard-handler-mixin/index.html
+$dokka.location:gay.asoji.innerpastels.mixins/KeyboardHandlerMixin/KeyboardHandlerMixin/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.mixins/-keyboard-handler-mixin/-keyboard-handler-mixin.html
+$dokka.location:gay.asoji.innerpastels.mixins/MouseHandlerMixin///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.mixins/-mouse-handler-mixin/index.html
+$dokka.location:gay.asoji.innerpastels.mixins/MouseHandlerMixin/MouseHandlerMixin/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.mixins/-mouse-handler-mixin/-mouse-handler-mixin.html
 $dokka.location:gay.asoji.innerpastels.register////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/index.html
 $dokka.location:gay.asoji.innerpastels.register//registerBlock/net.minecraft.world.level.block.Block#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerBlockItem/net.minecraft.world.level.block.Block#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-block-item.html
@@ -208,8 +229,10 @@ gay.asoji.innerpastels.client
 gay.asoji.innerpastels.client.screens.imgui
 gay.asoji.innerpastels.crab
 gay.asoji.innerpastels.datagen
+gay.asoji.innerpastels.events
 gay.asoji.innerpastels.items
 gay.asoji.innerpastels.misc
+gay.asoji.innerpastels.mixins
 gay.asoji.innerpastels.register
 gay.asoji.innerpastels.tags
 
