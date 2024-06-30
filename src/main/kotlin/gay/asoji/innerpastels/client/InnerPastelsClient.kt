@@ -2,10 +2,10 @@ package gay.asoji.innerpastels.client
 
 import com.mojang.blaze3d.platform.InputConstants
 import gay.asoji.innerpastels.InnerPastels
-import gay.asoji.innerpastels.client.screens.imgui.ImGuiPanel
-import gay.asoji.innerpastels.client.screens.imgui.ImGuiScreen
-import gay.asoji.innerpastels.client.screens.imgui.ImGuiScreen.implGl3
-import gay.asoji.innerpastels.client.screens.imgui.ImGuiScreen.implGlfw
+import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl
+import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.implGl3
+import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.implGlfw
+import gay.asoji.innerpastels.client.imgui.ImGuiPanel
 import gay.asoji.innerpastels.events.InputAction
 import gay.asoji.innerpastels.events.KeyInputEvent
 import gay.asoji.innerpastels.events.MouseInputEvent
@@ -41,13 +41,14 @@ class InnerPastelsClient : ClientModInitializer {
         while (DEVELOPER_UI_BINDING.consumeClick()) {
             if (client.player != null && client.screen == null) {
                 isImGuiRenderEnabled = !isImGuiRenderEnabled
+
+                implGl3.shutdown()
+                implGlfw.shutdown()
             }
         }
     }
 
     override fun onInitializeClient() {
-
-
         if (FabricLoader.getInstance().isDevelopmentEnvironment) {
             initializeDevKeybinds()
         }
@@ -58,20 +59,20 @@ class InnerPastelsClient : ClientModInitializer {
             }
             implGl3.newFrame()
             implGlfw.newFrame()
-            ImGuiScreen.imgui.newFrame()
+            InnerPastelsImGuiImpl.imgui.newFrame()
 
-            InnerPastelsClient.panels.forEach {
+            panels.forEach {
                 it.render(booleanArrayOf(true))
             }
 
-            ImGuiScreen.imgui.render()
+            InnerPastelsImGuiImpl.imgui.render()
             implGl3.renderDrawData(Objects.requireNonNull<DrawData>(ImGui.drawData))
         }
 
         KeyInputEvent.EVENT.register { key, scancode, action, mods ->
             when (action) {
-                InputAction.PRESS -> ImGuiScreen.keyPressed(key, scancode, mods)
-                InputAction.RELEASE -> ImGuiScreen.keyReleased(key, scancode, mods)
+                InputAction.PRESS -> InnerPastelsImGuiImpl.keyPressed(key, scancode, mods)
+                InputAction.RELEASE -> InnerPastelsImGuiImpl.keyReleased(key, scancode, mods)
             }
         }
 
@@ -79,17 +80,15 @@ class InnerPastelsClient : ClientModInitializer {
             val mouseX = Minecraft.getInstance().mouseHandler.xpos()
             val mouseY = Minecraft.getInstance().mouseHandler.ypos()
             when (action) {
-                InputAction.PRESS -> ImGuiScreen.mouseClicked(mouseX, mouseY, button)
-                InputAction.RELEASE -> ImGuiScreen.mouseReleased(mouseX, mouseY, button)
+                InputAction.PRESS -> InnerPastelsImGuiImpl.mouseClicked(mouseX, mouseY, button)
+                InputAction.RELEASE -> InnerPastelsImGuiImpl.mouseReleased(mouseX, mouseY, button)
             }
-
-            InnerPastels.LOGGER.debug("$mouseX, $mouseY, $action")
         }
 
         MouseScrollInputEvent.EVENT.register{ xOffset, yOffset ->
             val mouseX = Minecraft.getInstance().mouseHandler.xpos()
             val mouseY = Minecraft.getInstance().mouseHandler.ypos()
-            ImGuiScreen.mouseScrolled(mouseX, mouseY, xOffset, yOffset)
+            InnerPastelsImGuiImpl.mouseScrolled(mouseX, mouseY, xOffset, yOffset)
         }
     }
 
