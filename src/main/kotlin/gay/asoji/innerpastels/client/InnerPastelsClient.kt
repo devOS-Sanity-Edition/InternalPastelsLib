@@ -5,6 +5,10 @@ import gay.asoji.innerpastels.client.screens.imgui.ImGuiPanel
 import gay.asoji.innerpastels.client.screens.imgui.ImGuiScreen
 import gay.asoji.innerpastels.client.screens.imgui.ImGuiScreen.implGl3
 import gay.asoji.innerpastels.client.screens.imgui.ImGuiScreen.implGlfw
+import gay.asoji.innerpastels.events.InputAction
+import gay.asoji.innerpastels.events.KeyInputEvent
+import gay.asoji.innerpastels.events.MouseInputEvent
+import gay.asoji.innerpastels.events.MouseScrollInputEvent
 import imgui.ImGui
 import imgui.internal.DrawData
 import net.fabricmc.api.ClientModInitializer
@@ -61,6 +65,28 @@ class InnerPastelsClient : ClientModInitializer {
 
             ImGuiScreen.imgui.render()
             implGl3.renderDrawData(Objects.requireNonNull<DrawData>(ImGui.drawData))
+        }
+
+        KeyInputEvent.EVENT.register { key, scancode, action, mods ->
+            when (action) {
+                InputAction.PRESS -> ImGuiScreen.keyPressed(key, scancode, mods)
+                InputAction.RELEASE -> ImGuiScreen.keyReleased(key, scancode, mods)
+            }
+        }
+
+        MouseInputEvent.EVENT.register { button, action, mods ->
+            val mouseX = Minecraft.getInstance().mouseHandler.xpos()
+            val mouseY = Minecraft.getInstance().mouseHandler.ypos()
+            when (action) {
+                InputAction.PRESS -> ImGuiScreen.mouseClicked(mouseX, mouseY, button)
+                InputAction.RELEASE -> ImGuiScreen.mouseReleased(mouseX, mouseY, button)
+            }
+        }
+
+        MouseScrollInputEvent.EVENT.register{ xOffset, yOffset ->
+            val mouseX = Minecraft.getInstance().mouseHandler.xpos()
+            val mouseY = Minecraft.getInstance().mouseHandler.ypos()
+            ImGuiScreen.mouseScrolled(mouseX, mouseY, xOffset, yOffset)
         }
     }
 

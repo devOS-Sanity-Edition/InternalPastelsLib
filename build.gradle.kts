@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 import org.jetbrains.dokka.base.DokkaBase
 import org.jetbrains.dokka.base.DokkaBaseConfiguration
 import org.jetbrains.dokka.gradle.DokkaTask
@@ -37,7 +39,7 @@ dependencies {
 
     mappings(loom.layered {
         officialMojangMappings()
-//        parchment("org.parchmentmc.data:parchment-1.20.3:2023.12.31@zip")
+        parchment("org.parchmentmc.data:parchment-1.21:2024.06.23@zip")
     })
 
     //Fabric
