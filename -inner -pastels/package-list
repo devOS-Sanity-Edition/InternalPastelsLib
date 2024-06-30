@@ -23,20 +23,19 @@ $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelWall/#/PointingTo
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelWool/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-wool.html
 $dokka.location:gay.asoji.innerpastels.blocks/StairBlock///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-stair-block/index.html
 $dokka.location:gay.asoji.innerpastels.blocks/StairBlock/StairBlock/#net.minecraft.world.level.block.state.BlockState#net.minecraft.world.level.block.state.BlockBehaviour.Properties/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-stair-block/-stair-block.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/index.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiPanel///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-panel/index.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiPanel/render/#kotlin.BooleanArray/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-panel/render.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiScreen///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-screen/index.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiScreen/charTyped/#kotlin.Char#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-screen/char-typed.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiScreen/imgui/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-screen/imgui.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiScreen/implGl3/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-screen/impl-gl3.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiScreen/implGlfw/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-screen/impl-glfw.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiScreen/keyPressed/#kotlin.Int#kotlin.Int#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-screen/key-pressed.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiScreen/keyReleased/#kotlin.Int#kotlin.Int#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-screen/key-released.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiScreen/mouseClicked/#kotlin.Double#kotlin.Double#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-screen/mouse-clicked.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiScreen/mouseReleased/#kotlin.Double#kotlin.Double#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-screen/mouse-released.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiScreen/mouseScrolled/#kotlin.Double#kotlin.Double#kotlin.Double#kotlin.Double/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-screen/mouse-scrolled.html
-$dokka.location:gay.asoji.innerpastels.client.screens.imgui/ImGuiScreen/render/#net.minecraft.client.gui.GuiGraphics#kotlin.Int#kotlin.Int#kotlin.Float/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.screens.imgui/-im-gui-screen/render.html
+$dokka.location:gay.asoji.innerpastels.client.imgui////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/index.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/ImGuiPanel///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-im-gui-panel/index.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/ImGuiPanel/render/#kotlin.BooleanArray/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-im-gui-panel/render.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/index.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/charTyped/#kotlin.Char#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/char-typed.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/imgui/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/imgui.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/implGl3/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/impl-gl3.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/implGlfw/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/impl-glfw.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/keyPressed/#kotlin.Int#kotlin.Int#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/key-pressed.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/keyReleased/#kotlin.Int#kotlin.Int#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/key-released.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/mouseClicked/#kotlin.Double#kotlin.Double#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/mouse-clicked.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/mouseReleased/#kotlin.Double#kotlin.Double#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/mouse-released.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/mouseScrolled/#kotlin.Double#kotlin.Double#kotlin.Double#kotlin.Double/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/mouse-scrolled.html
 $dokka.location:gay.asoji.innerpastels.client////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/index.html
 $dokka.location:gay.asoji.innerpastels.client/InnerPastelsClient.Companion///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-inner-pastels-client/-companion/index.html
 $dokka.location:gay.asoji.innerpastels.client/InnerPastelsClient.Companion/panels/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-inner-pastels-client/-companion/panels.html
@@ -226,7 +225,7 @@ $dokka.location:gay.asoji.innerpastels/InnerPastels/registerMods/#kotlin.String/
 gay.asoji.innerpastels
 gay.asoji.innerpastels.blocks
 gay.asoji.innerpastels.client
-gay.asoji.innerpastels.client.screens.imgui
+gay.asoji.innerpastels.client.imgui
 gay.asoji.innerpastels.crab
 gay.asoji.innerpastels.datagen
 gay.asoji.innerpastels.events
