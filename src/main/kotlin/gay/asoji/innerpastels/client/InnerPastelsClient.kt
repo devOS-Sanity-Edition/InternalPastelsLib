@@ -1,6 +1,7 @@
 package gay.asoji.innerpastels.client
 
 import com.mojang.blaze3d.platform.InputConstants
+import gay.asoji.innerpastels.InnerPastels
 import gay.asoji.innerpastels.client.screens.imgui.ImGuiPanel
 import gay.asoji.innerpastels.client.screens.imgui.ImGuiScreen
 import gay.asoji.innerpastels.client.screens.imgui.ImGuiScreen.implGl3
@@ -81,6 +82,8 @@ class InnerPastelsClient : ClientModInitializer {
                 InputAction.PRESS -> ImGuiScreen.mouseClicked(mouseX, mouseY, button)
                 InputAction.RELEASE -> ImGuiScreen.mouseReleased(mouseX, mouseY, button)
             }
+
+            InnerPastels.LOGGER.debug("$mouseX, $mouseY, $action")
         }
 
         MouseScrollInputEvent.EVENT.register{ xOffset, yOffset ->
