@@ -25,7 +25,7 @@ $dokka.location:gay.asoji.innerpastels.blocks/StairBlock///PointingToDeclaration
 $dokka.location:gay.asoji.innerpastels.blocks/StairBlock/StairBlock/#net.minecraft.world.level.block.state.BlockState#net.minecraft.world.level.block.state.BlockBehaviour.Properties/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-stair-block/-stair-block.html
 $dokka.location:gay.asoji.innerpastels.client.imgui////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/index.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/ImGuiPanel///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-im-gui-panel/index.html
-$dokka.location:gay.asoji.innerpastels.client.imgui/ImGuiPanel/render/#kotlin.BooleanArray/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-im-gui-panel/render.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/ImGuiPanel/render/#imgui.type.ImBoolean/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-im-gui-panel/render.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/index.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/charTyped/#kotlin.Char#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/char-typed.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/endFrame/#kotlin.Long/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/end-frame.html
