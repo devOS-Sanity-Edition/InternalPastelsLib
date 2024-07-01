@@ -28,9 +28,7 @@ group = project.property("maven_group")!!
 
 repositories {
     maven { url = uri("https://maven.parchmentmc.org") }
-    maven { url = uri("https://mvn.devos.one/snapshots") }
-    maven { url = uri("https://raw.githubusercontent.com/kotlin-graphics/mary/master") }
-}
+    maven { url = uri("https://mvn.devos.one/snapshots") } }
 
 //All dependencies and their versions are in ./gradle/libs.versions.toml
 dependencies {
@@ -45,6 +43,7 @@ dependencies {
     //Fabric
     modImplementation(libs.fabric.loader)
     modImplementation(libs.fabric.api)
+    modImplementation(libs.fabric.language.kotlin) // how did i not have this
 
     implementation(libs.bundles.imgui) {
         exclude(group = "org.lwjgl")

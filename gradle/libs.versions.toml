@@ -15,9 +15,11 @@ fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fab
 fabric_language_kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabric_language_kotlin" }
 imgui-binding = { module = "io.github.spair:imgui-java-binding", version.ref = "imgui-java" }
 imgui-lwjgl3 = { module = "io.github.spair:imgui-java-lwjgl3", version.ref = "imgui-java" }
+imgui-native-windows = { module = "io.github.spair:imgui-java-natives-windows", version.ref = "imgui-java" }
+imgui-native-linux = { module = "io.github.spair:imgui-java-natives-linux", version.ref = "imgui-java" }
 
 [bundles]
-imgui = [ "imgui-binding", "imgui-lwjgl3" ]
+imgui = [ "imgui-binding", "imgui-lwjgl3", "imgui-native-linux", "imgui-native-windows" ]
 
 [plugins]
 grgit = { id = "org.ajoberstar.grgit", version = "5.2.1"}

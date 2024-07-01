@@ -26,8 +26,9 @@ object InnerPastelsImGuiImpl {
     fun glfwInit(handle: Long) {
         implGlfw.init(handle, false)
         implGl3.init()
-        ImGui.createContext()
 
+        ImGui.createContext()
+        imGuiInit()
         windowHandle = handle
     }
 

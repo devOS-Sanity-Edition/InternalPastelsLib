@@ -53,6 +53,8 @@ class InnerPastelsClient : ClientModInitializer {
 
     override fun onInitializeClient() {
         if (FabricLoader.getInstance().isDevelopmentEnvironment) {
+            // THIS IS PROBABLY NOT CORRECT, IF IT ISNT, FUCKING REMOVE IT LATER, ALL CONTEXT CREATION SHOULD PROBABLY BE FUCKING LEFT TO THE IMPL [OR THE PANEL ITSELF]?
+            ImGui.createContext()
             initializeDevKeybinds()
         }
 
@@ -60,7 +62,6 @@ class InnerPastelsClient : ClientModInitializer {
             if (!isImGuiRenderEnabled) {
                 return@register
             }
-            implGl3.renderDrawData(ImGui.getDrawData())
             implGlfw.newFrame()
             ImGui.newFrame()
 
@@ -68,6 +69,8 @@ class InnerPastelsClient : ClientModInitializer {
                 it.render(ImBoolean())
             }
 
+            implGl3.renderDrawData(ImGui.getDrawData())
+            ImGui.render()
             endFrame(windowHandle)
         }
 
