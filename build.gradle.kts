@@ -27,6 +27,7 @@ version = getModVersion()
 group = project.property("maven_group")!!
 
 repositories {
+    mavenCentral()
     maven { url = uri("https://maven.parchmentmc.org") }
     maven { url = uri("https://mvn.devos.one/snapshots") } }
 
