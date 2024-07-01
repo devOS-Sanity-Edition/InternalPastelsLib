@@ -28,7 +28,11 @@ $dokka.location:gay.asoji.innerpastels.client.imgui/ImGuiPanel///PointingToDecla
 $dokka.location:gay.asoji.innerpastels.client.imgui/ImGuiPanel/render/#kotlin.BooleanArray/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-im-gui-panel/render.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/index.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/charTyped/#kotlin.Char#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/char-typed.html
-$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/imgui/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/imgui.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/endFrame/#kotlin.Long/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/end-frame.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/glfwInit/#kotlin.Long/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/glfw-init.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/imGui/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/im-gui.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/imGuiIO/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/im-gui-i-o.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/imGuiInit/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/im-gui-init.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/implGl3/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/impl-gl3.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/implGlfw/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/impl-glfw.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/keyPressed/#kotlin.Int#kotlin.Int#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/key-pressed.html
@@ -36,6 +40,7 @@ $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/keyRel
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/mouseClicked/#kotlin.Double#kotlin.Double#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/mouse-clicked.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/mouseReleased/#kotlin.Double#kotlin.Double#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/mouse-released.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/mouseScrolled/#kotlin.Double#kotlin.Double#kotlin.Double#kotlin.Double/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/mouse-scrolled.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/windowHandle/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/window-handle.html
 $dokka.location:gay.asoji.innerpastels.client////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/index.html
 $dokka.location:gay.asoji.innerpastels.client/InnerPastelsClient.Companion///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-inner-pastels-client/-companion/index.html
 $dokka.location:gay.asoji.innerpastels.client/InnerPastelsClient.Companion/panels/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-inner-pastels-client/-companion/panels.html
