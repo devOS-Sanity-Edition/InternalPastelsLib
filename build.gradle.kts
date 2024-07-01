@@ -46,19 +46,7 @@ dependencies {
     modImplementation(libs.fabric.loader)
     modImplementation(libs.fabric.api)
 
-    implementation("kotlin.graphics:imgui-core:1.89.7-1") {
-        exclude(group = "org.lwjgl")
-    }
-    implementation("kotlin.graphics:imgui-gl:1.89.7-1") {
-        exclude(group = "org.lwjgl")
-    }
-    implementation("kotlin.graphics:imgui-glfw:1.89.7-1") {
-        exclude(group = "org.lwjgl")
-    }
-    implementation("kotlin.graphics:uno-core:0.7.21") {
-        exclude(group = "org.lwjgl")
-    }
-    implementation("kotlin.graphics:glm:0.9.9.1-build-11") {
+    implementation(libs.bundles.imgui) {
         exclude(group = "org.lwjgl")
     }
 

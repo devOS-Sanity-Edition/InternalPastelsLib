@@ -6,12 +6,14 @@ import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.implGl3
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.implGlfw
 import gay.asoji.innerpastels.client.imgui.ImGuiPanel
+import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.endFrame
+import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.imGui
+import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.windowHandle
 import gay.asoji.innerpastels.events.InputAction
 import gay.asoji.innerpastels.events.KeyInputEvent
 import gay.asoji.innerpastels.events.MouseInputEvent
 import gay.asoji.innerpastels.events.MouseScrollInputEvent
 import imgui.ImGui
-import imgui.internal.DrawData
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper
@@ -42,8 +44,8 @@ class InnerPastelsClient : ClientModInitializer {
             if (client.player != null && client.screen == null) {
                 isImGuiRenderEnabled = !isImGuiRenderEnabled
 
-                implGl3.shutdown()
-                implGlfw.shutdown()
+                implGl3.dispose()
+                implGlfw.dispose()
             }
         }
     }
@@ -57,16 +59,15 @@ class InnerPastelsClient : ClientModInitializer {
             if (!isImGuiRenderEnabled) {
                 return@register
             }
-            implGl3.newFrame()
+            implGl3.renderDrawData(ImGui.getDrawData())
             implGlfw.newFrame()
-            InnerPastelsImGuiImpl.imgui.newFrame()
+            ImGui.newFrame()
 
             panels.forEach {
                 it.render(booleanArrayOf(true))
             }
 
-            InnerPastelsImGuiImpl.imgui.render()
-            implGl3.renderDrawData(Objects.requireNonNull<DrawData>(ImGui.drawData))
+            endFrame(windowHandle)
         }
 
         KeyInputEvent.EVENT.register { key, scancode, action, mods ->
