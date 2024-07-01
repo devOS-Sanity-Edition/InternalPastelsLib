@@ -14,6 +14,7 @@ import gay.asoji.innerpastels.events.KeyInputEvent
 import gay.asoji.innerpastels.events.MouseInputEvent
 import gay.asoji.innerpastels.events.MouseScrollInputEvent
 import imgui.ImGui
+import imgui.type.ImBoolean
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper
@@ -64,7 +65,7 @@ class InnerPastelsClient : ClientModInitializer {
             ImGui.newFrame()
 
             panels.forEach {
-                it.render(booleanArrayOf(true))
+                it.render(ImBoolean())
             }
 
             endFrame(windowHandle)
