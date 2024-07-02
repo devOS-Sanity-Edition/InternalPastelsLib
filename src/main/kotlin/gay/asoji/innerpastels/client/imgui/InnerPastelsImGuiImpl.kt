@@ -1,135 +1,154 @@
 package gay.asoji.innerpastels.client.imgui
 
-import imgui.ImFontAtlas
-import imgui.ImFontConfig
 import imgui.ImGui
+import imgui.flag.ImGuiCol
 import imgui.flag.ImGuiConfigFlags
 import imgui.gl3.ImGuiImplGl3
 import imgui.glfw.ImGuiImplGlfw
+import imgui.internal.ImGuiContext
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
-import net.minecraft.client.Minecraft
 import org.lwjgl.glfw.GLFW
-import org.lwjgl.glfw.GLFW.glfwGetCurrentContext
-import org.lwjgl.glfw.GLFW.glfwMakeContextCurrent
-
 
 @Environment(EnvType.CLIENT)
 object InnerPastelsImGuiImpl {
-    var implGl3: ImGuiImplGl3 = ImGuiImplGl3()
-    var implGlfw: ImGuiImplGlfw = ImGuiImplGlfw()
-    var imGui: ImGui = ImGui()
-    var imGuiIO = ImGui.getIO()
-    var windowHandle: Long = Minecraft.getInstance().window.window
+    var isInitialized = false
+        private set
 
-    // GLFW Initialization for imgui.
-    fun glfwInit(handle: Long) {
-        implGlfw.init(handle, false)
-        implGl3.init()
+    lateinit var imguiContext: ImGuiContext
+        private set
 
-        ImGui.createContext()
-        imGuiInit()
-        windowHandle = handle
+    lateinit var imguiGl3: ImGuiImplGl3
+        private set
+
+    lateinit var imguiGlfw: ImGuiImplGlfw
+        private set
+
+    val isMouseHidden: Boolean
+        get() = isInitialized && ImGui.getIO().wantCaptureMouse
+
+    fun initialize(handle: Long) {
+        if (isInitialized) {
+            return
+        }
+
+        imguiGlfw = ImGuiImplGlfw()
+        imguiGl3 = ImGuiImplGl3()
+
+        imGuiInitialize()
+        imguiGlfw.init(handle, true)
+        imguiGl3.init()
+
+        isInitialized = true
     }
 
-    fun imGuiInit() {
-        imGuiIO.iniFilename = null
-        imGuiIO.addConfigFlags(ImGuiConfigFlags.NavEnableKeyboard)
-        imGuiIO.addConfigFlags(ImGuiConfigFlags.DockingEnable)
-        imGuiIO.addConfigFlags(ImGuiConfigFlags.ViewportsEnable)
+    fun mouseFocus() {
+        if (!isInitialized) {
+            return
+        }
 
-        val fontAtlas: ImFontAtlas = imGuiIO.getFonts()
-        val fontConfig = ImFontConfig()
-
-        fontConfig.glyphRanges = fontAtlas.glyphRangesCyrillic
-
-        fontAtlas.addFontDefault()
-
-        fontConfig.mergeMode = true
-        fontConfig.pixelSnapH = true
-
-        fontConfig.destroy()
-
+        ImGui.setWindowFocus(null)
     }
 
-    fun endFrame(windowPtr: Long) {
-        implGl3.renderDrawData(ImGui.getDrawData())
+    fun mouseClick(mouseX: Double, mouseY: Double, button: Int): Boolean {
+        if (!isInitialized || !ImGui.getIO().wantCaptureMouse) {
+            return false
+        }
+
+        ImGui.getIO().setMousePos(mouseX.toFloat(), mouseY.toFloat())
+        ImGui.getIO().setMouseDown(button, true)
+        return true
+    }
+
+    fun mouseRelease(mouseX: Double, mouseY: Double, button: Int): Boolean {
+        if (!isInitialized || !ImGui.getIO().wantCaptureMouse) {
+            return false
+        }
+
+        ImGui.getIO().setMousePos(mouseX.toFloat(), mouseY.toFloat())
+        ImGui.getIO().setMouseDown(button, false)
+        return true
+    }
+
+    fun mouseScroll(xOff: Double, yOff: Double): Boolean {
+        if (!isInitialized || !ImGui.getIO().wantCaptureMouse) {
+            return false
+        }
+
+        ImGui.getIO().mouseWheelH = xOff.toFloat()
+        ImGui.getIO().mouseWheel = yOff.toFloat()
+        return true
+    }
+
+    fun keyPress(keyCode: Int, mods: Int): Boolean {
+        if (!isInitialized || !ImGui.getIO().wantCaptureKeyboard) {
+            return false
+        }
+
+        ImGui.getIO().keyCtrl = mods and GLFW.GLFW_MOD_CONTROL != 0
+        ImGui.getIO().keyAlt = mods and GLFW.GLFW_MOD_ALT != 0
+        ImGui.getIO().keyShift = mods and GLFW.GLFW_MOD_SHIFT != 0
+        ImGui.getIO().keySuper = mods and GLFW.GLFW_MOD_SUPER != 0
+        ImGui.getIO().setKeysDown(keyCode, true)
+        return true
+    }
+
+    fun keyRelease(keyCode: Int, mods: Int): Boolean {
+        if (!isInitialized || !ImGui.getIO().wantCaptureKeyboard) {
+            return false
+        }
+
+        ImGui.getIO().keyCtrl = mods and GLFW.GLFW_MOD_CONTROL != 0
+        ImGui.getIO().keyAlt = mods and GLFW.GLFW_MOD_ALT != 0
+        ImGui.getIO().keyShift = mods and GLFW.GLFW_MOD_SHIFT != 0
+        ImGui.getIO().keySuper = mods and GLFW.GLFW_MOD_SUPER != 0
+        ImGui.getIO().setKeysDown(keyCode, false)
+        return true
+    }
+
+    fun destroy() {
+        if (!isInitialized) {
+            return
+        }
+
+        imguiGl3.dispose()
+        imguiGlfw.dispose()
+        ImGui.destroyContext(imguiContext)
+    }
+
+    fun startFrame() {
+        imguiGlfw.newFrame()
+        ImGui.newFrame()
+    }
+
+    fun endFrame() {
+        ImGui.render()
+        imguiGl3.renderDrawData(ImGui.getDrawData())
 
         if (ImGui.getIO().hasConfigFlags(ImGuiConfigFlags.ViewportsEnable)) {
-            val backupWindowPtr = glfwGetCurrentContext()
-            ImGui.updatePlatformWindows()
-            ImGui.renderPlatformWindowsDefault()
-            glfwMakeContextCurrent(backupWindowPtr)
+            val backupHandle = GLFW.glfwGetCurrentContext();
+            ImGui.updatePlatformWindows();
+            ImGui.renderPlatformWindowsDefault();
+            GLFW.glfwMakeContextCurrent(backupHandle);
         }
     }
 
-    fun mouseReleased(mouseX: Double, mouseY: Double, button: Int): Boolean {
-        if (imGuiIO.getMouseDown(button)) {
-            imGuiIO.setMouseDown(booleanArrayOf(true))
+    private fun imGuiInitialize() {
+        imguiContext = ImGui.createContext()
+
+        val io = ImGui.getIO()
+        io.iniFilename = null
+        io.configViewportsNoTaskBarIcon = true;
+        io.addConfigFlags(ImGuiConfigFlags.NavEnableKeyboard)
+        io.addConfigFlags(ImGuiConfigFlags.DockingEnable)
+        io.addConfigFlags(ImGuiConfigFlags.ViewportsEnable)
+        io.configViewportsNoTaskBarIcon = true
+        io.fonts.addFontDefault()
+
+        if (io.hasConfigFlags(ImGuiConfigFlags.ViewportsEnable)) {
+            val style = ImGui.getStyle()
+            style.windowRounding = 0.0f
+            style.setColor(ImGuiCol.WindowBg, ImGui.getColorU32(ImGuiCol.WindowBg, 1f))
         }
-
-        return imGuiIO.wantCaptureMouse
-    }
-
-    fun mouseScrolled(mouseX: Double, mouseY: Double, scrollX: Double, scrollY: Double): Boolean {
-        if (imGuiIO.wantCaptureMouse) {
-            imGuiIO.mouseWheelH = scrollX.toFloat()
-            imGuiIO.mouseWheel = scrollY.toFloat()
-        }
-
-        return imGuiIO.wantCaptureMouse
-    }
-
-    fun mouseClicked(mouseX: Double, mouseY: Double, button: Int): Boolean {
-        if (imGuiIO.wantCaptureMouse) {
-            if (imGuiIO.getMouseDown(button)) {
-                imGuiIO.setMouseDown(booleanArrayOf(false))
-            }
-        }
-
-        return imGuiIO.wantCaptureMouse
-    }
-
-    fun keyPressed(keyCode: Int, scanCode: Int, modifiers: Int): Boolean {
-        if (imGuiIO.wantCaptureKeyboard) {
-            imGuiIO.keyCtrl = modifiers and GLFW.GLFW_MOD_CONTROL != 0
-            imGuiIO.keyShift = modifiers and GLFW.GLFW_MOD_SHIFT != 0
-            imGuiIO.keyAlt = modifiers and GLFW.GLFW_MOD_ALT != 0
-            imGuiIO.keySuper = modifiers and GLFW.GLFW_MOD_SUPER != 0
-
-            if (imGuiIO.getKeysDown(keyCode)) {
-                imGuiIO.setKeysDown(booleanArrayOf(false))
-            }
-        }
-
-        return imGuiIO.wantCaptureKeyboard
-    }
-
-    fun keyReleased(keyCode: Int, scanCode: Int, modifiers: Int): Boolean {
-        if (imGuiIO.wantCaptureKeyboard) {
-            imGuiIO.keyCtrl = modifiers and GLFW.GLFW_MOD_CONTROL != 0
-            imGuiIO.keyShift = modifiers and GLFW.GLFW_MOD_SHIFT != 0
-            imGuiIO.keyAlt = modifiers and GLFW.GLFW_MOD_ALT != 0
-            imGuiIO.keySuper = modifiers and GLFW.GLFW_MOD_SUPER != 0
-
-            if (imGuiIO.getKeysDown(keyCode)) {
-                imGuiIO.setKeysDown(booleanArrayOf(false))
-            }
-        }
-
-        return imGuiIO.wantCaptureKeyboard
-    }
-
-    fun charTyped(codePoint: Char, modifiers: Int): Boolean {
-        if (imGuiIO.wantCaptureKeyboard) {
-            imGuiIO.keyCtrl = modifiers and GLFW.GLFW_MOD_CONTROL != 0
-            imGuiIO.keyShift = modifiers and GLFW.GLFW_MOD_SHIFT != 0
-            imGuiIO.keyAlt = modifiers and GLFW.GLFW_MOD_ALT != 0
-            imGuiIO.keySuper = modifiers and GLFW.GLFW_MOD_SUPER != 0
-
-            imGuiIO.addInputCharacter(codePoint.code)
-        }
-
-        return imGuiIO.wantCaptureKeyboard
     }
 }

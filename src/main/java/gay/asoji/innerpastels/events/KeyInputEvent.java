@@ -12,11 +12,11 @@ import net.fabricmc.fabric.api.event.EventFactory;
 
 @FunctionalInterface
 public interface KeyInputEvent {
-    Event<KeyInputEvent> EVENT = EventFactory.createArrayBacked(KeyInputEvent.class, (listeners) -> (key, scancode, action, mods) -> {
+    Event<KeyInputEvent> EVENT = EventFactory.createArrayBacked(KeyInputEvent.class, (listeners) -> (key, action, mods) -> {
         for (KeyInputEvent listener : listeners) {
-            listener.onKeyInput(key, scancode, action, mods);
+            listener.onKeyInput(key, action, mods);
         }
     });
 
-    void onKeyInput(int key, int scancode, InputAction action, int mods);
+    void onKeyInput(int key, InputAction action, int mods);
 }

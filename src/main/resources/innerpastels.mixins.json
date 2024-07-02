@@ -6,8 +6,8 @@
   "mixins": [
   ],
   "client": [
-    "MinecraftClientMixin",
     "KeyboardHandlerMixin",
+    "MinecraftMixin",
     "MouseHandlerMixin"
   ],
   "injectors": {
