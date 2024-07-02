@@ -27,10 +27,9 @@ version = getModVersion()
 group = project.property("maven_group")!!
 
 repositories {
+    mavenCentral()
     maven { url = uri("https://maven.parchmentmc.org") }
-    maven { url = uri("https://mvn.devos.one/snapshots") }
-    maven { url = uri("https://raw.githubusercontent.com/kotlin-graphics/mary/master") }
-}
+    maven { url = uri("https://mvn.devos.one/snapshots") } }
 
 //All dependencies and their versions are in ./gradle/libs.versions.toml
 dependencies {
@@ -45,20 +44,9 @@ dependencies {
     //Fabric
     modImplementation(libs.fabric.loader)
     modImplementation(libs.fabric.api)
+    modImplementation(libs.fabric.language.kotlin) // how did i not have this
 
-    implementation("kotlin.graphics:imgui-core:1.89.7-1") {
-        exclude(group = "org.lwjgl")
-    }
-    implementation("kotlin.graphics:imgui-gl:1.89.7-1") {
-        exclude(group = "org.lwjgl")
-    }
-    implementation("kotlin.graphics:imgui-glfw:1.89.7-1") {
-        exclude(group = "org.lwjgl")
-    }
-    implementation("kotlin.graphics:uno-core:0.7.21") {
-        exclude(group = "org.lwjgl")
-    }
-    implementation("kotlin.graphics:glm:0.9.9.1-build-11") {
+    implementation(libs.bundles.imgui) {
         exclude(group = "org.lwjgl")
     }
 

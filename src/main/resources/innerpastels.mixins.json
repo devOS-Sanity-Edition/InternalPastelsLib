@@ -4,10 +4,10 @@
   "package": "gay.asoji.innerpastels.mixins",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-
   ],
   "client": [
     "KeyboardHandlerMixin",
+    "MinecraftMixin",
     "MouseHandlerMixin"
   ],
   "injectors": {
