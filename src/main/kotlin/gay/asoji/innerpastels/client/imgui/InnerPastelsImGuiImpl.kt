@@ -3,6 +3,8 @@ package gay.asoji.innerpastels.client.imgui
 import imgui.ImGui
 import imgui.flag.ImGuiCol
 import imgui.flag.ImGuiConfigFlags
+import imgui.flag.ImGuiDockNodeFlags
+import imgui.flag.ImGuiWindowFlags
 import imgui.gl3.ImGuiImplGl3
 import imgui.glfw.ImGuiImplGlfw
 import imgui.internal.ImGuiContext
@@ -142,6 +144,8 @@ object InnerPastelsImGuiImpl {
         io.addConfigFlags(ImGuiConfigFlags.NavEnableKeyboard)
         io.addConfigFlags(ImGuiConfigFlags.DockingEnable)
         io.addConfigFlags(ImGuiConfigFlags.ViewportsEnable)
+        io.addConfigFlags(ImGuiDockNodeFlags.None)
+        io.addConfigFlags(ImGuiWindowFlags.MenuBar)
         io.configViewportsNoTaskBarIcon = true
         io.fonts.addFontDefault()
 
