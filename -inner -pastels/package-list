@@ -26,6 +26,7 @@ $dokka.location:gay.asoji.innerpastels.blocks/StairBlock/StairBlock/#net.minecra
 $dokka.location:gay.asoji.innerpastels.client.imgui////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/index.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/ImGuiPanel///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-im-gui-panel/index.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/ImGuiPanel/render/#imgui.type.ImBoolean/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-im-gui-panel/render.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/ImGuiPanel/theme/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-im-gui-panel/theme.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/index.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/destroy/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/destroy.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/endFrame/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/end-frame.html
@@ -42,6 +43,12 @@ $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/mouseF
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/mouseRelease/#kotlin.Double#kotlin.Double#kotlin.Int/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/mouse-release.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/mouseScroll/#kotlin.Double#kotlin.Double/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/mouse-scroll.html
 $dokka.location:gay.asoji.innerpastels.client.imgui/InnerPastelsImGuiImpl/startFrame/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-inner-pastels-im-gui-impl/start-frame.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/TestDockSpace///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-test-dock-space/index.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/TestDockSpace/render/#imgui.type.ImBoolean/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-test-dock-space/render.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/TestDockSpace/theme/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-test-dock-space/theme.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/TestPanel///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-test-panel/index.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/TestPanel/render/#imgui.type.ImBoolean/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-test-panel/render.html
+$dokka.location:gay.asoji.innerpastels.client.imgui/TestPanel/theme/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client.imgui/-test-panel/theme.html
 $dokka.location:gay.asoji.innerpastels.client////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/index.html
 $dokka.location:gay.asoji.innerpastels.client/InnerPastelsClient.Companion///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-inner-pastels-client/-companion/index.html
 $dokka.location:gay.asoji.innerpastels.client/InnerPastelsClient.Companion/panels/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-inner-pastels-client/-companion/panels.html
