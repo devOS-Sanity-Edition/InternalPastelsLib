@@ -6,10 +6,13 @@ import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.endFrame
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.initialize
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.startFrame
+import gay.asoji.innerpastels.client.imgui.TestDockSpace
+import gay.asoji.innerpastels.client.imgui.TestPanel
 import gay.asoji.innerpastels.events.InputAction
 import gay.asoji.innerpastels.events.KeyInputEvent
 import gay.asoji.innerpastels.events.MouseInputEvent
 import gay.asoji.innerpastels.events.MouseScrollInputEvent
+import imgui.ImGui
 import imgui.type.ImBoolean
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
@@ -46,6 +49,20 @@ class InnerPastelsClient : ClientModInitializer {
 
     override fun onInitializeClient() {
         if (FabricLoader.getInstance().isDevelopmentEnvironment) {
+//            panels.addAll( // testing stuff
+//                listOf(
+//                    object : ImGuiPanel {
+//                        override fun theme() {
+//
+//                        }
+//
+//                        override fun render(open_: ImBoolean) {
+//                            ImGui.showDemoWindow()
+//                        }
+//                    },
+//                    TestDockSpace, TestPanel
+//                )
+//            )
             initializeDevKeybinds()
         }
 
@@ -55,6 +72,7 @@ class InnerPastelsClient : ClientModInitializer {
 
             if (isImGuiRenderEnabled) {
                 panels.forEach {
+                    it.theme()
                     it.render(ImBoolean())
                 }
             }
