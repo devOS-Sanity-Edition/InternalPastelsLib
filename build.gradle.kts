@@ -133,7 +133,7 @@ dependencies {
 
     }
 
-    include(modImplementation("gay.asoji:fmw:1.0.0+build.8")!!)
+    include(modApi("gay.asoji:fmw:1.0.0+build.8")!!)
 }
 
 tasks.withType<DokkaTask>().configureEach {
