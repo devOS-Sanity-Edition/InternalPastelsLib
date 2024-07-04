@@ -1,5 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import org.jetbrains.dokka.base.DokkaBase
 import org.jetbrains.dokka.base.DokkaBaseConfiguration
 import org.jetbrains.dokka.gradle.DokkaTask
@@ -20,11 +21,80 @@ plugins {
     alias(libs.plugins.grgit)
     alias(libs.plugins.fabric.loom)
     alias(libs.plugins.dokka)
+    alias(libs.plugins.shadow) apply false
 }
 
+val shade: Configuration by configurations.creating { }
 val archivesBaseName = project.property("archives_base_name").toString()
 version = getModVersion()
 group = project.property("maven_group")!!
+
+/*
+*
+* Taken from Deftu's Gradle-Toolkit with permission, and have explicit permission from Deftu himself to be excluded from Deftu's Gradle-Toolkit's LGPLv3 license
+*
+* src: https://github.com/Deftu/Gradle-Toolkit/blob/main/src/main/kotlin/dev/deftu/gradle/tools/shadow.gradle.kts
+*
+* lines affected: 27, 42-96
+*
+*/
+
+val fatJar = tasks.register<ShadowJar>("fatJar") {
+    group = "innerpastels"
+    description = "Builds a fat JAR with all dependencies shaded in"
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    configurations = listOf(shade)
+    archiveVersion.set(project.version.toString())
+    archiveClassifier.set("all")
+
+    val javaPlugin = project.extensions.getByType(JavaPluginExtension::class.java)
+    val jarTask = project.tasks.getByName("jar") as Jar
+
+    manifest.inheritFrom(jarTask.manifest)
+    val libsProvider = project.provider { listOf(jarTask.manifest.attributes["Class-Path"]) }
+    val files = project.objects.fileCollection().from(shade)
+    doFirst {
+        if (!files.isEmpty) {
+            val libs = libsProvider.get().toMutableList()
+            libs.addAll(files.map { it.name })
+            manifest.attributes(mapOf("Class-Path" to libs.filterNotNull().joinToString(" ")))
+        }
+    }
+
+    relocate("org.lwjgl", "gay.asoji.innerpastels.shade.lwjgl") // told by naz to add to prevent conflicts
+    from(javaPlugin.sourceSets.getByName("main").output)
+    exclude("META-INF/INDEX.LIST", "META-INF/*.SF", "META-INF/*.DSA", "META-INF/*.RSA", "module-info.class")
+}
+
+project.artifacts.add("shade", fatJar)
+
+pluginManager.withPlugin("java") {
+    tasks["assemble"].dependsOn(fatJar)
+}
+
+tasks {
+    val shadowJar = findByName("shadowJar")
+    if (shadowJar != null) {
+        named("shadowJar") {
+            doFirst {
+                throw GradleException("Incorrect task! You're looking for fatJar.")
+            }
+        }
+    }
+}
+
+loom {
+    tasks {
+        fatJar {
+            archiveClassifier.set("dev")
+        }
+
+        remapJar {
+            inputFile.set(fatJar.get().archiveFile)
+            archiveClassifier.set("")
+        }
+    }
+}
 
 repositories {
     mavenCentral()
@@ -46,8 +116,23 @@ dependencies {
     modImplementation(libs.fabric.api)
     modImplementation(libs.fabric.language.kotlin) // how did i not have this
 
-    implementation(libs.bundles.imgui) {
-        exclude(group = "org.lwjgl")
+    listOf(
+        "binding" to true,
+        "lwjgl3" to true,
+        "natives-windows" to false,
+        "natives-linux" to false,
+        "natives-macos" to false
+    ).forEach { (module, bundled) ->
+        val version = "1.86.11"
+        implementation("io.github.spair:imgui-java-$module:$version") {
+            exclude(group = "org.lwjgl")
+        }
+
+        if (bundled) {
+            include("io.github.spair:imgui-java-$module:$version")
+        } else {
+            shade("io.github.spair:imgui-java-$module:$version")
+        }
     }
 
     include(modImplementation("gay.asoji:fmw:1.0.0+build.8")!!)
@@ -192,5 +277,5 @@ fun getModVersion(): String {
 
     // No tracking information could be found about the build
     return "${modVersion}+unknown"
-
 }
+

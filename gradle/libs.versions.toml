@@ -13,15 +13,9 @@ minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
 fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
 fabric_language_kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabric_language_kotlin" }
-imgui-binding = { module = "io.github.spair:imgui-java-binding", version.ref = "imgui-java" }
-imgui-lwjgl3 = { module = "io.github.spair:imgui-java-lwjgl3", version.ref = "imgui-java" }
-imgui-native-windows = { module = "io.github.spair:imgui-java-natives-windows", version.ref = "imgui-java" }
-imgui-native-linux = { module = "io.github.spair:imgui-java-natives-linux", version.ref = "imgui-java" }
-
-[bundles]
-imgui = [ "imgui-binding", "imgui-lwjgl3", "imgui-native-linux", "imgui-native-windows" ]
 
 [plugins]
 grgit = { id = "org.ajoberstar.grgit", version = "5.2.1"}
 fabric_loom = { id = "fabric-loom", version = "1.6-SNAPSHOT" }
 dokka = { id = "org.jetbrains.dokka", version = "1.9.10" }
+shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" } # ngl i'm very reluctant about this but what can i do rly
