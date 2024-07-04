@@ -7,7 +7,7 @@ import imgui.ImVec4
 import imgui.flag.ImGuiCol
 import imgui.type.ImBoolean
 
-object TestDockSpace : ImGuiPanel {
+internal object TestDockSpace : ImGuiPanel {
     override fun theme() {
         val style = ImGui.getStyle()
         val lmaored: Int = ImColor.rgb("#00a86b")

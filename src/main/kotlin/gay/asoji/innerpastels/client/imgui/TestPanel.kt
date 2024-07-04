@@ -7,7 +7,7 @@ import imgui.ImGui.end
 import imgui.flag.ImGuiCol
 import imgui.type.ImBoolean
 
-object TestPanel : ImGuiPanel {
+internal object TestPanel : ImGuiPanel {
     override fun theme() {
         val style = ImGui.getStyle()
         val lmaored: Int = ImColor.rgba(122, 41, 41, 255)
