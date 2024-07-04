@@ -115,6 +115,7 @@ dependencies {
     modImplementation(libs.fabric.loader)
     modImplementation(libs.fabric.api)
     modImplementation(libs.fabric.language.kotlin) // how did i not have this
+    include(implementation("com.moulberry:mixinconstraints:1.0.1")!!)
 
     listOf(
         "binding" to true,

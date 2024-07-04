@@ -1,5 +1,6 @@
 package gay.asoji.innerpastels.mixins;
 
+import com.moulberry.mixinconstraints.annotations.IfDevEnvironment;
 import gay.asoji.innerpastels.events.InputAction;
 import gay.asoji.innerpastels.events.KeyInputEvent;
 import net.minecraft.client.KeyboardHandler;
@@ -11,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+@IfDevEnvironment
 @Mixin(KeyboardHandler.class)
 public class KeyboardHandlerMixin {
     @Shadow @Final private Minecraft minecraft;

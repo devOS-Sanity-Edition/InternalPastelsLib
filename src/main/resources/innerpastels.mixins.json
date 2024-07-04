@@ -3,6 +3,7 @@
   "minVersion": "0.8",
   "package": "gay.asoji.innerpastels.mixins",
   "compatibilityLevel": "JAVA_21",
+  "plugin": "com.moulberry.mixinconstraints.ConstraintsMixinPlugin",
   "mixins": [
   ],
   "client": [

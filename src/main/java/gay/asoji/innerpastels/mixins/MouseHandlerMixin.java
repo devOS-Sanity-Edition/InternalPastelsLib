@@ -1,5 +1,6 @@
 package gay.asoji.innerpastels.mixins;
 
+import com.moulberry.mixinconstraints.annotations.IfDevEnvironment;
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl;
 import gay.asoji.innerpastels.events.InputAction;
 import gay.asoji.innerpastels.events.MouseInputEvent;
@@ -14,6 +15,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+@IfDevEnvironment
 @Mixin(MouseHandler.class)
 public class MouseHandlerMixin {
     @Shadow @Final private Minecraft minecraft;

@@ -5,7 +5,6 @@ fabric-loader = "0.15.11"
 fabric-api = "0.100.4+1.21"
 fabric_language_kotlin = "1.11.0+kotlin.2.0.0"
 imgui-java = "1.86.11"
-
 dokka = "1.9.10"
 
 [libraries]
@@ -13,6 +12,7 @@ minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
 fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
 fabric_language_kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabric_language_kotlin" }
+
 
 [plugins]
 grgit = { id = "org.ajoberstar.grgit", version = "5.2.1"}
