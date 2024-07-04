@@ -61,6 +61,7 @@ val fatJar = tasks.register<ShadowJar>("fatJar") {
         }
     }
 
+    relocate("imgui", "gay.asoji.innerpastels.shade.imgui") // told by naz to add to prevent conflicts
     relocate("org.lwjgl", "gay.asoji.innerpastels.shade.lwjgl") // told by naz to add to prevent conflicts
     from(javaPlugin.sourceSets.getByName("main").output)
     exclude("META-INF/INDEX.LIST", "META-INF/*.SF", "META-INF/*.DSA", "META-INF/*.RSA", "module-info.class")
@@ -98,8 +99,9 @@ loom {
 
 repositories {
     mavenCentral()
-    maven { url = uri("https://maven.parchmentmc.org") }
-    maven { url = uri("https://mvn.devos.one/snapshots") } }
+    maven("https://maven.parchmentmc.org")
+    maven("https://mvn.devos.one/snapshots")
+}
 
 //All dependencies and their versions are in ./gradle/libs.versions.toml
 dependencies {
@@ -128,11 +130,9 @@ dependencies {
             exclude(group = "org.lwjgl")
         }
 
-        if (bundled) {
-            include("io.github.spair:imgui-java-$module:$version")
-        } else {
-            shade("io.github.spair:imgui-java-$module:$version")
-        }
+
+        shade("io.github.spair:imgui-java-$module:$version")
+
     }
 
     include(modImplementation("gay.asoji:fmw:1.0.0+build.8")!!)
