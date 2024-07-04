@@ -125,7 +125,7 @@ dependencies {
         "natives-macos" to false
     ).forEach { (module, bundled) ->
         val version = "1.86.11"
-        implementation("io.github.spair:imgui-java-$module:$version") {
+        api("io.github.spair:imgui-java-$module:$version") {
             exclude(group = "org.lwjgl")
         }
 
