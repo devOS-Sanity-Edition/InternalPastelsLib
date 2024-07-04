@@ -61,8 +61,9 @@ val fatJar = tasks.register<ShadowJar>("fatJar") {
         }
     }
 
-    relocate("imgui", "gay.asoji.innerpastels.shade.imgui") // told by naz to add to prevent conflicts
-    relocate("org.lwjgl", "gay.asoji.innerpastels.shade.lwjgl") // told by naz to add to prevent conflicts
+    relocate("imgui", "gay.asoji.innerpastels.shade.imgui") // told by naz to add relocates to prevent conflicts
+    relocate("io.imgui.java.native-bin", "gay.asoji.innerpastels.shade.imgui-natives")
+    relocate("org.lwjgl", "gay.asoji.innerpastels.shade.lwjgl")
     from(javaPlugin.sourceSets.getByName("main").output)
     exclude("META-INF/INDEX.LIST", "META-INF/*.SF", "META-INF/*.DSA", "META-INF/*.RSA", "module-info.class")
 }
