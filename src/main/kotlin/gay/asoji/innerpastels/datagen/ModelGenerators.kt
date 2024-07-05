@@ -1,6 +1,5 @@
 package gay.asoji.innerpastels.datagen
 
-import gay.asoji.innerpastels.crab.CrabInTheCode
 import net.minecraft.data.models.BlockModelGenerators
 import net.minecraft.data.models.model.ModelLocationUtils
 import net.minecraft.data.models.model.ModelTemplates
@@ -82,7 +81,6 @@ object ModelGenerators {
             texturedModel.mapping,
             blockStateModelGenerator.modelOutput
         )
-        CrabInTheCode.crabDeezNuts("can someone help me up the stairs? thaaaaanks")
         val outerStairs: ResourceLocation = ModelTemplates.STAIRS_OUTER.create(
             stairs,
             texturedModel.mapping,

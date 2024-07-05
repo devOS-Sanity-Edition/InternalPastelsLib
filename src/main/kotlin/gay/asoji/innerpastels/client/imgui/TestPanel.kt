@@ -3,7 +3,6 @@ package gay.asoji.innerpastels.client.imgui
 import imgui.ImColor
 import imgui.ImGui
 import imgui.ImGui.*
-import imgui.ImGui.end
 import imgui.flag.ImGuiCol
 import imgui.type.ImBoolean
 

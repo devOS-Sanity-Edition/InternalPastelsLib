@@ -16,7 +16,6 @@ import gay.asoji.innerpastels.blocks.Properties.pastelStair
 import gay.asoji.innerpastels.blocks.Properties.pastelWall
 import gay.asoji.innerpastels.blocks.Properties.pastelWool
 import gay.asoji.innerpastels.blocks.StairBlock
-import gay.asoji.innerpastels.crab.CrabInTheCode
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
@@ -249,11 +248,6 @@ fun DyeColor.registerLightBlock(modID: String, name: String): Block = Block(past
  * @return [Block]
  */
 fun MapColor.registerLightBlock(modID: String, name: String): Block = Block(pastelLight().mapColor(this)).registerBlockWithItem(modID, name)
-
-/**
- * @suppress
- */
-object crab1 { val crab2 = CrabInTheCode.crabDeezNuts("hey, it felt comfortable here between the light and the carpet") }
 
 /**
  * Registers the pastel carpet block with an accompanying item with a chosen [DyeColor] to be shown on a map

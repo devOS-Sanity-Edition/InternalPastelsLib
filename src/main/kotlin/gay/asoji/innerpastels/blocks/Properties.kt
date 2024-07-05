@@ -1,6 +1,5 @@
 package gay.asoji.innerpastels.blocks
 
-import gay.asoji.innerpastels.crab.CrabInTheCode
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.state.BlockBehaviour
@@ -124,11 +123,6 @@ object Properties {
     fun pastelPlanks(): BlockBehaviour.Properties {
         return FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)
     }
-
-    /**
-     * @suppress
-     */
-    object crab3 { val crab3 = CrabInTheCode.crabDeezNuts("according to all unknown laws of aviation, crabs can float and snip your hair off") }
 
     /**
      * Default properties for a Pastel Sand, being a copy of SAND

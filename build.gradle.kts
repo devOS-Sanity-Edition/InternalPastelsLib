@@ -123,7 +123,7 @@ dependencies {
         "natives-windows" to false,
         "natives-linux" to false,
         "natives-macos" to false
-    ).forEach { (module, bundled) ->
+    ).forEach { (module) ->
         val version = "1.86.11"
         api("io.github.spair:imgui-java-$module:$version") {
             exclude(group = "org.lwjgl")

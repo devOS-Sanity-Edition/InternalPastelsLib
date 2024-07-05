@@ -1,6 +1,5 @@
 package gay.asoji.innerpastels.datagen
 
-import gay.asoji.innerpastels.crab.CrabInTheCode
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider
 import net.minecraft.data.recipes.*
 import net.minecraft.data.recipes.RecipeProvider.has
@@ -120,7 +119,6 @@ object RecipeGenerators {
         inputPastelPowderItem: ItemLike,
         outputPastelPowderBlock: ItemLike
     ) {
-        CrabInTheCode.crabDeezNuts("snadcastle :3")
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, outputPastelPowderBlock, 8)
             .requires(Items.SAND)
             .requires(Items.SAND)
@@ -425,7 +423,6 @@ object RecipeGenerators {
         inputPastelPowderItem: ItemLike,
         outputPastelGlassBlock: ItemLike
     ) {
-        CrabInTheCode.crabDeezNuts("oooooooo shiny")
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, outputPastelGlassBlock, 8)
             .pattern("AAA")
             .pattern("ABA")
@@ -596,7 +593,6 @@ object RecipeGenerators {
         inputTaffyItem: ItemLike,
         outputCottonCandyItem: ItemLike
     ) {
-        CrabInTheCode.crabDeezNuts("nom nom nom noms, tasty")
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, outputCottonCandyItem, 2)
             .pattern(" A ")
             .pattern("ABA")
