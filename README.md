@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/45d0ca04-0ea8-4886-bb1a-119ea75fa081" height="512"></img>
+  <img src="https://github.com/user-attachments/assets/45d0ca04-0ea8-4886-bb1a-119ea75fa081" min-wi width="256" height="256"></img>
 </p>
 
 # InnerPastels
