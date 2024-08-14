@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/45d0ca04-0ea8-4886-bb1a-119ea75fa081" height="512"></img>
+</p>
+
 # InnerPastels
 
 Name by [@BluSpring](https://github.com/BluSpring)
