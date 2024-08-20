@@ -70,9 +70,9 @@ object InnerPastelsImGuiImpl {
         return if (ImGui.getIO().wantCaptureMouse) {
             updateKeyMods(mods)
             ImGui.getIO().addMouseButtonEvent(button, true)
-            true
-        } else {
             false
+        } else {
+            true
         }
     }
 
@@ -84,9 +84,9 @@ object InnerPastelsImGuiImpl {
         return if (ImGui.getIO().wantCaptureMouse) {
             updateKeyMods(mods)
             ImGui.getIO().addMouseButtonEvent(button, false)
-            false
-        } else {
             true
+        } else {
+            false
         }
     }
 
