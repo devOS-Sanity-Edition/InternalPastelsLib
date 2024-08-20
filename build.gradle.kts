@@ -129,7 +129,9 @@ dependencies {
             exclude(group = "org.lwjgl")
         }
 
-        shade("io.github.spair:imgui-java-$module:$version")
+        shade("io.github.spair:imgui-java-$module:$version") {
+            exclude(group = "org.lwjgl")
+        }
 
     }
 
