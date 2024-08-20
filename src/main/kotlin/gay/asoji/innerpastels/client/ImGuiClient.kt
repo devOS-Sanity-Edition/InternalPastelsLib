@@ -46,20 +46,20 @@ object ImGuiClient {
     }
 
     fun init() {
-        panels.addAll( // testing stuff
-            listOf(
-                object : ImGuiPanel {
-                    override fun theme() {
-
-                    }
-
-                    override fun render(open_: ImBoolean) {
-                        ImGui.showDemoWindow()
-                    }
-                },
-                TestDockSpace, TestPanel
-            )
-        )
+//        panels.addAll( // testing stuff
+//            listOf(
+//                object : ImGuiPanel {
+//                    override fun theme() {
+//
+//                    }
+//
+//                    override fun render(open_: ImBoolean) {
+//                        ImGui.showDemoWindow()
+//                    }
+//                },
+//                TestDockSpace, TestPanel
+//            )
+//        )
 
         initializeDevKeybinds()
         HudRenderCallback.EVENT.register { gui, tickDelta ->
