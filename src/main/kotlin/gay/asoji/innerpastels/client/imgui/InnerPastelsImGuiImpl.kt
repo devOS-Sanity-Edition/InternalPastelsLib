@@ -1,7 +1,5 @@
 package gay.asoji.innerpastels.client.imgui
 
-import com.mojang.blaze3d.platform.GlDebug
-import com.mojang.blaze3d.systems.RenderSystem
 import imgui.ImFontConfig
 import imgui.ImFontGlyphRangesBuilder
 import imgui.ImGui
@@ -12,11 +10,8 @@ import imgui.glfw.ImGuiImplGlfw
 import imgui.internal.ImGuiContext
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
-import net.fabricmc.loader.api.FabricLoader
 import net.minecraft.client.Minecraft
 import org.lwjgl.glfw.GLFW
-import org.lwjgl.opengl.GL11C
-import org.lwjgl.opengl.GL32C
 
 
 @Environment(EnvType.CLIENT)
@@ -45,7 +40,7 @@ object InnerPastelsImGuiImpl {
         imguiGl3 = ImGuiImplGl3()
 
         imGuiInitialize()
-        imguiGlfw.init(handle, true)
+        imguiGlfw.init(handle, false)
         imguiGl3.init()
 
         isInitialized = true
@@ -72,9 +67,13 @@ object InnerPastelsImGuiImpl {
             return false
         }
 
-        imguiGlfw.cursorPosCallback(Minecraft.getInstance().window.window, mouseX, mouseY)
-        //imguiGlfw.mouseButtonCallback(Minecraft.getInstance().window.window, button, GLFW.GLFW_PRESS, mods)
-        return true
+        return if (ImGui.getIO().wantCaptureMouse) {
+            updateKeyMods(mods)
+            ImGui.getIO().addMouseButtonEvent(button, true)
+            true
+        } else {
+            false
+        }
     }
 
     fun mouseRelease(mouseX: Double, mouseY: Double, button: Int, mods: Int): Boolean {
@@ -82,29 +81,39 @@ object InnerPastelsImGuiImpl {
             return false
         }
 
-        imguiGlfw.cursorPosCallback(Minecraft.getInstance().window.window, mouseX, mouseY)
-        //imguiGlfw.mouseButtonCallback(Minecraft.getInstance().window.window, button, GLFW.GLFW_RELEASE, mods)
-        return true
+        return if (ImGui.getIO().wantCaptureMouse) {
+            updateKeyMods(mods)
+            ImGui.getIO().addMouseButtonEvent(button, false)
+            false
+        } else {
+            true
+        }
     }
 
     fun mouseScroll(xOff: Double, yOff: Double): Boolean {
-        if (!isInitialized || !ImGui.getIO().wantCaptureMouse) {
+        if (!isInitialized) {
             return false
         }
 
-        ImGui.getIO().mouseWheelH = xOff.toFloat()
-        ImGui.getIO().mouseWheel = yOff.toFloat()
-        return true
+        return if (ImGui.getIO().wantCaptureMouse) {
+            ImGui.getIO().addMouseWheelEvent(xOff.toFloat(), yOff.toFloat())
+            true
+        } else {
+            false
+        }
     }
 
     fun setKeyState(keyCode: Int, mods: Int, scanCode: Int, isDown: Boolean): Boolean {
-        if (!isInitialized || !ImGui.getIO().wantCaptureKeyboard) {
+        if (!isInitialized) {
             return false
         }
 
-        imguiGlfw.keyCallback(Minecraft.getInstance().window.window, keyCode, scanCode, if (isDown) GLFW.GLFW_PRESS else GLFW.GLFW_RELEASE, mods)
-
-        return true
+        return if (ImGui.getIO().wantCaptureKeyboard) {
+            imguiGlfw.keyCallback(Minecraft.getInstance().window.window, keyCode, scanCode, if (isDown) GLFW.GLFW_PRESS else GLFW.GLFW_RELEASE, mods)
+            true
+        } else {
+            false
+        }
     }
 
     fun destroy() {
@@ -174,5 +183,13 @@ object InnerPastelsImGuiImpl {
         val glyphRanges = rangesBuilder.buildRanges()
 
         fontConfig.destroy()
+    }
+
+    private fun updateKeyMods(mods: Int) {
+        val io = ImGui.getIO()
+        io.addKeyEvent(ImGuiKey.ModCtrl, (mods and GLFW.GLFW_MOD_CONTROL) != 0)
+        io.addKeyEvent(ImGuiKey.ModShift, (mods and GLFW.GLFW_MOD_SHIFT) != 0)
+        io.addKeyEvent(ImGuiKey.ModSuper, (mods and GLFW.GLFW_MOD_SUPER) != 0)
+        io.addKeyEvent(ImGuiKey.ModAlt, (mods and GLFW.GLFW_MOD_ALT) != 0)
     }
 }
