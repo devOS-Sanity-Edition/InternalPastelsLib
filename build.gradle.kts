@@ -108,7 +108,7 @@ dependencies {
 
     mappings(loom.layered {
         officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-1.21:2024.06.23@zip")
+        parchment("org.parchmentmc.data:parchment-1.21:2024.07.28@zip")
     })
 
     //Fabric
@@ -124,7 +124,7 @@ dependencies {
         "natives-linux" to false,
         "natives-macos" to false
     ).forEach { (module) ->
-        val version = "1.86.11"
+        val version = "1.87.0"
         api("io.github.spair:imgui-java-$module:$version") {
             exclude(group = "org.lwjgl")
         }

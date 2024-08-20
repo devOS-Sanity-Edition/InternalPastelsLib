@@ -1,6 +1,9 @@
 package gay.asoji.innerpastels.client.imgui
 
+import imgui.ImFontConfig
+import imgui.ImFontGlyphRangesBuilder
 import imgui.ImGui
+import imgui.ImGuiIO
 import imgui.flag.ImGuiCol
 import imgui.flag.ImGuiConfigFlags
 import imgui.flag.ImGuiDockNodeFlags
@@ -11,6 +14,7 @@ import imgui.internal.ImGuiContext
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import org.lwjgl.glfw.GLFW
+
 
 @Environment(EnvType.CLIENT)
 object InnerPastelsImGuiImpl {
@@ -113,8 +117,8 @@ object InnerPastelsImGuiImpl {
             return
         }
 
-        imguiGl3.dispose()
-        imguiGlfw.dispose()
+        imguiGl3.shutdown()
+        imguiGlfw.shutdown()
         ImGui.destroyContext(imguiContext)
     }
 
@@ -147,12 +151,32 @@ object InnerPastelsImGuiImpl {
         io.addConfigFlags(ImGuiDockNodeFlags.None)
         io.addConfigFlags(ImGuiWindowFlags.MenuBar)
         io.configViewportsNoTaskBarIcon = true
-        io.fonts.addFontDefault()
+
+        imGuiFontsInitialization(io)
+
+        io.fonts.build()
 
         if (io.hasConfigFlags(ImGuiConfigFlags.ViewportsEnable)) {
             val style = ImGui.getStyle()
             style.windowRounding = 0.0f
             style.setColor(ImGuiCol.WindowBg, ImGui.getColorU32(ImGuiCol.WindowBg, 1f))
         }
+    }
+
+    private fun imGuiFontsInitialization(io: ImGuiIO) { // why do fonts always come to bite me in the ass in one way or another i dont like you
+        io.fonts.setFreeTypeRenderer(true)
+        io.fonts.addFontDefault()
+
+        val rangesBuilder = ImFontGlyphRangesBuilder() // Glyphs ranges provide
+        rangesBuilder.addRanges(io.fonts.glyphRangesDefault)
+        rangesBuilder.addRanges(io.fonts.glyphRangesCyrillic)
+        rangesBuilder.addRanges(io.fonts.glyphRangesJapanese)
+
+        val fontConfig = ImFontConfig()
+        fontConfig.mergeMode = true
+
+        val glyphRanges = rangesBuilder.buildRanges()
+
+        fontConfig.destroy()
     }
 }
