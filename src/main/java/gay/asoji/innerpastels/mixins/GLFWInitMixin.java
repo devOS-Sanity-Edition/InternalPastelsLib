@@ -16,7 +16,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @IfDevEnvironment
 @Mixin(Window.class)
 public class GLFWInitMixin {
-    @Shadow @Final private long window;
+    @Shadow
+    @Final
+    private long window;
 
     @Inject(at = @At("TAIL"), method = "<init>")
     private void onGLFWInit(WindowEventHandler eventHandler, ScreenManager screenManager, DisplayData displayData, String preferredFullscreenVideoMode, String title, CallbackInfo ci) {

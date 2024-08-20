@@ -2,20 +2,19 @@
 # The latest versions are available at https://fabricmc.net/develop
 minecraft = "1.21"
 fabric-loader = "0.15.11"
-fabric-api = "0.100.4+1.21"
-fabric_language_kotlin = "1.11.0+kotlin.2.0.0"
-imgui-java = "1.86.11"
+fabric-api = "0.102.0+1.21"
+fabric-language-kotlin = "1.11.0+kotlin.2.0.0"
+imgui-java = "1.86.12"
 dokka = "1.9.10"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
 fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
-fabric_language_kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabric_language_kotlin" }
-
+fabric_language_kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabric-language-kotlin" }
 
 [plugins]
 grgit = { id = "org.ajoberstar.grgit", version = "5.2.1"}
-fabric_loom = { id = "fabric-loom", version = "1.6-SNAPSHOT" }
+fabric_loom = { id = "fabric-loom", version = "1.7-SNAPSHOT" }
 dokka = { id = "org.jetbrains.dokka", version = "1.9.10" }
-shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" } # ngl i'm very reluctant about this but what can i do rly
+shadow = { id = "com.gradleup.shadow", version = "8.3.0" } # ngl i'm very reluctant about this but what can i do rly

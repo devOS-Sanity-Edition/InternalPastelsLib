@@ -18,7 +18,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @IfDevEnvironment
 @Mixin(MouseHandler.class)
 public class MouseHandlerMixin {
-    @Shadow @Final private Minecraft minecraft;
+    @Shadow
+    @Final
+    private Minecraft minecraft;
 
     @Inject(method = "onPress", at = @At("HEAD"))
     private void onPress(long handle, int button, int action, int mods, CallbackInfo ci) {

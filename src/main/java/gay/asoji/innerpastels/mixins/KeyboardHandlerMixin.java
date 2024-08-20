@@ -15,7 +15,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @IfDevEnvironment
 @Mixin(KeyboardHandler.class)
 public class KeyboardHandlerMixin {
-    @Shadow @Final private Minecraft minecraft;
+    @Shadow
+    @Final
+    private Minecraft minecraft;
 
     @Inject(method = "keyPress", at = @At("HEAD"))
     private void onKeyPress(long handle, int key, int scancode, int action, int mods, CallbackInfo ci) {

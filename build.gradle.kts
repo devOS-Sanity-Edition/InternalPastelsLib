@@ -146,7 +146,7 @@ tasks.withType<DokkaTask>().configureEach {
 
             sourceLink {
                 localDirectory.set(file("src/main/kotlin"))
-                remoteUrl.set(URL("http://github.com/devOS-Sanity-Edition/InnerPastels/tree/kt/1.20.5/main/" + "src/main/kotlin"))
+                remoteUrl.set(URL("http://github.com/devOS-Sanity-Edition/InnerPastels/tree/kt/1.21/main/" + "src/main/kotlin"))
                 remoteLineSuffix.set("#L")
             }
         }
@@ -235,6 +235,26 @@ loom {
                 "-Dfabric-api.datagen.modid=${project.extra["archives_base_name"] as String}"
             )
             runDir("build/datagen")
+        }
+        create("testModClient") {
+            client()
+            name("Test Mod Client")
+            source(sourceSets.getByName("test"))
+            runDir("run/test")
+        }
+        create("testModServer") {
+            server()
+            name("Test Mod Server")
+            source(sourceSets.getByName("test"))
+            runDir("run/test_server")
+        }
+        create("Gametest") {
+            server()
+            name("Test")
+            source(sourceSets.getByName("test"))
+            vmArgs("-Dfabric-api.gametest")
+            vmArgs("-Dfabric-api.gametest.report-file=${project.buildDir}/junit.xml")
+            runDir("run/gametest_server")
         }
     }
 }

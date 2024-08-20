@@ -95,7 +95,7 @@ object RegisterFood {
 
     /**
      * Registers the Taffy candy item without any effects
-     * 
+     *
      * @property modID The namespace for your mod to be used with, like `SofterPastels.MOD_ID`
      * @property name Candy's Item ID [like `white_taffy`]
      *
@@ -162,7 +162,8 @@ object RegisterFood {
      * TODO: Rethink how Ice Cream is done as it's essentially an unused, but registered item, in every version of Softer Pastels.
      */
     fun registerIceCream(modID: String, name: String): Item {
-        return Items.registerItem(ResourceLocation.fromNamespaceAndPath(modID, name), Item(Item.Properties().food(FoodProperties.Builder().nutrition(3).saturationModifier(5f).build()))
+        return Items.registerItem(
+            ResourceLocation.fromNamespaceAndPath(modID, name), Item(Item.Properties().food(FoodProperties.Builder().nutrition(3).saturationModifier(5f).build()))
         )
     }
 }
