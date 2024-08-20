@@ -12,6 +12,7 @@
 		"sources": "https://github.com/devOS-Sanity-Edition/InnerPastels"
 	},
 	"license": "MIT",
+	"icon": "assets/innerpastels/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
