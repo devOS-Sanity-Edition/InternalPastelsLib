@@ -76,10 +76,10 @@ object ImGuiClient {
             endFrame()
         }
 
-        KeyInputEvent.EVENT.register { key, action, mods ->
+        KeyInputEvent.EVENT.register { key, action, mods, scanCode ->
             when (action ?: return@register) {
-                InputAction.PRESS -> InnerPastelsImGuiImpl.keyPress(key, mods)
-                InputAction.RELEASE -> InnerPastelsImGuiImpl.keyRelease(key, mods)
+                InputAction.PRESS -> InnerPastelsImGuiImpl.setKeyState(key, mods, scanCode, true)
+                InputAction.RELEASE -> InnerPastelsImGuiImpl.setKeyState(key, mods, scanCode, false)
             }
         }
 
@@ -87,8 +87,8 @@ object ImGuiClient {
             val mouseX = Minecraft.getInstance().mouseHandler.xpos()
             val mouseY = Minecraft.getInstance().mouseHandler.ypos()
             when (action ?: return@register) {
-                InputAction.PRESS -> InnerPastelsImGuiImpl.mouseClick(mouseX, mouseY, button)
-                InputAction.RELEASE -> InnerPastelsImGuiImpl.mouseRelease(mouseX, mouseY, button)
+                InputAction.PRESS -> InnerPastelsImGuiImpl.mouseClick(mouseX, mouseY, button, mods)
+                InputAction.RELEASE -> InnerPastelsImGuiImpl.mouseRelease(mouseX, mouseY, button, mods)
             }
         }
 

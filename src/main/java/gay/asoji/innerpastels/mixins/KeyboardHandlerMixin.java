@@ -25,7 +25,7 @@ public class KeyboardHandlerMixin {
             return;
 
         InputAction inputAction = InputAction.from(action);
-        KeyInputEvent.EVENT.invoker().onKeyInput(key, inputAction, mods);
+        KeyInputEvent.EVENT.invoker().onKeyInput(key, inputAction, mods, scancode);
     }
 
 

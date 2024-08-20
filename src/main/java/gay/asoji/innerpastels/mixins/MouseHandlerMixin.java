@@ -1,6 +1,7 @@
 package gay.asoji.innerpastels.mixins;
 
 import com.moulberry.mixinconstraints.annotations.IfDevEnvironment;
+import gay.asoji.innerpastels.client.ImGuiClient;
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl;
 import gay.asoji.innerpastels.events.InputAction;
 import gay.asoji.innerpastels.events.MouseInputEvent;
@@ -21,6 +22,15 @@ public class MouseHandlerMixin {
     @Shadow
     @Final
     private Minecraft minecraft;
+
+    @Inject(method = "onMove", at = @At("HEAD"))
+    private void onMove(long handle, double xpos, double ypos, CallbackInfo ci) {
+        if (handle != minecraft.getWindow().getWindow())
+            return;
+
+        // TODO: move to event
+        InnerPastelsImGuiImpl.INSTANCE.mouseMove(xpos, ypos);
+    }
 
     @Inject(method = "onPress", at = @At("HEAD"))
     private void onPress(long handle, int button, int action, int mods, CallbackInfo ci) {
