@@ -24,7 +24,9 @@ internal object TestPanel : ImGuiPanel {
 
 
         text("Howdy!")
-        button("press me, or dont")
+        if (button("press me, or dont")) {
+            println("die")
+        }
 
         end()
     }
