@@ -292,7 +292,7 @@ fun getModVersion(): String {
         }
 
         // ex: 1.0.0+rev.91949fa or 1.0.0+rev.91949fa-dirty
-        return "${modVersion}+rev.${id}+branch.${branch}"
+        return "${modVersion}+rev.${id}-branch.${branch}"
     }
 
     // No tracking information could be found about the build
