@@ -99,6 +99,8 @@ repositories {
     mavenCentral()
     maven("https://maven.parchmentmc.org")
     maven("https://mvn.devos.one/snapshots")
+    maven { url = uri("https://api.modrinth.com/maven") }
+
 }
 
 //All dependencies and their versions are in ./gradle/libs.versions.toml
@@ -115,6 +117,7 @@ dependencies {
     modImplementation(libs.fabric.loader)
     modImplementation(libs.fabric.api)
     modImplementation(libs.fabric.language.kotlin) // how did i not have this
+    modImplementation(libs.sodium)
     include(implementation("com.moulberry:mixinconstraints:1.0.1")!!)
 
     listOf(

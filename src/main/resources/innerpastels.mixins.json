@@ -10,7 +10,8 @@
     "GLFWInitMixin",
     "KeyboardHandlerMixin",
     "MinecraftMixin",
-    "MouseHandlerMixin"
+    "MouseHandlerMixin",
+    "RenderSystemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

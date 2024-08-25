@@ -6,10 +6,13 @@ import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.endFrame
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.initialize
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.startFrame
+import gay.asoji.innerpastels.client.imgui.TestDockSpace
+import gay.asoji.innerpastels.client.imgui.TestPanel
 import gay.asoji.innerpastels.events.InputAction
 import gay.asoji.innerpastels.events.KeyInputEvent
 import gay.asoji.innerpastels.events.MouseInputEvent
 import gay.asoji.innerpastels.events.MouseScrollInputEvent
+import imgui.ImGui
 import imgui.type.ImBoolean
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper
@@ -19,7 +22,8 @@ import net.minecraft.client.Minecraft
 import org.lwjgl.glfw.GLFW
 
 object ImGuiClient {
-    private var isImGuiRenderEnabled: Boolean = false
+    var isImGuiRenderEnabled: Boolean = false
+        private set
 
     val DEVELOPER_UI_BINDING = KeyMapping(
         "key.innerpastels.developerui",
@@ -43,35 +47,22 @@ object ImGuiClient {
     }
 
     fun init() {
-//        panels.addAll( // testing stuff
-//            listOf(
-//                object : ImGuiPanel {
-//                    override fun theme() {
-//
-//                    }
-//
-//                    override fun render(open_: ImBoolean) {
-//                        ImGui.showDemoWindow()
-//                    }
-//                },
-//                TestDockSpace, TestPanel
-//            )
-//        )
+        panels.addAll( // testing stuff
+            listOf(
+                object : ImGuiPanel {
+                    override fun theme() {
+
+                    }
+
+                    override fun render(open_: ImBoolean) {
+                        ImGui.showDemoWindow()
+                    }
+                },
+                TestDockSpace, TestPanel
+            )
+        )
 
         initializeDevKeybinds()
-        HudRenderCallback.EVENT.register { gui, tickDelta ->
-            initialize(Minecraft.getInstance().window.window)
-            startFrame()
-
-            if (isImGuiRenderEnabled) {
-                panels.forEach {
-                    it.theme()
-                    it.render(ImBoolean())
-                }
-            }
-
-            endFrame()
-        }
 
         KeyInputEvent.EVENT.register { key, action, mods, scanCode ->
             when (action ?: return@register) {

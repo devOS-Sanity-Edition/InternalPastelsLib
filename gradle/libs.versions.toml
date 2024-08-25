@@ -4,14 +4,16 @@ minecraft = "1.21"
 fabric-loader = "0.15.11"
 fabric-api = "0.102.0+1.21"
 fabric-language-kotlin = "1.11.0+kotlin.2.0.0"
-imgui-java = "1.86.12"
 dokka = "1.9.10"
+sodium_version = "mc1.21-0.6.0-beta.1-fabric"
+
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
 fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
 fabric_language_kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabric-language-kotlin" }
+sodium = { module = "maven.modrinth:sodium", version.ref = "sodium_version" }
 
 [plugins]
 grgit = { id = "org.ajoberstar.grgit", version = "5.2.1"}
