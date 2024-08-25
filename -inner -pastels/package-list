@@ -50,6 +50,7 @@ $dokka.location:gay.asoji.innerpastels.client/ImGuiClient///PointingToDeclaratio
 $dokka.location:gay.asoji.innerpastels.client/ImGuiClient/DEVELOPER_UI_BINDING/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-im-gui-client/-d-e-v-e-l-o-p-e-r_-u-i_-b-i-n-d-i-n-g.html
 $dokka.location:gay.asoji.innerpastels.client/ImGuiClient/init/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-im-gui-client/init.html
 $dokka.location:gay.asoji.innerpastels.client/ImGuiClient/initializeDevKeybinds/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-im-gui-client/initialize-dev-keybinds.html
+$dokka.location:gay.asoji.innerpastels.client/ImGuiClient/isImGuiRenderEnabled/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-im-gui-client/is-im-gui-render-enabled.html
 $dokka.location:gay.asoji.innerpastels.client/ImGuiClient/onTickDeveloperScreen/#net.minecraft.client.Minecraft/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-im-gui-client/on-tick-developer-screen.html
 $dokka.location:gay.asoji.innerpastels.client/ImGuiClient/panels/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-im-gui-client/panels.html
 $dokka.location:gay.asoji.innerpastels.client/InnerPastelsClient///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.client/-inner-pastels-client/index.html
@@ -137,6 +138,8 @@ $dokka.location:gay.asoji.innerpastels.mixins/MouseHandlerMixin/MouseHandlerMixi
 $dokka.location:gay.asoji.innerpastels.mixins/MouseHandlerMixin/cancelMouseX/#org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable<java.lang.Double>/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.mixins/-mouse-handler-mixin/cancel-mouse-x.html
 $dokka.location:gay.asoji.innerpastels.mixins/MouseHandlerMixin/cancelMouseY/#org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable<java.lang.Double>/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.mixins/-mouse-handler-mixin/cancel-mouse-y.html
 $dokka.location:gay.asoji.innerpastels.mixins/MouseHandlerMixin/grabMouse/#org.spongepowered.asm.mixin.injection.callback.CallbackInfo/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.mixins/-mouse-handler-mixin/grab-mouse.html
+$dokka.location:gay.asoji.innerpastels.mixins/RenderSystemMixin///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.mixins/-render-system-mixin/index.html
+$dokka.location:gay.asoji.innerpastels.mixins/RenderSystemMixin/RenderSystemMixin/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.mixins/-render-system-mixin/-render-system-mixin.html
 $dokka.location:gay.asoji.innerpastels.register////PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/index.html
 $dokka.location:gay.asoji.innerpastels.register//registerBlock/net.minecraft.world.level.block.Block#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerBlockItem/net.minecraft.world.level.block.Block#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-block-item.html
