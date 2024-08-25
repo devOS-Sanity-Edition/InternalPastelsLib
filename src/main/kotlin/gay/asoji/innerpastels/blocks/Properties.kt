@@ -1,132 +1,237 @@
 package gay.asoji.innerpastels.blocks
 
 import net.minecraft.world.level.block.Blocks
+import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.state.BlockBehaviour
+import net.minecraft.world.level.block.state.BlockState
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument
+import net.minecraft.world.level.material.PushReaction
 
 /**
  * A list of Block Properties, mostly copyOf's, to be used with making new blocks.
  */
 object Properties {
     /**
-     * Default properties for a Pastel Block, being a copy of WHITE_CONCRETE
+     * Default properties for Pastel Block, being a copy of WHITE_CONCRETE
      */
     fun pastelBlock(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CONCRETE)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .requiresCorrectToolForDrops()
+            .strength(1.8F)
     }
 
     /**
-     * Default properties for a Pastel Powder Block, being a copy of WHITE_CONCRETE_POWDER
+     * Default properties for Pastel Powder Block, being a copy of WHITE_CONCRETE_POWDER
      */
     fun pastelPowder(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CONCRETE_POWDER)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.SNARE)
+            .strength(0.5F)
+            .sound(SoundType.SAND)
     }
 
     /**
-     * Default properties for a Pastel Glass Pane, being a copy of WHITE_STAINED_GLASS, with vision not being blocked, and can't suffocate
+     * Default properties for Pastel Glass Pane, being a copy of WHITE_STAINED_GLASS, with vision not being blocked, and can't suffocate
      */
     fun pastelGlassPane(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS_PANE)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.HAT)
+            .strength(0.3F)
+            .sound(SoundType.GLASS)
+            .noOcclusion()
+            .requiresCorrectToolForDrops()
             .isViewBlocking(Blocks::never)
             .isSuffocating(Blocks::never)
     }
 
     /**
-     * Default properties for a Pastel Fence, being a copy of NETHER_BRICK_FENCE
+     * Default properties for Pastel Fence
      */
     fun pastelFence(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICK_FENCE)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .strength(2.0F, 6.0F)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()
     }
 
     /**
-     * Default properties for a Pastel Fence Gate, being a copy of Stone's properties, will probably get reworked in the future.
+     * Default properties for Pastel Fence Gate
      */
     fun pastelFenceGate(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .strength(2.0F, 6.0F)
+            .forceSolidOn()
+            .requiresCorrectToolForDrops()
     }
 
     /**
-     * Default properties for a Pastel Wall, being a copy of STONE_BRICK_WALL
+     * Default properties for Pastel Wall
      */
     fun pastelWall(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICK_WALL)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .strength(1.5F, 6.0F)
+            .forceSolidOn() // i saw this was there for STONE_BRICKS so it's needed
+            .requiresCorrectToolForDrops()
     }
 
     /**
-     * Default properties for a Pastel Slab, being a copy of STONE_SLAB
+     * Default properties for Pastel Slab
      */
     fun pastelSlab(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .strength(2.0F, 6.0F)
+            .requiresCorrectToolForDrops()
     }
 
     /**
-     * Default properties for a Pastel Stair, being a copy of STONE_STAIRS
+     * Default properties for Pastel Stair
      */
     fun pastelStair(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .strength(1.5F, 6.0F)
+            .requiresCorrectToolForDrops()
     }
 
     /**
-     * Default properties for a Pastel Wool, being a copy of WHITE_WOOL
+     * Default properties for Pastel Wool
      */
     fun pastelWool(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.GUITAR)
+            .strength(0.8F)
+            .sound(SoundType.WOOL)
+            .ignitedByLava()
     }
 
     /**
-     * Default properties for a Pastel Light, being a copy of GLOWSTONE
+     * Default properties for Pastel Light
      */
     fun pastelLight(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.PLING)
+            .strength(0.3F)
+            .sound(SoundType.GLASS)
+            .lightLevel { blockStatex: BlockState? -> 15 }
+            .isRedstoneConductor(Blocks::never)
     }
 
     /**
-     * Default properties for a Pastel Carpet, being a copy of WHITE_CARPET
+     * Default properties for Pastel Carpet
      */
     fun pastelCarpet(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CARPET)
+        return BlockBehaviour.Properties.of()
+            .strength(0.1F)
+            .sound(SoundType.WOOL)
+            .ignitedByLava()
     }
 
     /**
-     * Default properties for a Pastel Glass, being a copy of WHITE_STAINED_GLASS
+     * Default properties for Pastel Glass
      */
     fun pastelGlass(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)
-            .isViewBlocking(Blocks::never)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.HAT)
+            .strength(0.3F)
+            .sound(SoundType.GLASS)
+            .noOcclusion()
+            .isValidSpawn(Blocks::never)
+            .isRedstoneConductor(Blocks::never)
+            .requiresCorrectToolForDrops()
             .isSuffocating(Blocks::never)
+            .isViewBlocking(Blocks::never)
     }
 
     // **UNUSED**
     fun pastelCrops(): BlockBehaviour.Properties {
-        return (BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT))
+        return BlockBehaviour.Properties.of()
+            .noCollission()
+            .randomTicks()
+            .instabreak()
+            .sound(SoundType.CROP)
+            .pushReaction(PushReaction.DESTROY)
     }
 
     /**
-     * Default properties for a Pastel Leaves, being a copy of OAK_LEAVES
+     * Default properties for Pastel Leaves
      */
     fun pastelLeaves(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
-            .isViewBlocking(Blocks::never)
+        return BlockBehaviour.Properties.of()
+            .strength(0.2F)
+            .randomTicks()
+            .sound(SoundType.GRASS)
+            .noOcclusion()
+            .isValidSpawn(Blocks::ocelotOrParrot)
             .isSuffocating(Blocks::never)
+            .isViewBlocking(Blocks::never)
+            .ignitedByLava()
+            .requiresCorrectToolForDrops()
+            .pushReaction(PushReaction.DESTROY)
+            .isRedstoneConductor(Blocks::never)
     }
 
     /**
-     * Default properties for a Pastel Log, being a copy of OAK_LOG
+     * Default properties for Pastel Brightened Leaves
+     */
+    fun pastelBrightenedLeaves(): BlockBehaviour.Properties {
+        return BlockBehaviour.Properties.of()
+            .strength(0.2F)
+            .randomTicks()
+            .sound(SoundType.GRASS)
+            .noOcclusion()
+            .isValidSpawn(Blocks::ocelotOrParrot)
+            .isSuffocating(Blocks::never)
+            .isViewBlocking(Blocks::never)
+            .ignitedByLava()
+            .pushReaction(PushReaction.DESTROY)
+            .isRedstoneConductor(Blocks::never)
+            .requiresCorrectToolForDrops()
+            .lightLevel { blockStatex: BlockState? -> 5 }
+            .hasPostProcess(Blocks::always).emissiveRendering(Blocks::always)
+    }
+
+    /**
+     * Default properties for Pastel Log
      */
     fun pastelLogs(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2.0F)
+            .sound(SoundType.WOOD)
+            .ignitedByLava()
     }
 
     /**
-     * Default properties for a Pastel Plank, being a copy of OAK_PLANKS
+     * Default properties for Pastel Plank
      */
     fun pastelPlanks(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2.0F, 3.0F)
+            .sound(SoundType.WOOD)
+            .ignitedByLava()
     }
 
     /**
-     * Default properties for a Pastel Sand, being a copy of SAND
+     * Default properties for Pastel Sand
      */
     fun pastelSand(): BlockBehaviour.Properties {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.SAND)
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.SNARE)
+            .strength(0.5F)
+            .sound(SoundType.SAND)
+    }
+    
+    fun pastelOre(): BlockBehaviour.Properties {
+        return BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .strength(3.0F, 3.0F)
+            .sound(SoundType.DEEPSLATE)
+            .requiresCorrectToolForDrops()
     }
 }

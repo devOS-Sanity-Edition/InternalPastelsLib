@@ -2,6 +2,7 @@ package gay.asoji.innerpastels.register
 
 import gay.asoji.innerpastels.blocks.FenceGateBlock
 import gay.asoji.innerpastels.blocks.Properties.pastelBlock
+import gay.asoji.innerpastels.blocks.Properties.pastelBrightenedLeaves
 import gay.asoji.innerpastels.blocks.Properties.pastelCarpet
 import gay.asoji.innerpastels.blocks.Properties.pastelFence
 import gay.asoji.innerpastels.blocks.Properties.pastelFenceGate
@@ -10,6 +11,7 @@ import gay.asoji.innerpastels.blocks.Properties.pastelGlassPane
 import gay.asoji.innerpastels.blocks.Properties.pastelLeaves
 import gay.asoji.innerpastels.blocks.Properties.pastelLight
 import gay.asoji.innerpastels.blocks.Properties.pastelLogs
+import gay.asoji.innerpastels.blocks.Properties.pastelOre
 import gay.asoji.innerpastels.blocks.Properties.pastelPowder
 import gay.asoji.innerpastels.blocks.Properties.pastelSlab
 import gay.asoji.innerpastels.blocks.Properties.pastelStair
@@ -20,6 +22,7 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.util.valueproviders.UniformInt
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.DyeColor
 import net.minecraft.world.item.Item
@@ -285,3 +288,15 @@ fun MapColor.registerLeavesBlock(modID: String, name: String, emissiveRenderingS
 
 fun DyeColor.registerLeavesBlock(modID: String, name: String, emissiveRenderingState: BlockBehaviour.StatePredicate): Block =
     LeavesBlock(pastelLeaves().mapColor(this).hasPostProcess(emissiveRenderingState).emissiveRendering(emissiveRenderingState)).registerBlockWithItem(modID, name).apply { FlammableBlockRegistry.getDefaultInstance().add(this, 30, 60) }
+
+fun MapColor.registerBrightenedLeavesBlock(modID: String, name: String, emissiveRenderingState: BlockBehaviour.StatePredicate): Block =
+    LeavesBlock(pastelBrightenedLeaves().mapColor(this)).registerBlockWithItem(modID, name).apply { FlammableBlockRegistry.getDefaultInstance().add(this, 30, 60) }
+
+fun DyeColor.registerBrightenedLeavesBlock(modID: String, name: String, emissiveRenderingState: BlockBehaviour.StatePredicate): Block =
+    LeavesBlock(pastelBrightenedLeaves().mapColor(this)).registerBlockWithItem(modID, name).apply { FlammableBlockRegistry.getDefaultInstance().add(this, 30, 60) }
+
+fun MapColor.registerOreBlock(modID: String, name: String): Block = // WHY ARE ORE BLOCKS `DropExperienceBlock`S
+    DropExperienceBlock(UniformInt.of(1, 3), pastelOre()).registerBlockWithItem(modID, name)
+
+fun DyeColor.registerOreBlock(modID: String, name: String): Block =
+    DropExperienceBlock(UniformInt.of(1, 3), pastelOre()).registerBlockWithItem(modID, name)

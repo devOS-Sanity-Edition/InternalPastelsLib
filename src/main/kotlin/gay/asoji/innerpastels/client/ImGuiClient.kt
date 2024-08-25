@@ -6,13 +6,10 @@ import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.endFrame
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.initialize
 import gay.asoji.innerpastels.client.imgui.InnerPastelsImGuiImpl.startFrame
-import gay.asoji.innerpastels.client.imgui.TestDockSpace
-import gay.asoji.innerpastels.client.imgui.TestPanel
 import gay.asoji.innerpastels.events.InputAction
 import gay.asoji.innerpastels.events.KeyInputEvent
 import gay.asoji.innerpastels.events.MouseInputEvent
 import gay.asoji.innerpastels.events.MouseScrollInputEvent
-import imgui.ImGui
 import imgui.type.ImBoolean
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper
