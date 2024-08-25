@@ -47,20 +47,22 @@ object ImGuiClient {
     }
 
     fun init() {
-        panels.addAll( // testing stuff
-            listOf(
-                object : ImGuiPanel {
-                    override fun theme() {
+        if (System.getProperty("EEZNUTSFUCKER")?.toBoolean() == true) {
+            panels.addAll( // testing stuff
+                listOf(
+                    object : ImGuiPanel {
+                        override fun theme() {
 
-                    }
+                        }
 
-                    override fun render(open_: ImBoolean) {
-                        ImGui.showDemoWindow()
-                    }
-                },
-                TestDockSpace, TestPanel
+                        override fun render(open_: ImBoolean) {
+                            ImGui.showDemoWindow()
+                        }
+                    },
+                    TestDockSpace, TestPanel
+                )
             )
-        )
+        }
 
         initializeDevKeybinds()
 
