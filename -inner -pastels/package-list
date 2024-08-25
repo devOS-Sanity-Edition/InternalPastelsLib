@@ -5,6 +5,7 @@ $dokka.location:gay.asoji.innerpastels.blocks/FenceGateBlock///PointingToDeclara
 $dokka.location:gay.asoji.innerpastels.blocks/FenceGateBlock/FenceGateBlock/#net.minecraft.world.level.block.state.BlockBehaviour.Properties/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-fence-gate-block/-fence-gate-block.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/index.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelBlock/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-block.html
+$dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelBrightenedLeaves/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-brightened-leaves.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelCarpet/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-carpet.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelCrops/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-crops.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelFence/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-fence.html
@@ -14,6 +15,7 @@ $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelGlassPane/#/Point
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelLeaves/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-leaves.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelLight/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-light.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelLogs/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-logs.html
+$dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelOre/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-ore.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelPlanks/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-planks.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelPowder/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-powder.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelSand/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-sand.html
@@ -139,6 +141,8 @@ $dokka.location:gay.asoji.innerpastels.register////PointingToDeclaration/-inner
 $dokka.location:gay.asoji.innerpastels.register//registerBlock/net.minecraft.world.level.block.Block#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerBlockItem/net.minecraft.world.level.block.Block#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-block-item.html
 $dokka.location:gay.asoji.innerpastels.register//registerBlockWithItem/net.minecraft.world.level.block.Block#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-block-with-item.html
+$dokka.location:gay.asoji.innerpastels.register//registerBrightenedLeavesBlock/net.minecraft.world.item.DyeColor#kotlin.String#kotlin.String#net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-brightened-leaves-block.html
+$dokka.location:gay.asoji.innerpastels.register//registerBrightenedLeavesBlock/net.minecraft.world.level.material.MapColor#kotlin.String#kotlin.String#net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-brightened-leaves-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerCarpetBlock/net.minecraft.world.item.DyeColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-carpet-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerCarpetBlock/net.minecraft.world.level.material.MapColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-carpet-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerGlassBlock/net.minecraft.world.item.DyeColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-glass-block.html
@@ -149,6 +153,8 @@ $dokka.location:gay.asoji.innerpastels.register//registerLightBlock/net.minecraf
 $dokka.location:gay.asoji.innerpastels.register//registerLightBlock/net.minecraft.world.level.material.MapColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-light-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerLogBlock/net.minecraft.world.item.DyeColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-log-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerLogBlock/net.minecraft.world.level.material.MapColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-log-block.html
+$dokka.location:gay.asoji.innerpastels.register//registerOreBlock/net.minecraft.world.item.DyeColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-ore-block.html
+$dokka.location:gay.asoji.innerpastels.register//registerOreBlock/net.minecraft.world.level.material.MapColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-ore-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerPastelBlock/net.minecraft.world.item.DyeColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-pastel-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerPastelBlock/net.minecraft.world.level.material.MapColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-pastel-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerPastelFenceBlock/net.minecraft.world.item.DyeColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-pastel-fence-block.html
