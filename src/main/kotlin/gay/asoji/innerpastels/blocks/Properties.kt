@@ -234,7 +234,7 @@ object Properties {
         return BlockBehaviour.Properties.of()
             .instrument(NoteBlockInstrument.BASEDRUM)
             .strength(3.0F, 3.0F)
-            .sound(SoundType.DEEPSLATE)
+            .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()
     }
 }
