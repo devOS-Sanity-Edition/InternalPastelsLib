@@ -7,6 +7,7 @@ import net.minecraft.data.models.model.TextureMapping
 import net.minecraft.data.models.model.TexturedModel
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.DropExperienceBlock
 import net.minecraft.world.level.block.RotatedPillarBlock
 
 /**
@@ -269,6 +270,23 @@ object ModelGenerators {
         )
         blockStateModelGenerator.blockStateOutput.accept(
             BlockModelGenerators.createRotatedPillarWithHorizontalVariant(pillarBlock, pillarMain, pillarHorizontal)
+        )
+    }
+
+    fun createPillar(oreBlock: DropExperienceBlock, blockStateModelGenerator: BlockModelGenerators) {
+        val texture = TextureMapping.logColumn(oreBlock)
+        val pillarMain: ResourceLocation = ModelTemplates.CUBE_COLUMN.create(
+            oreBlock,
+            texture,
+            blockStateModelGenerator.modelOutput
+        )
+        val pillarHorizontal: ResourceLocation = ModelTemplates.CUBE_COLUMN_HORIZONTAL.create(
+            oreBlock,
+            texture,
+            blockStateModelGenerator.modelOutput
+        )
+        blockStateModelGenerator.blockStateOutput.accept(
+            BlockModelGenerators.createRotatedPillarWithHorizontalVariant(oreBlock, pillarMain, pillarHorizontal)
         )
     }
 }

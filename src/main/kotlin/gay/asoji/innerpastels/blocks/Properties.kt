@@ -226,7 +226,10 @@ object Properties {
             .strength(0.5F)
             .sound(SoundType.SAND)
     }
-    
+
+    /**
+     * Default properties for Pastel Ore
+     */
     fun pastelOre(): BlockBehaviour.Properties {
         return BlockBehaviour.Properties.of()
             .instrument(NoteBlockInstrument.BASEDRUM)
