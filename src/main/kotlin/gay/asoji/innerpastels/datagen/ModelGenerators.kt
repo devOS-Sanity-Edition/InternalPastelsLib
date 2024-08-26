@@ -272,21 +272,4 @@ object ModelGenerators {
             BlockModelGenerators.createRotatedPillarWithHorizontalVariant(pillarBlock, pillarMain, pillarHorizontal)
         )
     }
-
-    fun createPillar(oreBlock: DropExperienceBlock, blockStateModelGenerator: BlockModelGenerators) {
-        val texture = TextureMapping.logColumn(oreBlock)
-        val pillarMain: ResourceLocation = ModelTemplates.CUBE_COLUMN.create(
-            oreBlock,
-            texture,
-            blockStateModelGenerator.modelOutput
-        )
-        val pillarHorizontal: ResourceLocation = ModelTemplates.CUBE_COLUMN_HORIZONTAL.create(
-            oreBlock,
-            texture,
-            blockStateModelGenerator.modelOutput
-        )
-        blockStateModelGenerator.blockStateOutput.accept(
-            BlockModelGenerators.createRotatedPillarWithHorizontalVariant(oreBlock, pillarMain, pillarHorizontal)
-        )
-    }
 }
