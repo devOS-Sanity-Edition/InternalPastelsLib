@@ -13,6 +13,7 @@ import gay.asoji.innerpastels.blocks.Properties.pastelLight
 import gay.asoji.innerpastels.blocks.Properties.pastelLogs
 import gay.asoji.innerpastels.blocks.Properties.pastelOre
 import gay.asoji.innerpastels.blocks.Properties.pastelPowder
+import gay.asoji.innerpastels.blocks.Properties.pastelSand
 import gay.asoji.innerpastels.blocks.Properties.pastelSlab
 import gay.asoji.innerpastels.blocks.Properties.pastelStair
 import gay.asoji.innerpastels.blocks.Properties.pastelWall
@@ -22,6 +23,7 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.util.ColorRGBA
 import net.minecraft.util.valueproviders.UniformInt
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.DyeColor
@@ -296,7 +298,13 @@ fun DyeColor.registerBrightenedLeavesBlock(modID: String, name: String, emissive
     LeavesBlock(pastelBrightenedLeaves().mapColor(this)).registerBlockWithItem(modID, name).apply { FlammableBlockRegistry.getDefaultInstance().add(this, 30, 60) }
 
 fun MapColor.registerOreBlock(modID: String, name: String): Block = // WHY ARE ORE BLOCKS `DropExperienceBlock`S
-    DropExperienceBlock(UniformInt.of(1, 3), pastelOre()).registerBlockWithItem(modID, name)
+    DropExperienceBlock(UniformInt.of(1, 3), pastelOre().mapColor(this)).registerBlockWithItem(modID, name)
 
 fun DyeColor.registerOreBlock(modID: String, name: String): Block =
-    DropExperienceBlock(UniformInt.of(1, 3), pastelOre()).registerBlockWithItem(modID, name)
+    DropExperienceBlock(UniformInt.of(1, 3), pastelOre().mapColor(this)).registerBlockWithItem(modID, name)
+
+fun MapColor.registerSandBlock(modID: String, name: String, colorRGBA: ColorRGBA) : Block = // snad is `ColoredFallingBlock` sure i guess
+    ColoredFallingBlock(colorRGBA, pastelSand().mapColor(this)).registerBlockWithItem(modID, name)
+
+fun DyeColor.registerSandBlock(modID: String, name: String, colorRGBA: ColorRGBA) : Block =
+    ColoredFallingBlock(colorRGBA, pastelSand().mapColor(this)).registerBlockWithItem(modID, name)
