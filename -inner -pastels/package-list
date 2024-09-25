@@ -8,10 +8,12 @@ $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelBlock/#/PointingT
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelBrightenedLeaves/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-brightened-leaves.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelCarpet/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-carpet.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelCrops/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-crops.html
+$dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelDirt/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-dirt.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelFence/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-fence.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelFenceGate/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-fence-gate.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelGlass/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-glass.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelGlassPane/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-glass-pane.html
+$dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelGrass/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-grass.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelLeaves/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-leaves.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelLight/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-light.html
 $dokka.location:gay.asoji.innerpastels.blocks/Properties/pastelLogs/#/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.blocks/-properties/pastel-logs.html
@@ -174,6 +176,8 @@ $dokka.location:gay.asoji.innerpastels.register//registerPastelWallBlock/net.min
 $dokka.location:gay.asoji.innerpastels.register//registerPastelWallBlock/net.minecraft.world.level.material.MapColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-pastel-wall-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerSandBlock/net.minecraft.world.item.DyeColor#kotlin.String#kotlin.String#net.minecraft.util.ColorRGBA/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-sand-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerSandBlock/net.minecraft.world.level.material.MapColor#kotlin.String#kotlin.String#net.minecraft.util.ColorRGBA/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-sand-block.html
+$dokka.location:gay.asoji.innerpastels.register//registerStoneBlock/net.minecraft.world.item.DyeColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-stone-block.html
+$dokka.location:gay.asoji.innerpastels.register//registerStoneBlock/net.minecraft.world.level.material.MapColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-stone-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerWoolBlock/net.minecraft.world.item.DyeColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-wool-block.html
 $dokka.location:gay.asoji.innerpastels.register//registerWoolBlock/net.minecraft.world.level.material.MapColor#kotlin.String#kotlin.String/PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/register-wool-block.html
 $dokka.location:gay.asoji.innerpastels.register/RegisterFood///PointingToDeclaration/-inner -pastels/gay.asoji.innerpastels.register/-register-food/index.html
