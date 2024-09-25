@@ -1,5 +1,6 @@
 package gay.asoji.innerpastels.blocks
 
+import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.state.BlockBehaviour
@@ -237,4 +238,24 @@ object Properties {
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()
     }
+
+    /**
+     * Default properties for Pastel Dirt
+     */
+    fun pastelDirt(): BlockBehaviour.Properties {
+        return BlockBehaviour.Properties.of()
+            .strength(0.5F)
+            .sound(SoundType.GRAVEL)
+    }
+
+    /**
+     * Default properties for Pastel Grass
+     */
+    fun pastelGrass(): BlockBehaviour.Properties {
+        return BlockBehaviour.Properties.of()
+            .randomTicks()
+            .strength(0.6F)
+            .sound(SoundType.GRASS)
+    }
+
 }

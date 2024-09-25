@@ -308,3 +308,9 @@ fun MapColor.registerSandBlock(modID: String, name: String, colorRGBA: ColorRGBA
 
 fun DyeColor.registerSandBlock(modID: String, name: String, colorRGBA: ColorRGBA) : Block =
     ColoredFallingBlock(colorRGBA, pastelSand().mapColor(this)).registerBlockWithItem(modID, name)
+
+fun MapColor.registerStoneBlock(modID: String, name: String): Block =
+    Block(pastelBlock().mapColor(this)).registerBlockWithItem(modID, name)
+
+fun DyeColor.registerStoneBlock(modID: String, name: String): Block =
+    Block(pastelBlock().mapColor(this)).registerBlockWithItem(modID, name)
